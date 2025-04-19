@@ -2,7 +2,7 @@
 Title: ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia
 Date: 2025-03-03 13:24
 Summary: Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.
-Slug: chatgpt-no-dia-a-dia
+Slug: teste-2
 image: images/imagem_destaque/imagem post.jpg
 ---
 hello
