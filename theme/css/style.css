@@ -133,13 +133,13 @@ p.card-text{
     max-height:400px!important;
     width:100%!important;
 }
-.post p img{
+.article-content p img{
     border-radius: 50px!important;
     object-fit:cover!important;
     max-height:600px!important;
     width:100%!important;
 }
-.post p a{
+.article-content p a{
     text-decoration: none!important;
     color: #EE471D!important;
     font-weight: 900!important;
