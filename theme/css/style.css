@@ -18,6 +18,13 @@ color: #111!important;
 text-shadow: 0.5px 0.5px 0 #00000020;
 }
 
+p{
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 700px; /* opcional, para limitar linhas muito longas */
+    margin-bottom: 1.2em
+}
+
 /* #region responsividade*/
 @media (max-width: 767px) {
     .card {
@@ -129,12 +136,7 @@ p.card-text{
 /* #endregion */
 
 /* #region estilização da página de postagem  */
-.post p{
-  font-size: 20px;
-  line-height: 1.6;
-  max-width: 700px; /* opcional, para limitar linhas muito longas */
-  margin-bottom: 1.2em
-}
+
 .feature-image{
     border-radius: 50px!important;
     object-fit:cover!important;
