@@ -137,6 +137,13 @@ p.card-text{
 
 /* #region estilização da página de postagem  */
 
+.post{
+    font-family: var(--font-body)!important;
+    font-weight: 500!important;
+    font-size: 20px!important;
+    color:black!important;
+    text-align: center!important;
+}
 .feature-image{
     border-radius: 50px!important;
     object-fit:cover!important;
