@@ -17,6 +17,7 @@ font-weight: 900!important;
 }
 
 
+
 /* #region responsividade*/
 @media (max-width: 767px) {
     .card {
@@ -146,8 +147,8 @@ p.card-text{
     object-fit: contain !important;
     object-position: center !important;
 }
-.post p p{
-    font-size: 20px;
+.post p{
+    font-size: 29px;
     line-height: 1.6;
     max-width: 700px; /* opcional, para limitar linhas muito longas */
     margin-bottom: 1.2em
