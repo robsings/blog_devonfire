@@ -135,8 +135,8 @@ p.card-text{
 }
 .post p img{
     border-radius: 50px!important;
-    object-fit:cover!important;
-    max-height:600px!important;
+    object-fit:center!important;
+    max-height:500px!important;
     width:100%!important;
 }
 .post p a{
