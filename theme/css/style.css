@@ -16,7 +16,7 @@ font-family:var(--font-title)!important;
 font-weight: 900!important;
 }
 p{
-    font-size: 22px!important;
+    font-size: 25px!important;
 }
 
 /* #region responsividade*/
@@ -117,7 +117,7 @@ p.card-text{
 .footer{
     border-top:2px solid #EE471D;
     padding-bottom:50px;
-    font-size:small!important;
+    font-size:19px!important;
     font-family: var(--font-title)!important;
     font-weight: 900!important;
     text-shadow: 0 0 0.8px #EE471D, 0 0 0.8px #EE471D;
