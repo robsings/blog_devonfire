@@ -14,7 +14,6 @@ body{
 h1, h2, h3, h4, h5{
 font-family:var(--font-title)!important;
 font-weight: 900!important;
-text-shadow: 0.5px 0.5px 0 #00000020;
 }
 
 
@@ -130,13 +129,6 @@ p.card-text{
 
 /* #region estilização da página de postagem  */
 
-.post{
-    font-family: var(--font-body)!important;
-    font-weight: 500!important;
-    font-size: 20px!important;
-    color:black!important;
-    text-align: center!important;
-}
 .feature-image{
     border-radius: 50px!important;
     object-fit:cover!important;
