@@ -16,7 +16,7 @@ font-family:var(--font-title)!important;
 font-weight: 900!important;
 }
 p{
-    font-size: 26px!important;
+    font-size: 22px!important;
 }
 
 /* #region responsividade*/
@@ -126,6 +126,9 @@ p.card-text{
 }
 .footer a:hover{
     color: #EE471D;
+}
+.footer p{
+    font-size:1px!important;
 }
 /* #endregion */
 
