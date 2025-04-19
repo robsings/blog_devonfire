@@ -10,7 +10,7 @@
 &lt;li&gt;item 7;&lt;/li&gt;
 &lt;li&gt;item 8;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;print(helloWorld)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;helloWorld&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Vamo desgraça!&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>teste 2</title><link href="https://robsings.github.io/blog_devonfire/teste%202.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-03-03T13:24:00-03:00</updated><author><name>@Robsings</name></author><id>tag:robsings.github.io,2025-03-03:/blog_devonfire/teste 2.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Hello World&lt;/h1&gt;
