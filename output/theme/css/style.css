@@ -117,6 +117,7 @@ p.card-text{
 .footer{
     border-top:2px solid #EE471D;
     padding-bottom:50px;
+    font-size:small!important;
     font-family: var(--font-title)!important;
     font-weight: 900!important;
     text-shadow: 0 0 0.8px #EE471D, 0 0 0.8px #EE471D;
@@ -126,9 +127,6 @@ p.card-text{
 }
 .footer a:hover{
     color: #EE471D;
-}
-.footer p{
-    font-size:1px!important;
 }
 /* #endregion */
 
