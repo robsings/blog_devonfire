@@ -15,8 +15,9 @@ h1, h2, h3, h4, h5{
 font-family:var(--font-title)!important;
 font-weight: 900!important;
 }
-
-
+p{
+    font-size: 26px!important;
+}
 
 /* #region responsividade*/
 @media (max-width: 767px) {
@@ -146,12 +147,6 @@ p.card-text{
     height: auto !important;
     object-fit: contain !important;
     object-position: center !important;
-}
-.post p p{
-    font-size: 39px!important;
-    line-height: 1.6!important;
-    max-width: 700px!important;
-    margin-bottom: 1.2em!important;
 }
 .post p a{
     text-decoration: none!important;
