@@ -25,3 +25,13 @@ Primeiramente, acesse e cadastre-se pelo seguinte link [ChatGPT](https://chatgpt
 O cadastro é rápido. Você não precisará preencher formulários. Basta fornecer um endereço de e-mail e uma senha. Se preferir, utilize um e-mail já existente, seja do Google, Microsoft ou Apple.
 
 ![Imagem 1](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled.png)
+
+Pronto! Uma vez que tenha feito o cadastro, seu ChatGPT estará pronto para as suas requisições. 
+
+## Como abrir um Novo Chat?
+
+O print abaixo é a tela principal da aplicação. É a tela que você verá após realizar o cadastro. Note que ela já traz alguns exemplos de uso, como: 'Receita com o que tem na cozinha', 'Confortar um amigo', etc. Note também que no menu lateral há a opção 'Explorar GPTs'. Ao clicar nela, você verá que já existem inúmeras aplicações disponíveis através da ferramenta.
+
+![Imagem 2](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%201.png)
+
+![Imagem 3](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%202.png)
