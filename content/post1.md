@@ -14,6 +14,7 @@ image: images/imagem_destaque/imagem post.jpg
 * item 5;
 * item 6;
 * item 7;
+* item 8;
 
 ```
 print(helloWorld)
