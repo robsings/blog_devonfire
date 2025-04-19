@@ -129,6 +129,12 @@ p.card-text{
 /* #endregion */
 
 /* #region estilização da página de postagem  */
+.post p{
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px; /* opcional, para limitar linhas muito longas */
+  margin-bottom: 1.2em
+}
 .feature-image{
     border-radius: 50px!important;
     object-fit:cover!important;
