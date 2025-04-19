@@ -16,7 +16,8 @@ image: images/imagem_destaque/imagem post.jpg
 * item 7;
 * item 8;
 
-```
+
+```python
 print(helloWorld)
 ```
 
