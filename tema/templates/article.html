@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<!-- #region Header-->
+{% block header %}
+<header class="bg-dark text-white text-center py-4">
+    <div class="container text-center">
+        <a href="{{ SITEURL }}/" 
+        class="logo-img">
+        <i class="fas fa-home fa-2x"
+        title="Voltar para a página inicial"
+        style="text-decoration: none; color: #EE471D;"></i>
+        </a>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-3">
+        {{ article.title }}
+    </h1>
+    <p class="text-muted publication-date mb-5 text-end">
+        Publicado em {{ article.date.strftime('%d/%m/%Y %H:%M') }}
+    </p>
+
+    {% if article.metadata.image %}
+        <img src="{{ SITEURL }}/{{ article.metadata.image }}" 
+        alt="{{ article.title }}" 
+        class="img-fluid mb-5 feature-image">
+    {% endif %}
+
+    <div class="article-content mb-5">
+        {{ article.content }}
+    </div>
+</div>
+{% endblock %}
