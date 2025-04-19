@@ -14,6 +14,7 @@ body{
 h1, h2, h3, h4, h5{
 font-family:var(--font-title)!important;
 font-weight: 900!important;
+color: #111!important;
 }
 
 /* #region responsividade*/
@@ -138,7 +139,7 @@ p.card-text{
     margin: 0 auto;
     border-radius: 50px !important;
     max-height: 500px !important;
-    max-width: 100% !important;
+    max-width: 70% !important;
     width: auto !important;
     height: auto !important;
     object-fit: contain !important;
