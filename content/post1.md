@@ -20,9 +20,7 @@ Além disso, o ChatGPT é capaz de aprender com as interações, adaptando-se e 
 
 # Como começar a utilizá-lo?
 
-- Primeiramente, acesse e cadastre-se pelo seguinte link:
-
-[ChatGPT](https://chatgpt.com/)
+Primeiramente, acesse e cadastre-se pelo seguinte link [ChatGPT](https://chatgpt.com/)
 
 O cadastro é rápido. Você não precisará preencher formulários. Basta fornecer um endereço de e-mail e uma senha. Se preferir, utilize um e-mail já existente, seja do Google, Microsoft ou Apple.
 
