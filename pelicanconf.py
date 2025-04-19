@@ -12,6 +12,7 @@ TIMEZONE = 'America/Sao_Paulo'
 DEFAULT_LANG = 'en'
 
 THEME = "./tema/"
+STATIC_PATHS = ['images']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -30,6 +31,14 @@ SOCIAL = (
     ("You can add links in your config file", "#"),
     ("Another social link", "#"),
 )
+MARKDOWN = {
+    'extensions': ['codehilite', 'extra'],
+    'extension_configs': {
+        'codehilite': {'css_class': 'highlight'},
+    },
+    'output_format': 'html5',
+}
+
 
 DEFAULT_PAGINATION = 10
 
