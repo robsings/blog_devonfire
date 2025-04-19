@@ -8,6 +8,7 @@
 &lt;li&gt;item 5;&lt;/li&gt;
 &lt;li&gt;item 6;&lt;/li&gt;
 &lt;li&gt;item 7;&lt;/li&gt;
+&lt;li&gt;item 8;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;print(helloWorld)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
