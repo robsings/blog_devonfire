@@ -151,9 +151,10 @@ p.card-text{
     object-position: center !important;
     transition: transform 0.3s ease;
     transform-origin: center center;
+    cursor:pointer;
 }
 
-.post p img:hover {
+.post p img:hover{
     transform: scale(1.1);
     filter: blur(0.5px);
 }
