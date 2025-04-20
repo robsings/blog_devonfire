@@ -1,42 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios</title><link href="https://robsings.github.io/blog_devonfire/" rel="alternate"></link><link href="https://robsings.github.io/blog_devonfire/feeds/all.atom.xml" rel="self"></link><id>https://robsings.github.io/blog_devonfire/</id><updated>2025-03-03T13:24:00-03:00</updated><entry><title>ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</title><link href="https://robsings.github.io/blog_devonfire/chatgpt-no-dia-a-dia.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-03-03T13:24:00-03:00</updated><author><name>@Robsings</name></author><id>tag:robsings.github.io,2025-03-03:/blog_devonfire/chatgpt-no-dia-a-dia.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;strong&gt;O que é o ChatGPT?&lt;/strong&gt;\&lt;/h1&gt;
-&lt;p&gt;De maneira simples, ele é um chatbot - um programa de computador super inteligente projetado para imitar conversas com usuários humanos, através da internet.\&lt;/p&gt;
-&lt;p&gt;O que distingue o ChatGPT dos chatbots tradicionais é seu modelo de linguagem que utiliza da &lt;a href="https://www.surfedigital.io/blog/ia-generativa"&gt;Inteligência Artificial Generativa&lt;/a&gt; (Generative AI). Este modelo &lt;strong&gt;permite que o ChatGPT entenda e responda de maneira mais humana, utilizando linguagem natural&lt;/strong&gt; e contextualizada, oferecendo uma experiência às pessoas muito mais rica, próxima e interativa.\&lt;/p&gt;
-&lt;p&gt;Além disso, o ChatGPT é capaz de aprender com as interações, adaptando-se e aprimorando suas respostas ao longo do tempo.\  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios</title><link href="https://robsings.github.io/blog_devonfire/" rel="alternate"></link><link href="https://robsings.github.io/blog_devonfire/feeds/all.atom.xml" rel="self"></link><id>https://robsings.github.io/blog_devonfire/</id><updated>2025-03-03T13:24:00-03:00</updated><entry><title>ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</title><link href="https://robsings.github.io/blog_devonfire/chatgpt-no-dia-a-dia.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-03-03T13:24:00-03:00</updated><author><name>@Robsings</name></author><id>tag:robsings.github.io,2025-03-03:/blog_devonfire/chatgpt-no-dia-a-dia.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;O que é o ChatGPT?&lt;/h1&gt;
+&lt;p&gt;De maneira simples, ele é um chatbot - um programa de computador super inteligente projetado para imitar conversas com usuários humanos, através da internet.  &lt;/p&gt;
+&lt;p&gt;O que distingue o ChatGPT dos chatbots tradicionais é seu modelo de linguagem que utiliza da &lt;a href="https://www.surfedigital.io/blog/ia-generativa"&gt;Inteligência Artificial Generativa&lt;/a&gt; (Generative AI). Este modelo &lt;strong&gt;permite que o ChatGPT entenda e responda de maneira mais humana, utilizando linguagem natural&lt;/strong&gt; e contextualizada, oferecendo uma experiência às pessoas muito mais rica, próxima e interativa.  &lt;/p&gt;
+&lt;p&gt;Além disso, o ChatGPT é capaz de aprender com as interações, adaptando-se e aprimorando suas respostas ao longo do tempo.  &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;FONTE:&lt;/strong&gt; 
-&lt;a href="https://www.surfedigital.io/blog/chatgpt"&gt;ChatGPT: o que é, como funciona e como utilizar&lt;/a&gt;\  &lt;/p&gt;
+&lt;a href="https://www.surfedigital.io/blog/chatgpt"&gt;ChatGPT: o que é, como funciona e como utilizar&lt;/a&gt;  &lt;/p&gt;
 &lt;h1&gt;&lt;strong&gt;Como começar a utilizá-lo?&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;Primeiramente, acesse e cadastre-se pelo seguinte link &lt;a href="https://chatgpt.com/"&gt;ChatGPT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;O cadastro é rápido. Você não precisará preencher formulários. Basta fornecer um endereço de e-mail e uma senha. Se preferir, utilize um e-mail já existente, seja do Google, Microsoft ou Apple.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 1" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled.png"&gt;&lt;/p&gt;
-&lt;p&gt;Pronto! Uma vez que tenha feito o cadastro, seu ChatGPT estará pronto para as suas requisições. &lt;/p&gt;
+&lt;p&gt;Primeiramente, acesse e cadastre-se pelo seguinte link &lt;a href="https://chatgpt.com/"&gt;ChatGPT&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;O cadastro é rápido. Você não precisará preencher formulários. Basta fornecer um endereço de e-mail e uma senha. Se preferir, utilize um e-mail já existente, seja do Google, Microsoft ou Apple.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 1" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Pronto! Uma vez que tenha feito o cadastro, seu ChatGPT estará pronto para as suas requisições.  &lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Como abrir um Novo Chat?&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;O print abaixo é a tela principal da aplicação. É a tela que você verá após realizar o cadastro. Note que ela já traz alguns exemplos de uso, como: 'Receita com o que tem na cozinha', 'Confortar um amigo', etc. Note também que no menu lateral há a opção 'Explorar GPTs'. Ao clicar nela, você verá que já existem inúmeras aplicações disponíveis através da ferramenta.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 2" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%201.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 3" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%202.png"&gt;&lt;/p&gt;
-&lt;p&gt;No ChatGPT, você pode criar vários chats de acordo com os assuntos que deseja abordar. Há duas formas de criar um novo chat na aplicação, e ambas são bem intuitivas. A primeira é através do ícone e a segunda através da opção “ChatGPT”.&lt;/p&gt;
-&lt;p&gt;Uma vez aberto o novo chat, faça a requisição que deseja. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 4" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%203.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 5" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%204.png"&gt;&lt;/p&gt;
-&lt;p&gt;Quando falamos em aplicações de inteligência artificial, qualquer entrada ou solicitação é chamada de prompt. Em resumo, um prompt é tudo aquilo que você digita ou diz para iniciar uma interação com um sistema. Não há nenhum segredo aqui, basta entregar uma entrada ao ChatGPT. Digite uma mensagem ou envie um documento - essa funcionalidade é nova. Veja, aqui pedi ao chat para me dar dicas sobre como utiliza-lo:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 6" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%205.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 7" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%206.png"&gt;&lt;/p&gt;
-&lt;p&gt;Fácil, não? Note que assim que ele me respondeu à solicitação, ele também criou ali uma aba através do chat recém-aberto. Você pode renomear a aba clicando em "Renomear" através dos três pontos. Assim:&lt;/p&gt;
-&lt;p&gt;Da mesma forma, através do botão dos três pontos, você pode “Arquivar”, “Compartilhar” ou “Excluir”&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 8" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%207.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 9" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%208.png"&gt;&lt;/p&gt;
+&lt;p&gt;O print abaixo é a tela principal da aplicação. É a tela que você verá após realizar o cadastro. Note que ela já traz alguns exemplos de uso, como: 'Receita com o que tem na cozinha', 'Confortar um amigo', etc. Note também que no menu lateral há a opção 'Explorar GPTs'. Ao clicar nela, você verá que já existem inúmeras aplicações disponíveis através da ferramenta.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 2" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%201.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 3" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%202.png"&gt;  &lt;/p&gt;
+&lt;p&gt;No ChatGPT, você pode criar vários chats de acordo com os assuntos que deseja abordar. Há duas formas de criar um novo chat na aplicação, e ambas são bem intuitivas. A primeira é através do ícone e a segunda através da opção “ChatGPT”.  &lt;/p&gt;
+&lt;p&gt;Uma vez aberto o novo chat, faça a requisição que deseja.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 4" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%203.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 5" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%204.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Quando falamos em aplicações de inteligência artificial, qualquer entrada ou solicitação é chamada de prompt. Em resumo, um prompt é tudo aquilo que você digita ou diz para iniciar uma interação com um sistema. Não há nenhum segredo aqui, basta entregar uma entrada ao ChatGPT. Digite uma mensagem ou envie um documento - essa funcionalidade é nova. Veja, aqui pedi ao chat para me dar dicas sobre como utiliza-lo:  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 6" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%205.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 7" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%206.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Fácil, não? Note que assim que ele me respondeu à solicitação, ele também criou ali uma aba através do chat recém-aberto. Você pode renomear a aba clicando em "Renomear" através dos três pontos. Assim:  &lt;/p&gt;
+&lt;p&gt;Da mesma forma, através do botão dos três pontos, você pode “Arquivar”, “Compartilhar” ou “Excluir”  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 8" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%207.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 9" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%208.png"&gt;  &lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;Para que serve, e por que eu deveria utilizar o ChatGPT?&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, ou organizar suas ideias, assim como para qualquer pessoa que deseja ajuda em seus trabalhos acadêmicos, criativos, projetos pessoais, e afins. Vamos ver alguns exemplos que podem ser úteis no nosso dia a dia.&lt;/p&gt;
+&lt;p&gt;Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, ou organizar suas ideias, assim como para qualquer pessoa que deseja ajuda em seus trabalhos acadêmicos, criativos, projetos pessoais, e afins. Vamos ver alguns exemplos que podem ser úteis no nosso dia a dia.  &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Corretor ortográfico:&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Imagem 10" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%209.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 10" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%209.png"&gt;  &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Bloco de notas:&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Imagem 11" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2010.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 12" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2011.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 11" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2010.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 12" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2011.png"&gt;  &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Professor do que você desejar&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Imagem 13" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2012.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagem 14" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2013.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 13" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2012.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 14" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2013.png"&gt;  &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Sessões de terapia&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Imagem 15" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2014.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imagem 15" src="./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2014.png"&gt;  &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Ampliar suas habilidades de escrita&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Imagem 16" src="./images/imagem_post/post_chatgpt_dia_a_dia/image.png"&gt;&lt;/p&gt;
-&lt;p&gt;Acredito que os exemplos de prompts que eu dei neste tutorial são até mesmo bem elaborados para quem é iniciante, mas fiz isso com o intuito de mostrar a você o quanto o ChatGPT pode ser útil no dia a dia. Muita gente tem medo de inteligências artificiais - e esse medo é, até certo ponto, muito justificável - mas acho que consegui comprovar aqui, por meio desses exemplos, que podemos muito bem utilizar essas novas tecnologias em nosso benefício.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</title><link href="https://robsings.github.io/blog_devonfire/teste-2.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-03-03T13:24:00-03:00</updated><author><name>@Robsings</name></author><id>tag:robsings.github.io,2025-03-03:/blog_devonfire/teste-2.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;p&gt;hello&lt;/p&gt;</content><category term="misc"></category></entry></feed>
+&lt;p&gt;&lt;img alt="Imagem 16" src="./images/imagem_post/post_chatgpt_dia_a_dia/image.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Acredito que os exemplos de prompts que eu dei neste tutorial são até mesmo bem elaborados para quem é iniciante, mas fiz isso com o intuito de mostrar a você o quanto o ChatGPT pode ser útil no dia a dia. Muita gente tem medo de inteligências artificiais - e esse medo é, até certo ponto, muito justificável - mas acho que consegui comprovar aqui, por meio desses exemplos, que podemos muito bem utilizar essas novas tecnologias em nosso benefício.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</title><link href="https://robsings.github.io/blog_devonfire/estado-da-arte-ia.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-03-03T13:24:00-03:00</updated><author><name>@Robsings</name></author><id>tag:robsings.github.io,2025-03-03:/blog_devonfire/estado-da-arte-ia.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Qual o estado da arte no campo das IAs&lt;/h1&gt;
+&lt;p&gt;Em 2025, a Inteligência Artificial (IA) encontra-se em um ponto de inflexão, caracterizado por avanços técnicos notáveis, ampla adoção em diversos setores e debates intensos sobre seus limites, riscos e governança. A seguir, apresento uma análise detalhada do estado da arte da IA, destacando seus principais desenvolvimentos, desafios e perspectivas futuras.​&lt;/p&gt;
+&lt;p&gt;🚀 Avanços Técnicos e Modelos de Última Geração
+O relatório AI Index 2025, elaborado pela Universidade de Stanford, evidencia progressos significativos na performance de modelos de linguagem e raciocínio. Modelos como o GPT-4 e seus sucessores demonstraram melhorias de até 67% em benchmarks como MMLU, GPQA e SWE Bench, indicando avanços substanciais em compreensão e geração de linguagem natural .​
+Home | Stanford HAI
++2
+LinkedIn
++2
+Unite.AI
++2
+Unite.AI&lt;/p&gt;
+&lt;p&gt;Além disso, a redução drástica nos custos de inferência — mais de 280 vezes nos últimos 18 meses — tem democratizado o acesso à IA, permitindo que empresas de diversos portes adotem soluções baseadas em IA generativa .​
+LinkedIn&lt;/p&gt;
+&lt;p&gt;🧠 Inteligência Artificial Geral (AGI): Realidade ou Utopia?
+A busca pela Inteligência Artificial Geral (AGI), capaz de replicar a inteligência humana em sua totalidade, permanece um objetivo ambicioso. Demis Hassabis, CEO da DeepMind, prevê que a AGI pode emergir nos próximos 5 a 10 anos, destacando seu potencial para resolver crises globais, como doenças e mudanças climáticas .​
+El País
+Time&lt;/p&gt;
+&lt;p&gt;No entanto, uma pesquisa recente da AAAI com 475 especialistas revelou que 76% consideram "muito improvável" ou "improvável" que as técnicas atuais conduzam à AGI, enfatizando a necessidade de novas abordagens que integrem corpo, percepção e raciocínio simbólico .​
+El País&lt;/p&gt;
+&lt;p&gt;🏭 Aplicações Práticas: Transformando Setores
+A IA está revolucionando diversos setores:​
+Funiber Blogs - FUNIBER&lt;/p&gt;
+&lt;p&gt;Saúde: Ferramentas como o AlphaFold, da DeepMind, têm acelerado a descoberta de medicamentos e a compreensão de doenças, ao prever estruturas de proteínas com alta precisão .​
+Time&lt;/p&gt;
+&lt;p&gt;Indústria e Logística: A automação de processos e a otimização de cadeias de suprimentos têm sido impulsionadas por IA, aumentando a eficiência operacional .​&lt;/p&gt;
+&lt;p&gt;Educação e Conteúdo: Sistemas de IA estão sendo utilizados para personalizar o aprendizado e gerar conteúdo educativo adaptado às necessidades individuais dos alunos.​&lt;/p&gt;
+&lt;p&gt;⚖️ Desafios Éticos e Regulatórios
+Com o avanço da IA, surgem preocupações éticas significativas:​&lt;/p&gt;
+&lt;p&gt;Privacidade e Segurança: O uso de IA em vigilância e análise de dados pessoais levanta questões sobre privacidade e consentimento.​&lt;/p&gt;
+&lt;p&gt;Desinformação: A capacidade da IA de gerar conteúdo realista pode ser explorada para disseminar informações falsas, impactando a opinião pública e processos democráticos.​&lt;/p&gt;
+&lt;p&gt;Regulação: Governos estão desenvolvendo legislações específicas para IA, como o projeto de lei de segurança da IA no Reino Unido, visando garantir o uso responsável da tecnologia .​
+Bastaki Software Solutions L.L.C-FZ&lt;/p&gt;
+&lt;p&gt;📊 Tendências Emergentes
+Algumas tendências que estão moldando o futuro da IA incluem:​
+Mundo dos Negócios
++1
+Funiber Blogs - FUNIBER
++1&lt;/p&gt;
+&lt;p&gt;IA Agêntica: Desenvolvimento de agentes autônomos capazes de tomar decisões complexas e interagir de forma proativa com o ambiente.​&lt;/p&gt;
+&lt;p&gt;Modelos Multimodais: Integração de diferentes tipos de dados (texto, imagem, áudio) em modelos unificados, ampliando as capacidades de compreensão e geração de conteúdo.​&lt;/p&gt;
+&lt;p&gt;Sustentabilidade: Esforços para reduzir o impacto ambiental do treinamento de modelos de IA, promovendo práticas mais sustentáveis.​&lt;/p&gt;
+&lt;p&gt;🧭 Conclusão
+Em 2025, a Inteligência Artificial está profundamente integrada à sociedade, oferecendo benefícios significativos, mas também apresentando desafios complexos. O equilíbrio entre inovação, ética e regulamentação será crucial para garantir que a IA contribua positivamente para o futuro da humanidade.​&lt;/p&gt;
+&lt;p&gt;Se desejar, posso fornecer informações adicionais sobre aplicações específicas da IA em áreas de seu interesse ou orientá-lo sobre como implementar soluções de IA em projetos pessoais ou profissionais.&lt;/p&gt;</content><category term="misc"></category></entry></feed>
