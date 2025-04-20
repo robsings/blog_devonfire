@@ -130,9 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Seleciona todos os <a> do documento
   document.querySelectorAll('.article-content a').forEach(link => {
     // Define target="_blank" para abrir em nova aba
-    link.setAttribute('target', '_blank');
-    // Adiciona rel="noopener noreferrer" por segurança e privacidade
-    link.setAttribute('rel', 'noopener noreferrer');
+    img.addEventListener('click', () => {
+      // Abre a URL da imagem em uma nova aba
+      window.open(link, '_blank', 'noopener,noreferrer');
+      window.focus();
   });
 });
 </script>
