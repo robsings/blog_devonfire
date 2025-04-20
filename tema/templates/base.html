@@ -107,5 +107,19 @@
             scrollTitle();
         })();
     </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.article-content img').forEach(img => {
+    const wrapper = document.createElement('a');
+    wrapper.href = img.src;
+    wrapper.target = '_blank';
+    wrapper.rel = 'noopener noreferrer';
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+  });
+});
+</script>
+
 </body>
 </html>
