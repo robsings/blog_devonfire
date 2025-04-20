@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     img.addEventListener('click', () => {
       // Abre a URL da imagem em uma nova aba
       window.open(img.src, '_blank', 'noopener,noreferrer');
+      window.focus();
     });
   });
 });
