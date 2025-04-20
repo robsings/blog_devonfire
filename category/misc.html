@@ -139,13 +139,6 @@
     </footer>
     <!-- #endregion -->
 
-    <!-- #region Lightbox Overlay -->
-    <div id="lightboxOverlay" class="lightbox-overlay">
-    <span id="lightboxClose" class="lightbox-close">&times;</span>
-    <img id="lightboxImage" src="" alt="Ampliada">
-    </div>
-    <!-- #endregion -->
-
     <!-- #region Bootstrap Lib -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js">
     </script>
@@ -165,33 +158,6 @@
 
             scrollTitle();
         })();
-
-  document.addEventListener('DOMContentLoaded', () => {
-  const overlay = document.getElementById('lightboxOverlay');
-  const overlayImage = document.getElementById('lightboxImage');
-  const closeBtn = document.getElementById('lightboxClose');
-
-  // Seleciona todas as imagens dentro do conteúdo do artigo
-  document.querySelectorAll('.article-content img').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
-      overlayImage.src = img.src;
-      overlay.classList.add('active');
-    });
-  });
-
-  // Função para fechar
-  const closeLightbox = () => {
-    overlay.classList.remove('active');
-    overlayImage.src = '';
-  };
-
-  // Fecha ao clicar no botão ou fora da imagem
-  closeBtn.addEventListener('click', closeLightbox);
-  overlay.addEventListener('click', e => {
-    if (e.target === overlay) closeLightbox();
-  });
-});
     </script>
 </body>
 </html>
