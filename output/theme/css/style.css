@@ -147,11 +147,16 @@ p.card-text{
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
-    object-fit: fill !important;
+    object-fit: contain !important;
     object-position: center !important;
-    transition: transform 0.3s ease;
-    transform-origin: center center;
-    cursor:pointer;
+    transition: transform 0.3s ease!important;
+    transform-origin: center center!important;
+    cursor:pointer!important;
+}
+
+.post p img:hover{
+    transform: scale(1.1)!important;
+    filter: blur(0.5px)!important;
 }
 
 .post p a{
