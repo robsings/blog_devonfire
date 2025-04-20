@@ -6,7 +6,8 @@ Slug: chatgpt-no-dia-a-dia
 image: images/imagem_destaque/imagem post.jpg
 ---
 
-# O que é o ChatGPT? 
+# O que é o ChatGPT?  
+
 
 
 De maneira simples, ele é um chatbot - um programa de computador super inteligente projetado para imitar conversas com usuários humanos, através da internet.  
@@ -67,16 +68,19 @@ Da mesma forma, através do botão dos três pontos, você pode “Arquivar”, 
 ## **Para que serve, e por que eu deveria utilizar o ChatGPT?**  
 
 
+
 Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, ou organizar suas ideias, assim como para qualquer pessoa que deseja ajuda em seus trabalhos acadêmicos, criativos, projetos pessoais, e afins. Vamos ver alguns exemplos que podem ser úteis no nosso dia a dia.  
 
 
 ### **Corretor ortográfico:**  
 
 
+
 ![Imagem 10](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%209.png)  
 
 
 ### **Bloco de notas:**  
+
 
 
 ![Imagem 11](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2010.png)  
@@ -88,6 +92,7 @@ Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, 
 ### **Professor do que você desejar**  
 
 
+
 ![Imagem 13](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2012.png)  
 
 
@@ -97,10 +102,12 @@ Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, 
 ### **Sessões de terapia**  
 
 
+
 ![Imagem 15](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2014.png)  
 
 
 ### **Ampliar suas habilidades de escrita**  
+  
 
 
 ![Imagem 16](./images/imagem_post/post_chatgpt_dia_a_dia/image.png)  
