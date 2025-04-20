@@ -144,7 +144,7 @@ p.card-text{
     margin: 0 auto;
     border-radius: 50px !important;
     max-height: 500px !important;
-    max-width: 70% !important;
+    max-width: 100% !important;
     width: auto !important;
     height: auto !important;
     object-fit: contain !important;
