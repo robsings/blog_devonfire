@@ -31,6 +31,14 @@
 
     <div class="article-content mb-5 post">
         {{ article.content }}
+         <!-- #region Lightbox Overlay -->
+        <div id="lightboxOverlay" class="lightbox-overlay">
+        <span id="lightboxClose" class="lightbox-close">&times;</span>
+        <img id="lightboxImage" src="" alt="Ampliada">
+        </div>
+        <!-- #endregion -->
     </div>
 </div>
+
+
 {% endblock %}
