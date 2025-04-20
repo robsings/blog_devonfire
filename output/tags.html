@@ -109,13 +109,12 @@
 
     <script>
 document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todas as imagens dentro do conteúdo do artigo
   document.querySelectorAll('.article-content img').forEach(img => {
-    const wrapper = document.createElement('a');
-    wrapper.href = img.src;
-    wrapper.target = '_blank';
-    wrapper.rel = 'noopener noreferrer';
-    img.parentNode.insertBefore(wrapper, img);
-    wrapper.appendChild(img);
+    img.addEventListener('click', () => {
+      // Abre a URL da imagem em uma nova aba
+      window.open(img.src, '_blank', 'noopener,noreferrer');
+    });
   });
 });
 </script>
