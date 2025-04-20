@@ -1,7 +1,7 @@
 ---
-Title: ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia
-Date: 2025-03-03 13:24
-Summary: Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.
+Title: As IAs e o seu estado da arte
+Date: 2025-04-19 21:26
+Summary: O que a IA faz hoje, até onde pode ir, e por que isso importa mais do que parece. 
 Slug: estado-da-arte-ia
 image: images/imagem_destaque/imagem post 1.jpg
 ---
