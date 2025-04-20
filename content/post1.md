@@ -33,7 +33,7 @@ O cadastro é rápido. Você não precisará preencher formulários. Basta forne
 
 Pronto! Uma vez que tenha feito o cadastro, seu ChatGPT estará pronto para as suas requisições.  
  
-## **Como abrir um Novo Chat?**  
+# **Como abrir um Novo Chat?**  
 
 O print abaixo é a tela principal da aplicação. É a tela que você verá após realizar o cadastro. Note que ela já traz alguns exemplos de uso, como: 'Receita com o que tem na cozinha', 'Confortar um amigo', etc. Note também que no menu lateral há a opção 'Explorar GPTs'. Ao clicar nela, você verá que já existem inúmeras aplicações disponíveis através da ferramenta.  
 
@@ -65,21 +65,21 @@ Da mesma forma, através do botão dos três pontos, você pode “Arquivar”, 
 ![Imagem 9](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%208.png)  
 
 
-## **Para que serve, e por que eu deveria utilizar o ChatGPT?**  
+# **Para que serve, e por que eu deveria utilizar o ChatGPT?**  
 
 
 
 Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, ou organizar suas ideias, assim como para qualquer pessoa que deseja ajuda em seus trabalhos acadêmicos, criativos, projetos pessoais, e afins. Vamos ver alguns exemplos que podem ser úteis no nosso dia a dia.  
 
 
-### **Corretor ortográfico:**  
+## **⚫ Corretor ortográfico:**  
 
 
 
 ![Imagem 10](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%209.png)  
 
 
-### **Bloco de notas:**  
+## **⚫ Bloco de notas:**  
 
 
 
@@ -89,7 +89,7 @@ Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, 
 ![Imagem 12](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2011.png)  
 
 
-### **Professor do que você desejar**  
+## **⚫ Professor do que você desejar**  
 
 
 
@@ -99,15 +99,15 @@ Esta aplicação, é valiosa para quem precisa de um auxilio para se organizar, 
 ![Imagem 14](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2013.png)  
 
 
-### **Sessões de terapia**  
+## **⚫ Sessões de terapia**  
 
 
 
 ![Imagem 15](./images/imagem_post/post_chatgpt_dia_a_dia/Untitled%2014.png)  
 
 
-### **Ampliar suas habilidades de escrita**  
-  
+## **⚫ Ampliar suas habilidades de escrita**  
+
 
 
 ![Imagem 16](./images/imagem_post/post_chatgpt_dia_a_dia/image.png)  
