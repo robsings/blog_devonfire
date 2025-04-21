@@ -44,15 +44,57 @@
      </header>
     <!-- #endregion -->
     <!-- #region Espaço reservado para o botão e a funcionalidade de arquivo do Blog -->
+    <!-- Botão para abrir o arquivo -->
+<button class="btn btn-secondary position-fixed open-button" id="openButton" title="Arquivo Do Blog"
+style="top: 260px; right: 10px; z-index: 1050;background-color:#212529;"
+type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria-controls="archiveOffcanvas">
+<i class="fas fa-folder-open"></i>
+</button>
+
+<!-- Offcanvas com conteúdo dos arquivos -->
+<div class="offcanvas offcanvas-end" style="font-family:'Poiret One', serif!important; font-weight:bolder" tabindex="-1" id="archiveOffcanvas" aria-labelledby="archiveOffcanvasLabel">
+<div class="offcanvas-header">
+    <h5 id="archiveOffcanvasLabel" class="text-capitalize" style="color:#212529!important;font-size: 23pt;">Arquivo do Blog</h5>
+</div>
+<div class="offcanvas-body">
+    <!-- Botão de fechamento -->
+    <button type="button" class="btn-close custom-close-button position-fixed" text="Fechar Arquivo" id="customCloseButton"
+            style="top: 10px; right: 10px; z-index: 1051; color:#212529!important" aria-label="Close"></button>
+
+<ul class="list-unstyled text-sm-left">
+        <li class="mb-3">
+            <strong>2025</strong>
+            <ul class="list-unstyled ms-3">
+                    <li class="mb-2">
+                        <span>abril</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="/estado-da-arte-ia.html" class="text-decoration-none" style="color:#D63E1A!important;">As IAs e o seu estado da arte</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>março</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="/chatgpt-no-dia-a-dia.html" class="text-decoration-none" style="color:#D63E1A!important;">ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</a>
+                                </li>
+                        </ul>
+                    </li>
+            </ul>
+        </li>
+</ul></div>
+</div>
+    
     <!-- #endregion-->
     <!-- #region conteúdo Principal -->
     <main class="flex-glow-1">
     <h2>Archives for  Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios </h2>
 
     <dl>
-            <dt>sáb 19 abril 2025</dt>
+            <dt>19 abril 2025</dt>
             <dd><a href="/estado-da-arte-ia.html">As IAs e o seu estado da arte</a></dd>
-            <dt>seg 03 março 2025</dt>
+            <dt>03 março 2025</dt>
             <dd><a href="/chatgpt-no-dia-a-dia.html">ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</a></dd>
     </dl>
     </main>
