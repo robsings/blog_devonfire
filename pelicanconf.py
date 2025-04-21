@@ -8,6 +8,11 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'pelican-plugins'))
 def month_name(month_number):
     return datetime(1900, month_number, 1).strftime('%B')
 
+def convert_tags_to_strings(article):
+    if article.tags:
+        article.tags = [str(tag) for tag in article.tags]
+    return article
+
 JINJA_FILTERS = {
     'month_name': month_name,
 }
