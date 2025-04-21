@@ -11,16 +11,18 @@ from pelicanconf import *
 SITEURL = 'https://www.devonfire.blog'
 RELATIVE_URLS = False
 
-EXTRA_PATH_METADATA = {
-    './content/Extra/robots.txt': {'path': 'robots.txt'},
-    './content/Extra/favicon.ico': {'path': 'favicon.ico'},
-    './content/Extra/CNAME': {'path': 'CNAME'},
-}
-PATH_METADATA = './robots.txt'
+
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
+STATIC_PATHS = [
+    'static/images', 
+    'static/robots.txt'
+    ]
+EXTRA_PATH_METADATA = {
+    'static/robots.txt': {'path': 'robots.txt'},
+}
 
 # Following items are often useful when publishing
 
