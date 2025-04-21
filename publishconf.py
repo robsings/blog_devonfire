@@ -15,6 +15,9 @@ RELATIVE_URLS = False
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
+EXTRA_PATH_METADATA = {
+    './content/extra/robots.txt': {'path': 'robots.txt'},
+}
 
 DELETE_OUTPUT_DIRECTORY = True
 
