@@ -14,8 +14,8 @@ JINJA_FILTERS = {
 SITEYEAR = datetime.now().year
 
 AUTHOR = '@Robsings'
-SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios '
-SITEDESCRIPTION = 'Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.'
+SITENAME = ' Blog DevOnFire - Artigos, códigos e devaneios '
+SITEDESCRIPTION = 'O humilde legado digital de um dev em chamas | Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.'
 SITEURL = ""
 
 PATH = "content"
