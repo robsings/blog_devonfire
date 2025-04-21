@@ -163,15 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Seleciona todos os <a> do documento
   document.querySelectorAll('.article-content a').forEach(link => {
     // Define target="_blank" para abrir em nova aba
-    img.addEventListener('click', () => {
-      // Abre a URL da imagem em uma nova aba
-      window.open(link, '_blank', 'noopener,noreferrer');
-      window.focus();
-    });
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
   });
 });
-</script>
-
     </script>
 
 </body>
