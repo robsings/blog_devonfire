@@ -8,16 +8,12 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = 'https://devonfire.blog'
+SITEURL = 'https://www.devonfire.blog'
 RELATIVE_URLS = False
 
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
-
-EXTRA_PATH_METADATA = {
-    './content/extra/robots.txt': {'path': 'robots.txt'},
-}
 
 DELETE_OUTPUT_DIRECTORY = True
 
