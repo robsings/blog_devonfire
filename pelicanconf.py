@@ -6,8 +6,11 @@ SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Art
 SITEURL = ""
 
 PATH = "content"
+ARTICLE_ORDER_BY = 'date'
 
 TIMEZONE = 'America/Sao_Paulo'
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['neighbors']
 
 DEFAULT_LANG = 'en'
 
@@ -20,6 +23,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+LOAD_CONTENT_CACHE = False
 
 # Blogroll
 LINKS = (
@@ -39,6 +44,7 @@ MARKDOWN = {
     'output_format': 'html5',
 }
 
+DEFAULT_ORPHANS = 0
 
 DEFAULT_PAGINATION = 10
 

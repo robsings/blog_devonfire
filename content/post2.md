@@ -2,6 +2,7 @@
 Title: As IAs e o seu estado da arte
 Date: 2025-04-19 21:26
 Summary: O que a IA faz hoje, até onde pode ir, e por que isso importa mais do que parece. 
+Category: Blog
 Slug: estado-da-arte-ia
 image: images/imagem_destaque/imagem post 1.jpg
 ---

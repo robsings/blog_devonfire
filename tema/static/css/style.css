@@ -171,16 +171,59 @@ p.card-text{
     animation:glow 2s infinite ease-in-out!important;
 }
 
-.btn-custom{
+.btn-nextprev{
     background-color: #EE471D!important;
     border-color:#EE471D!important;
     color:white!important;
+    text-decoration: none!important;
+    padding:0.5rem 1rem!important;
+    border-radius:0.25rem!important;
+    font-weight:900!important;
+    font-size:17px!important;
+    font-family: var(--font-body)!important;
+    display:inline-block;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease!important;
+    cursor:pointer!important;
+    white-space: normal!important;
+    overflow-wrap:break-word!important;
+    word-break:break-word!important;
+    text-align:center!important;
+    margin-bottom:10px!important;
 }
-.btn-custom:hover{
+.btn-nextprev:hover{
     background-color:#D63E1A!important;
     border-color:#D63E1A!important;
+    text-decoration: none!important;
+    transform: translateY(-2px)!important;
+    transition: all 0.3s ease!important;
+    animation:glow 2s infinite ease-in-out!important;
+}
+.btn-voltarlista{
+    background-color: white!important;
+    outline:2px solid #383636!important;
+    color:#383636!important;
+    text-decoration: none!important;
+    padding:0.5rem 1rem!important;
+    border-radius:0.25rem!important;
+    font-weight:900!important;
+    font-size:17px!important;
+    font-family: var(--font-body)!important;
+    display:inline-block;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease!important;
+    cursor:pointer!important;
+    white-space: normal!important;
+    overflow-wrap:break-word!important;
+    word-break:break-word!important;
+    text-align:center!important;
+    margin-bottom:10px!important;
+}
+.btn-voltarlista:hover{
+    background-color:#383636!important;
     color:white!important;
+    text-decoration: none!important;
+    transform: translateY(-2px)!important;
+    transition: all 0.3s ease!important;
+    animation:glow 2s infinite ease-in-out!important;
 }
 /* #endregion */
 

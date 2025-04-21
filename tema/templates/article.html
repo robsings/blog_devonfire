@@ -32,6 +32,30 @@
     <div class="article-content mb-5 post">
         {{ article.content }}
     </div>
+
+    <!--#region Botões de navegação-->
+    <div class="post-navigation" style="margin-top: 2rem; text-align: center;">
+    
+        {% if article.prev_article %} <!--Se exitem artigos mais antigos, defina o botão próximo post-->
+            <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="btn-nextprev" style="margin-right: 10px;">
+                ← {{ article.prev_article.title }} 
+            </a>
+        {% endif %}
+
+        {% if article.next_article%}
+        <a href="{{ SITEURL }}/{{ article.next_article.url }}" class="btn-nextprev" style="margin-right: 10px;">
+            {{ article.next_article.title }} →
+        </a>
+        {% endif %}
+        
+        <a href="{{ SITEURL }}/" class="btn-voltarlista">
+            Voltar para a lista de posts
+        </a>
+    
+    </div>
+    
+    
+    <!--#endregion-->
 </div>
 
 
