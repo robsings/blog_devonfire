@@ -39,7 +39,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 EXTRA_PATH_METADATA = {
-    './content/extra/robots.txt': {'path': 'robots.txt'},
+    './extra/robots.txt': {'path': 'robots.txt'},
 }
 LOAD_CONTENT_CACHE = False
 
