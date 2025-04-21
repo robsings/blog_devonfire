@@ -3,8 +3,24 @@
 <head>
     <!-- #region configurações Meta/SEO-->
     <meta charset="UTF-8">
-    <meta name="description" content="{{ article.summary if article and article.summary else SITEDESCRIPTION }}">
+    <meta name="description" content="{{ article.summary if article and article.summary else 'Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{{ ', '.join(article.tags) if article and article.tags else '' }}, tecnologia, programação, cultura geek, robsings, rob.sings, devonfire, blog, blog devonfire">
+    <meta name="author" content="{{ SITEAUTHOR }}">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="v0g1x2q4X3k5z6y7z8a9b0c1d2e3f4g5h6i7j8k9l0m" />
+    <meta property="og:title" content="{{ title if title else SITENAME }}">
+    <meta property="og:description" content="{{ article.summary if article and article.summary else SITEDESCRIPTION }}">
+    <meta property="og:image" content="{{ article.metadata.image if article and article.metadata.image else SITELOGO }}">
+    <meta property="og:url" content="{{ SITEURL }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title if title else SITENAME }}">
+    <meta name="twitter:description" content="{{ article.summary if article and article.summary else SITEDESCRIPTION }}">
+    <meta name="twitter:image" content="{{ article.metadata.image if article and article.metadata.image else SITELOGO }}">
+    <meta name="twitter:site" content="{{ SITEURL }}">
     <title>{% if title %}{{ title }} | {{ SITENAME }}{% else %}{{ SITENAME }}{% endif %}</title>
     <!-- #endregion-->
 
