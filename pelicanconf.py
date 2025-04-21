@@ -22,7 +22,11 @@ PATH = "content"
 ARTICLE_ORDER_BY = 'date'
 DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = '%d %B %Y'
-
+EXTRA_PATH_METADATA = {
+    './content/Extra/robots.txt': {'path': 'robots.txt'},
+    './content/Extra/favicon.ico': {'path': 'favicon.ico'},
+    './content/Extra/CNAME': {'path': 'CNAME'},
+}
 TIMEZONE = 'America/Sao_Paulo'
 PLUGIN_PATHS = ['pelican-plugins']
 # Aqui no plugins anteriormente só havia o neighbors
@@ -31,7 +35,7 @@ PLUGINS = ['neighbors', 'sitemap', 'related_posts','archive_menu_generator']
 DEFAULT_LANG = 'en'
 
 THEME = "./tema/"
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'Extra']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
