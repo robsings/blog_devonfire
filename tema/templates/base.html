@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="{{ article.summary if article and article.summary else SITEDESCRIPTION }}">
     <meta name="twitter:image" content="{{ article.metadata.image if article and article.metadata.image else SITELOGO }}">
     <meta name="twitter:site" content="{{ SITEURL }}">
-    <title>{% if article.title %}{{ title }} | {{ SITENAME }}{% else %}{{ SITENAME }}{% endif %}</title>
+    <title>{% if title %}{{ title }} | {{ SITENAME }}{% else %}{{ SITENAME }}{% endif %}</title>
     <!-- #endregion-->
 
     <!-- #region Font Awesome e Bootstrap Libs -->
