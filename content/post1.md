@@ -5,6 +5,8 @@ Summary: Um resumo prático sobre como o ChatGPT pode ser integrado na vida coti
 Category: Blog
 Slug: chatgpt-no-dia-a-dia
 image: images/imagem_destaque/imagem post.jpg
+Tags: [chatgpt, inteligência artificial, produtividade, tecnologia]
+
 ---
 
 # O que é o ChatGPT?  
