@@ -27,7 +27,7 @@ EXTRA_PATH_METADATA = {
     './content/Extra/favicon.ico': {'path': 'favicon.ico'},
     './content/Extra/CNAME': {'path': 'CNAME'},
 }
-PATH_METADATA = './content/Extra/robots.txt'
+PATH_METADATA = './robots.txt'
 TIMEZONE = 'America/Sao_Paulo'
 PLUGIN_PATHS = ['pelican-plugins']
 # Aqui no plugins anteriormente só havia o neighbors

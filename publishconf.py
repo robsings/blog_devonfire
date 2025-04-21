@@ -16,7 +16,7 @@ EXTRA_PATH_METADATA = {
     './content/Extra/favicon.ico': {'path': 'favicon.ico'},
     './content/Extra/CNAME': {'path': 'CNAME'},
 }
-PATH_METADATA = './content/Extra/robots.txt'
+PATH_METADATA = './robots.txt'
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
