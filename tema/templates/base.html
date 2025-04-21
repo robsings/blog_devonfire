@@ -3,10 +3,10 @@
 <head>
     <!-- #region configurações Meta/SEO-->
     <meta charset="UTF-8">
-    <meta name="description" content="{{ article.summary if article and article.summary else 'Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.' }}">
+    <meta name="description" content="{{ article.metadata.meta_description if article and article.metadata.meta_description else SITEDESCRIPTION }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="{{ ', '.join(article.tags) if article and article.tags else '' }}, tecnologia, programação, cultura geek, robsings, rob.sings, devonfire, blog, blog devonfire">
-    <meta name="author" content="{{ SITEAUTHOR }}">
+    <meta name="keywords" content="{{ article.metadata.seo_keywords if article and article.metadata.seo_keywords else 'tecnologia, programação, cultura geek, robsings, rob.sings, devonfire, blog, blog devonfire'}}">
+    <meta name="author" content="rob.sings">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="{{ title if title else SITENAME }}">
     <meta property="og:description" content="{{ article.summary if article and article.summary else SITEDESCRIPTION }}">

@@ -5,6 +5,8 @@ Summary: Um resumo prático sobre como o ChatGPT pode ser integrado na vida coti
 Category: Blog
 Slug: chatgpt-no-dia-a-dia
 image: images/imagem_destaque/imagem post.jpg
+Meta_Description: Aprenda como o ChatGPT pode ser o seu melhor amigo no dia-a-dia
+Seo_Keywords: Inteligencia Artifical, ChatGPT, Produtividade, Ferramenta Útil
 ---
 
 # O que é o ChatGPT?  
