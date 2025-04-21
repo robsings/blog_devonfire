@@ -32,12 +32,11 @@ DEFAULT_LANG = 'en'
 
 THEME = "./tema/"
 
-STATIC_PATHS = [
-    'static/images', 
-    'static/robots.txt'
-    ]
+STATIC_PATHS = ['images']
 EXTRA_PATH_METADATA = {
-    'static/robots.txt': {'path': 'robots.txt'},
+    './tema/static/Extra/robots.txt': {'path': 'robots.txt'},
+    './tema/static/Extra/CNAME': {'path': 'CNAME'},
+    './tema/static/Extra/favicon.ico': {'path': 'favicon.ico'},
 }
 
 # Feed generation is usually not desired when developing
