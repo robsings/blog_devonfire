@@ -32,13 +32,18 @@ DEFAULT_LANG = 'en'
 
 THEME = "./tema/"
 
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'extra/robots.txt']
 EXTRA_PATH_METADATA = {
-    './tema/static/Extra/robots.txt': {'path': 'robots.txt'},
-    './tema/static/Extra/CNAME': {'path': 'CNAME'},
-    './tema/static/Extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/robots.txt': {'path': 'robots.txt'},
 }
-
+DEFAULT_METADATA = {
+    'meta_description': 'O humilde legado digital de um dev em chamas.',
+    'seo_keywords': 'blog, devonfire, tecnologia, programação, rob.sings, robsings, dev, nerd, geek',
+    'seo_author': 'Roberto Santos',
+    'seo_og_image': 'https://www.devonfire.blog/images/og-image.png',
+    'seo_og_title': 'Blog DevOnFire - Artigos, códigos e devaneios',
+    'seo_og_description': 'O humilde legado digital de um dev em chamas | Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.',
+}
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

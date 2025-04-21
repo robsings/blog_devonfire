@@ -16,13 +16,12 @@ FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
-STATIC_PATHS = ['images']
-    
+
+STATIC_PATHS = ['images', 'extra/robots.txt']
 EXTRA_PATH_METADATA = {
-    './tema/static/Extra/robots.txt': {'path': 'robots.txt'},
-    './tema/static/Extra/CNAME': {'path': 'CNAME'},
-    './tema/static/Extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/robots.txt': {'path': 'robots.txt'},
 }
+
 
 # Following items are often useful when publishing
 
