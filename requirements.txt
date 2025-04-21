@@ -1,3 +1,4 @@
-invoke==2.2.0
-livereload==2.7.1
-pelican==4.11.0
+invoke>=2.2,<3.0
+livereload>=2.7,<3.0
+pelican>=4.11,<5.0
+markdown>=3.8,<4.0
