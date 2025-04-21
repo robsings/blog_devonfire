@@ -12,9 +12,9 @@ SITEURL = 'https://www.devonfire.blog'
 RELATIVE_URLS = False
 
 EXTRA_PATH_METADATA = {
-    './Extra/robots.txt': {'path': 'robots.txt'},
-    './Extra/favicon.ico': {'path': 'favicon.ico'},
-    './Extra/CNAME': {'path': 'CNAME'},
+    './content/Extra/robots.txt': {'path': 'robots.txt'},
+    './content/Extra/favicon.ico': {'path': 'favicon.ico'},
+    './content/Extra/CNAME': {'path': 'CNAME'},
 }
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"

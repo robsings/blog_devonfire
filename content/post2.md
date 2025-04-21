@@ -5,7 +5,6 @@ Summary: O que a IA faz hoje, até onde pode ir, e por que isso importa mais do 
 Category: Blog
 Slug: estado-da-arte-ia
 image: images/imagem_destaque/imagem post 1.jpg
-Tags: [inteligência artificial, futuro, tecnologia]
 ---
 
 # Qual o estado da arte no campo das IAs
