@@ -1,4 +1,16 @@
+import sys
+import os
 from datetime import datetime
+from jinja2 import Environment
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'pelican-plugins'))
+
+def month_name(month_number):
+    return datetime(1900, month_number, 1).strftime('%B')
+
+JINJA_FILTERS = {
+    'month_name': month_name,
+}
 SITEYEAR = datetime.now().year
 
 AUTHOR = '@Robsings'
@@ -7,10 +19,13 @@ SITEURL = ""
 
 PATH = "content"
 ARTICLE_ORDER_BY = 'date'
+DEFAULT_DATE = 'fs'
+DEFAULT_DATE_FORMAT = '%d %B %Y'
 
 TIMEZONE = 'America/Sao_Paulo'
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['neighbors']
+# Aqui no plugins anteriormente só havia o neighbors
+PLUGINS = ['neighbors', 'sitemap', 'related_posts','archive_menu_generator']
 
 DEFAULT_LANG = 'en'
 
@@ -42,6 +57,9 @@ MARKDOWN = {
         'codehilite': {'css_class': 'highlight'},
     },
     'output_format': 'html5',
+}
+SITEMAP = {
+    'format': 'xml',
 }
 
 DEFAULT_ORPHANS = 0

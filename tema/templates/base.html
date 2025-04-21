@@ -46,6 +46,27 @@
      {% endblock %}
     <!-- #endregion -->
     <!-- #region Espaço reservado para o botão e a funcionalidade de arquivo do Blog -->
+    <!-- Botão para abrir o arquivo -->
+<button class="btn btn-secondary position-fixed open-button" id="openButton" title="Arquivo Do Blog"
+style="top: 260px; right: 10px; z-index: 1050;background-color:#212529;"
+type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria-controls="archiveOffcanvas">
+<i class="fas fa-folder-open"></i>
+</button>
+
+<!-- Offcanvas com conteúdo dos arquivos -->
+<div class="offcanvas offcanvas-end" style="font-family:'Poiret One', serif!important; font-weight:bolder" tabindex="-1" id="archiveOffcanvas" aria-labelledby="archiveOffcanvasLabel">
+<div class="offcanvas-header">
+    <h5 id="archiveOffcanvasLabel" class="text-capitalize" style="color:#212529!important;font-size: 23pt;">Arquivo do Blog</h5>
+</div>
+<div class="offcanvas-body">
+    <!-- Botão de fechamento -->
+    <button type="button" class="btn-close custom-close-button position-fixed" text="Fechar Arquivo" id="customCloseButton"
+            style="top: 10px; right: 10px; z-index: 1051; color:#212529!important" aria-label="Close"></button>
+
+    {% include "includes/archive_menu.html" %}
+</div>
+</div>
+    
     <!-- #endregion-->
     <!-- #region conteúdo Principal -->
     <main class="flex-glow-1">

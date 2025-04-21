@@ -1,0 +1,23 @@
+<ul class="list-unstyled text-sm-left">
+    {% for year, year_posts in articles|groupby("date.year")|reverse %}
+        <li class="mb-3">
+            <strong>{{ year }}</strong>
+            <ul class="list-unstyled ms-3">
+                {% for month, month_posts in year_posts|groupby("date.month")|reverse %}
+                    <li class="mb-2">
+                        <span>{{ month|month_name }}</span>
+                        <ul class="list-unstyled ms-3">
+                            {% for post in month_posts %}
+                                <li>
+                                    <a href="{{ SITEURL }}/{{ post.url }}" class="text-decoration-none" style="color:#D63E1A!important;">{{ post.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% else %}
+        <li>Nenhum post disponível.</li>
+    {% endfor %}
+</ul>
