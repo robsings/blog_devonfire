@@ -1,74 +1,30 @@
 ---
-Title: As IAs e o seu estado da arte
+Title: As IAs e o seu estado da arte - Parte 1
 Date: 2025-04-19 21:26
-Summary: O que a IA faz hoje, até onde pode ir, e por que isso importa mais do que parece. 
+Summary: Do que as IAs são capazes hoje? até onde podem ir, e por que devemos  nos manter vigilantes? 
 Category: Blog
-Slug: estado-da-arte-ia
+Slug: estado-da-arte-ia-1
 image: images/imagem_destaque/imagem post 1.jpg
 Meta_Description: O Estado da Arte das IAs e quando isso começará a ficar preocupante
 Seo_Keywords: Inteligencia Artifical, Futuro, Tecnologia
 ---
 
-# Qual o estado da arte no campo das IAs
+O ano é 2025, e estamos em pleno boom das inteligências artificiais. Assim como foi com os computadores, os celulares ou as redes sociais, estamos vendo aqui mais uma revolução tecnológica que, de forma rápida e abrupta, impacta profundamente nossa sociedade.
+A bem da verdade, elas já vinham fazendo parte de nossas vidas cotidianas há muito tempo, mas não notávamos.
+Até eu, que trabalho com informática há tempos, só me dei conta disso recentemente, ao refletir sobre a coisa enquanto jogava o jogo Alien: Isolation (2014). Tive que passar sufoco com a inteligência artificial embutida no jogo, ser a presa do monstrengo, pra me dar conta do quanto as IAs estiveram presentes em nossas vidas de forma silenciosa até agora.
 
-Em 2025, a Inteligência Artificial (IA) encontra-se em um ponto de inflexão, caracterizado por avanços técnicos notáveis, ampla adoção em diversos setores e debates intensos sobre seus limites, riscos e governança. A seguir, apresento uma análise detalhada do estado da arte da IA, destacando seus principais desenvolvimentos, desafios e perspectivas futuras.​
+Mas devo dizer: graças à literatura e a Hollywood, talvez tenhamos sido preparados, de certa forma, para a chegada dela. O filme O Exterminador do Futuro, por exemplo, foi lançado em 1984. Curiosamente, o mesmo ano em que William Gibson, pioneiro do cyberpunk, lançava o livro Neuromancer, onde nos fazia imaginar um mundo dominado por megacorporações, proliferado por transhumanos e máquinas, onde a IA chamada Wintermute adquire vontade e planos próprios.
+É difícil acreditar que não havia um paralelo entre o cinema e a literatura com o clima cultural e científico da época. É claro que, antes de 1984, já havia menções às inteligências artificiais, mas, ao que parece, 1984 foi um ano um tanto premonitório.
 
-🚀 Avanços Técnicos e Modelos de Última Geração
-O relatório AI Index 2025, elaborado pela Universidade de Stanford, evidencia progressos significativos na performance de modelos de linguagem e raciocínio. Modelos como o GPT-4 e seus sucessores demonstraram melhorias de até 67% em benchmarks como MMLU, GPQA e SWE Bench, indicando avanços substanciais em compreensão e geração de linguagem natural .​
-Home | Stanford HAI
-+2
-LinkedIn
-+2
-Unite.AI
-+2
-Unite.AI
+A começar pela crença, na época, de que George Orwell, com o seu livro 1984, havia acertado na mosca, pois, naquele período, afora as ebulições geopolíticas, a proliferação inicial das CCTVs em áreas públicas começava a se tornar realidade.
+A Guerra Fria estava acontecendo. Uma guerra nuclear iniciada por falha humana ou algorítmica era muito provável.
+O Apple Macintosh estava sendo lançado, marcando o início da era dos computadores pessoais — o que acabaria levando a essa nossa sociedade profundamente interconectada e dependente de algoritmos ubíquos.
+A robótica e automação cresciam no Japão — com projetos de robôs industriais que começavam a levantar a possibilidade de substituição massiva de mão de obra.
 
-Além disso, a redução drástica nos custos de inferência — mais de 280 vezes nos últimos 18 meses — tem democratizado o acesso à IA, permitindo que empresas de diversos portes adotem soluções baseadas em IA generativa .​
-LinkedIn
+Voltando ao presente, percebemos que muito do que era imaginado nos anos 80 está, de algum modo, se realizando agora — ainda que com nuances diferentes. O avanço das inteligências artificiais nos últimos anos foi tão acelerado que aquilo que antes era apenas ficção científica, hoje é realidade cotidiana: temos assistentes que escrevem textos, criam imagens, codificam softwares e até tomam decisões críticas em sistemas de justiça, saúde e segurança.
 
-🧠 Inteligência Artificial Geral (AGI): Realidade ou Utopia?
-A busca pela Inteligência Artificial Geral (AGI), capaz de replicar a inteligência humana em sua totalidade, permanece um objetivo ambicioso. Demis Hassabis, CEO da DeepMind, prevê que a AGI pode emergir nos próximos 5 a 10 anos, destacando seu potencial para resolver crises globais, como doenças e mudanças climáticas .​
-El País
-Time
+Mas com tanto poder assim sendo delegado a algoritmos, é inevitável que surjam dúvidas e inquietações: até onde essas inteligências podem ir? Quais são os limites técnicos, éticos e sociais que precisamos estabelecer? E, acima de tudo, por que devemos nos manter vigilantes diante desse novo cenário?
 
-No entanto, uma pesquisa recente da AAAI com 475 especialistas revelou que 76% consideram "muito improvável" ou "improvável" que as técnicas atuais conduzam à AGI, enfatizando a necessidade de novas abordagens que integrem corpo, percepção e raciocínio simbólico .​
-El País
+Pretendo falar mais sobre isso em outra oportunidade, até porque esse ainda é um artigo experimental do meu blog, e o tema é algo que eu realmente desejo me aprofundar.
+Sendo assim, nos vemos na parte 2.
 
-🏭 Aplicações Práticas: Transformando Setores
-A IA está revolucionando diversos setores:​
-Funiber Blogs - FUNIBER
-
-Saúde: Ferramentas como o AlphaFold, da DeepMind, têm acelerado a descoberta de medicamentos e a compreensão de doenças, ao prever estruturas de proteínas com alta precisão .​
-Time
-
-Indústria e Logística: A automação de processos e a otimização de cadeias de suprimentos têm sido impulsionadas por IA, aumentando a eficiência operacional .​
-
-Educação e Conteúdo: Sistemas de IA estão sendo utilizados para personalizar o aprendizado e gerar conteúdo educativo adaptado às necessidades individuais dos alunos.​
-
-⚖️ Desafios Éticos e Regulatórios
-Com o avanço da IA, surgem preocupações éticas significativas:​
-
-Privacidade e Segurança: O uso de IA em vigilância e análise de dados pessoais levanta questões sobre privacidade e consentimento.​
-
-Desinformação: A capacidade da IA de gerar conteúdo realista pode ser explorada para disseminar informações falsas, impactando a opinião pública e processos democráticos.​
-
-Regulação: Governos estão desenvolvendo legislações específicas para IA, como o projeto de lei de segurança da IA no Reino Unido, visando garantir o uso responsável da tecnologia .​
-Bastaki Software Solutions L.L.C-FZ
-
-📊 Tendências Emergentes
-Algumas tendências que estão moldando o futuro da IA incluem:​
-Mundo dos Negócios
-+1
-Funiber Blogs - FUNIBER
-+1
-
-IA Agêntica: Desenvolvimento de agentes autônomos capazes de tomar decisões complexas e interagir de forma proativa com o ambiente.​
-
-Modelos Multimodais: Integração de diferentes tipos de dados (texto, imagem, áudio) em modelos unificados, ampliando as capacidades de compreensão e geração de conteúdo.​
-
-Sustentabilidade: Esforços para reduzir o impacto ambiental do treinamento de modelos de IA, promovendo práticas mais sustentáveis.​
-
-🧭 Conclusão
-Em 2025, a Inteligência Artificial está profundamente integrada à sociedade, oferecendo benefícios significativos, mas também apresentando desafios complexos. O equilíbrio entre inovação, ética e regulamentação será crucial para garantir que a IA contribua positivamente para o futuro da humanidade.​
-
-Se desejar, posso fornecer informações adicionais sobre aplicações específicas da IA em áreas de seu interesse ou orientá-lo sobre como implementar soluções de IA em projetos pessoais ou profissionais.
