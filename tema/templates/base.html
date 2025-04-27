@@ -106,8 +106,14 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 </div>
 <div class="offcanvas-body">
     <!-- Botão de fechamento -->
-    <button type="button" class="btn-close custom-close-button position-fixed" text="Fechar Arquivo" id="customCloseButton"
-            style="top: 10px; right: 10px; z-index: 1051; color:#212529!important" aria-label="Close"></button>
+    <button type="button" 
+    class="btn-close custom-close-button position-fixed" 
+    text="Fechar Arquivo" 
+    id="customCloseButton"
+    style="top: 10px; right: 10px; z-index: 1051; 
+    color:#212529!important" 
+    aria-label="Close"
+    data-bs-dismiss="offcanvas"></button>
 
     {% include "includes/archive_menu.html" %}
 </div>
