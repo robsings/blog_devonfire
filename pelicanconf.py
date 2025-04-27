@@ -17,6 +17,7 @@ AUTHOR = 'rob.sings'
 SITENAME = ' Blog DevOnFire - Artigos, códigos e devaneios '
 SITEDESCRIPTION = 'O humilde legado digital de um dev em chamas | Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.'
 SITEURL = ""
+SITELOGO='https://www.devonfire.blog/theme/images/logo2.png'
 
 PATH = "content"
 ARTICLE_ORDER_BY = 'date'
@@ -37,12 +38,9 @@ EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
 }
 DEFAULT_METADATA = {
-    'meta_description': 'O humilde legado digital de um dev em chamas.',
-    'seo_keywords': 'blog, devonfire, tecnologia, programação, rob.sings, robsings, dev, nerd, geek',
-    'seo_author': 'Roberto Santos',
-    'seo_og_image': 'https://www.devonfire.blog/images/og-image.png',
-    'seo_og_title': 'Blog DevOnFire - Artigos, códigos e devaneios',
-    'seo_og_description': 'O humilde legado digital de um dev em chamas | Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.',
+    'meta_description': SITEDESCRIPTION,
+    'seo_keywords': 'blog, devonfire, tecnologia, programação, rob.sings, @rob.sings, Robsings, robsings, rob_sings, dev, nerd, geek',
+    'seo_author': 'Roberto Santos, @rob.sings',
 }
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

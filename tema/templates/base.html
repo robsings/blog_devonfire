@@ -22,9 +22,10 @@
     {% endif %}
 
     <!-- Descrição -->
-    <meta name="description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION }}{% endif %}">
-    <meta property="og:description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION }}{% endif %}">
-    <meta name="twitter:description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION }}{% endif %}">
+    <meta name="description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION | default('Descrição padrão do blog') }}{% endif %}">
+    <meta property="og:description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION | default('Descrição padrão do blog') }}{% endif %}">
+    <meta name="twitter:description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION | default('Descrição padrão do blog') }}{% endif %}">
+
 
     <!-- Título -->
     <title>{% if article and article.title %}{{ article.title }} | {{ SITENAME }}{% elif title %}{{ title }} | {{ SITENAME }}{% else %}{{ SITENAME }}{% endif %}</title>
@@ -32,8 +33,10 @@
     <meta name="twitter:title" content="{% if article and article.title %}{{ article.title }} | {{ SITENAME }}{% elif title %}{{ title }} | {{ SITENAME }}{% else %}{{ SITENAME }}{% endif %}">
 
     <!-- Imagem (social preview) -->
-    <meta property="og:image" content="{{ article.metadata.image if article and article.metadata.image else SITELOGO }}">
-    <meta name="twitter:image" content="{{ article.metadata.image if article and article.metadata.image else SITELOGO }}">
+    <meta property="og:image" content="{% if article and article.metadata.image %}{{ article.metadata.image }}{% else %}{{ SITELOGO }}{% endif %}">
+    <meta name="twitter:image" content="{% if article and article.metadata.image %}{{ article.metadata.image }}{% else %}{{ SITELOGO }}{% endif %}">
+
+
 
     <!-- Outras propriedades Open Graph -->
     <meta property="og:url" content="{{ SITEURL }}">
@@ -46,8 +49,9 @@
     <meta name="twitter:site" content="{{ SITEURL }}">
 
     <!-- Palavras-chave e autor -->
-    <meta name="keywords" content="{{ article.metadata.seo_keywords if article and article.metadata.seo_keywords else 'tecnologia, programação, cultura geek, robsings, rob.sings, rob_sings, devonfire, blog, blog devonfire'}}">
-    <meta name="author" content="rob.sings">
+    <meta name="keywords" content="{% if article and article.metadata.seo_keywords %}{{ article.metadata.seo_keywords }}{% else %}blog, devonfire, tecnologia, programação, rob.sings, @rob.sings, Robsings, robsings, rob_sings, dev, nerd, geek{% endif %}">
+    <meta name="author" content="{{ article.metadata.author if article and article.metadata.author else 'Roberto Santos, @rob.sings' }}">
+
     <!-- #endregion -->
 
     <!-- #region Fontes e Estilos -->
