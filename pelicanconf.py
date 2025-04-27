@@ -13,7 +13,7 @@ JINJA_FILTERS = {
 }
 SITEYEAR = datetime.now().year
 
-AUTHOR = '@Robsings'
+AUTHOR = 'rob.sings'
 SITENAME = ' Blog DevOnFire - Artigos, códigos e devaneios '
 SITEDESCRIPTION = 'O humilde legado digital de um dev em chamas | Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.'
 SITEURL = ""
@@ -72,6 +72,17 @@ MARKDOWN = {
 }
 SITEMAP = {
     'format': 'xml',
+    'priorities':{
+        'articles':0.7,
+        'pages':0.5,
+        'indexes':0.1
+
+    },
+    'changefreqs': {
+        'articles': 'weekly',  # Posts podem ser atualizados semanalmente
+        'pages': 'monthly',    # Páginas mudam menos
+        'indexes': 'monthly',
+    }
 }
 
 DEFAULT_ORPHANS = 0

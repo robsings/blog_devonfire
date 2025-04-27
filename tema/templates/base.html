@@ -13,11 +13,12 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ SITEURL }}/{{ article.url if article else '' }}">
 
-    <!-- Indexação (bloqueia autores, categorias, arquivos) -->
-    {% if page_name in ["authors", "categories", "archives"] %}
-    <meta name="robots" content="noindex, follow">
+    <!-- Indexação (bloqueia autores, categorias, arquivos, tags e outros) -->
+    {% set noindex_pages = ["authors", "categories", "archives", "tags", "404"] %}
+    {% if page_name in noindex_pages %}
+        <meta name="robots" content="noindex, follow">
     {% else %}
-    <meta name="robots" content="index, follow">
+        <meta name="robots" content="index, follow">
     {% endif %}
 
     <!-- Descrição -->
