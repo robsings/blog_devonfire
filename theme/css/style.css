@@ -44,6 +44,14 @@ p{
         width: 95%;
         margin: 0 auto;
     }
+    .post-interactions{
+        flex-direction: column;
+        align-items: center;
+    }
+    .post-navigation{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* #endregion*/
@@ -170,6 +178,14 @@ p.card-text{
     transition: all 0.3s ease!important;
     animation:glow 2s infinite ease-in-out!important;
 }
+.post-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
 
 .btn-nextprev{
     background-color: #EE471D!important;
@@ -194,6 +210,7 @@ p.card-text{
     background-color:#D63E1A!important;
     border-color:#D63E1A!important;
     text-decoration: none!important;
+    margin-bottom:12px!important;
     transform: translateY(-2px)!important;
     transition: all 0.3s ease!important;
     animation:glow 2s infinite ease-in-out!important;
@@ -225,5 +242,32 @@ p.card-text{
     transition: all 0.3s ease!important;
     animation:glow 2s infinite ease-in-out!important;
 }
+.github-comment-button {
+    display: inline-block;
+    background-color: #24292e;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom:12px;
+    transition: background-color 0.3s;
+}
+.github-comment-button:hover {
+    background-color:#383636!important;
+    color:white!important;
+    text-decoration: none!important;
+    transform: translateY(-2px)!important;
+    transition: all 0.3s ease!important;
+    animation:glow 2s infinite ease-in-out!important;
+}
+.post-interactions{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    margin: 20px 0!important;
+    width:100%!important;
+}
+
 /* #endregion */
 
