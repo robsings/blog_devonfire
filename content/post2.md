@@ -36,7 +36,7 @@ Há certas coisas que devemos sempre manter em nosso radar. Primeiro, para nos a
 Considerando isso, decidi trazer semestralmente no meu blog um levantamento do estado da arte das IAs. Acredito que esse assunto dá muito pano para a manga.  
 
 
-### DeepSeek Vs. ChatGPT
+## ⚫ DeepSeek Vs. ChatGPT
 
 Bom, 2025 até aqui tem sido um ano bem emblemático, pois logo no início, em janeiro, tivemos o embate comercial inesperado do DeepSeek com o ChatGPT.
 A startup chinesa DeepSeek lançou seus modelos R1 e V3, que surpreenderam o mercado ao oferecer desempenho comparável ao do ChatGPT, mas com custos significativamente menores.
@@ -45,33 +45,35 @@ Tal ascenção, abalou o mercado de IA, levando a uma queda significativa nas a�
 **Fontes:** [DeepSeek desafia ChatGPT, lança chatbot e abala mercado de inteligência artificial](https://www.uol.com.br/tilt/ultimas-noticias/estado/2025/01/27/deepseek-desafia-chatgpt-lanca-chatbot-e-abala-mercado-de-inteligencia-artificial.htm?utm_source=chatgpt.com)  
 
 
-### Majorana 1: O salto quântico da Microsoft
+## ⚫ Majorana 1: O salto quântico da Microsoft
 
 A Microsoft anunciou o Majorana 1, o primeiro processador quântico do mundo a utilizar qubits topológicos baseados em partículas de Majorana. Com uma arquitetura "Topological Core", o chip promete maior estabilidade e escalabilidade, superando desafios comuns em tecnologias concorrentes. Apesar de ainda estar em fase inicial, com 8 qubits, o Majorana 1 representa um avanço significativo na computação quântica.
 
 **Fontes:** [Majorana 1: novo chip da Microsoft torna realidade teoria criada há 100 anos](https://www.techtudo.com.br/noticias/2025/02/majorana-1-novo-chip-da-microsoft-torna-realidade-teoria-criada-ha-100-anos-edsoftwares.ghtml)  
 
 
-### Tesla Optimus: robôs humanoides entram em produção
+## ⚫ Tesla Optimus: robôs humanoides entram em produção
 
 A Tesla iniciou a produção limitada do Optimus, seu robô humanoide de propósito geral. O Optimus é projetado para realizar uma ampla gama de tarefas cotidianas. O robô foi apresentado como uma peça-chave na visão de Elon Musk para o futuro da automação. 
 
 [Invasão de humanoides: Tesla vai entregar 10 mil robôs Optimus até o final de 2025, prevê Musk](https://www.tecmundo.com.br/mercado/402179-invasao-de-humanoides-tesla-vai-entregar-10-mil-robos-optimus-ate-o-final-de-2025-preve-musk.htm)  
 
 
-### Nvidia na CES 2025: avanços em IA e computação de alto desempenho
+## ⚫ Nvidia na CES 2025: avanços em IA e computação de alto desempenho
+
 
 Na CES 2025, a Nvidia apresentou o superchip Grace Hopper, projetado para acelerar a inteligência artificial e a computação de alto desempenho. Além disso, lançou a plataforma DGX Cloud, um serviço de IA em nuvem que facilita o acesso a recursos avançados para empresas e desenvolvedores. 
 
 [Nvidia na CES 2025: Novos avanços em inteligência artificial com Grace Hopper e DGX Cloud](https://nawebmarketing.com.br/blog/nvidia-na-ces-2025-novos-avancos-inteligencia-artificial-co/?utm_source=chatgpt.com)  
 
 
-### Segurança cibernética: sistemas multiagente em ação
+## ⚫ Segurança cibernética: sistemas multiagente em ação
+
 
 A segurança cibernética está sendo transformada por sistemas de IA multiagente, que operam com mínima intervenção humana. Esses agentes autônomos são utilizados tanto para defesa quanto para ataque em ambientes digitais, coordenando ações complexas e adaptando-se a novas ameaças em tempo real. A capacidade desses sistemas de trabalhar em conjunto oferece uma defesa sem precedentes contra múltiplos ataques simultâneos.
 
 [Inteligência Artificial em 2025: O Futuro da Segurança Cibernética e Tecnologia](https://www.gizmodo.com.br/inteligencia-artificial-em-2025-o-futuro-da-seguranca-cibernetica-e-tecnologia-5049?utm_source=chatgpt.com)  
-  
+
 
 
 
