@@ -89,3 +89,6 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+DISQUS_SITENAME = 'DevOnFire Blog'
+DISQUS_SECRET_KEY = 'xGuD2b9kso6C8Ops45kIwftsUaapdvczvaRMWC0X2gNMEMIouKGxv8bHc5WbBPdf'
+DISQUS_PUBLIC_KEY = 'zNjRg1KtLhE3Fp4XjyvsuZk9xvphE5oskuCsSoBCK6MCbNGEUjZDXHVmMXFlKbV4'

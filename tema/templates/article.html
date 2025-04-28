@@ -35,11 +35,23 @@
         {{ article.content }}
     </div>
 
+    <!--#endregion-->
+
+    <br/>
+        <!-- #region Botão de comentário no GitHub e de like-->
+        <div class="post-interactions">
+            <a href="https://github.com/robsings/blog_devonfire/issues/new?title={{ ('Comentário sobre o artigo ' ~ article.title)|urlencode }}" 
+               target="_blank"
+               class="github-comment-button">
+              Comente no GitHub
+            </a>
+        </div>
+
     <!--#region Botões de navegação-->
-    <div class="post-navigation" style="margin-top: 2rem; text-align: center;">
-    
+    <div class="post-navigation">
+        
         {% if article.prev_article %} <!--Se exitem artigos mais antigos, defina o botão próximo post-->
-            <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="btn-nextprev" style="margin-right: 10px;">
+            <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="btn-nextprev">
                 ← {{ article.prev_article.title }} 
             </a>
         {% endif %}
@@ -53,12 +65,9 @@
         <a href="{{ SITEURL }}/" class="btn-voltarlista">
             Voltar para a lista de posts
         </a>
-    
     </div>
-    
-    
     <!--#endregion-->
+
+    
 </div>
-
-
 {% endblock %}
