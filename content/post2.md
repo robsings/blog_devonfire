@@ -3,7 +3,7 @@ Title: As IAs e o seu estado da arte - 2025
 Date: 2025-04-19 21:26
 Summary: Do que as IAs são capazes hoje? até onde podem ir, e por que devemos  nos manter vigilantes? 
 Category: Blog
-Slug: estado-da-arte-ia-1
+Slug: estado-da-arte-ia
 image: images/imagem_destaque/imagem post 1.jpg
 Meta_Description: O Estado da Arte das IAs e quando isso começará a ficar preocupante
 Seo_Keywords: Inteligencia Artifical, Futuro, Tecnologia
