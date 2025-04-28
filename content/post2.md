@@ -1,5 +1,5 @@
 ---
-Title: As IAs e o seu estado da arte - 1º Sem. 2025
+Title: As IAs e o seu estado da arte - 2025
 Date: 2025-04-19 21:26
 Summary: Do que as IAs são capazes hoje? até onde podem ir, e por que devemos  nos manter vigilantes? 
 Category: Blog
@@ -63,4 +63,8 @@ Na CES 2025, a Nvidia apresentou o superchip Grace Hopper, projetado para aceler
 
 A segurança cibernética está sendo transformada por sistemas de IA multiagente, que operam com mínima intervenção humana. Esses agentes autônomos são utilizados tanto para defesa quanto para ataque em ambientes digitais, coordenando ações complexas e adaptando-se a novas ameaças em tempo real. A capacidade desses sistemas de trabalhar em conjunto oferece uma defesa sem precedentes contra múltiplos ataques simultâneos.
 
-[Inteligência Artificial em 2025: O Futuro da Segurança Cibernética e Tecnologia](https://www.gizmodo.com.br/inteligencia-artificial-em-2025-o-futuro-da-seguranca-cibernetica-e-tecnologia-5049?utm_source=chatgpt.com)
+[Inteligência Artificial em 2025: O Futuro da Segurança Cibernética e Tecnologia](https://www.gizmodo.com.br/inteligencia-artificial-em-2025-o-futuro-da-seguranca-cibernetica-e-tecnologia-5049?utm_source=chatgpt.com)  
+
+
+
+*Este artigo será atualizado periodicamente com as novidades mais relevantes sobre o estado da arte das IAs. Fique atento para não perder as próximas atualizações!*
