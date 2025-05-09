@@ -4,7 +4,7 @@ Date: 2025-05-09 12:18
 Summary: Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links
 Category: Blog
 Slug: projeto-expediente-automatizado
-image: images/imagem_destaque/imagem post 3.jpg
+image: images/imagem_destaque/imagem post 3.png
 Meta_Description: Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links
 Seo_Keywords: Organização, Ambiente de Trabalho, Batch Script, C, Projeto de Programação
 ---
