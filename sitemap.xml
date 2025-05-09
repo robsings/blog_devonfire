@@ -4,70 +4,70 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://www.devonfire.blog/</loc>
-<lastmod>2025-05-09T12:47:56-00:00</lastmod>
+<loc>https://devonfire.blog/</loc>
+<lastmod>2025-05-09T12:55:48-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/tags.html</loc>
-<lastmod>2025-05-09T12:47:56-00:00</lastmod>
+<loc>https://devonfire.blog/tags.html</loc>
+<lastmod>2025-05-09T12:55:48-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/categories.html</loc>
-<lastmod>2025-05-09T12:47:56-00:00</lastmod>
+<loc>https://devonfire.blog/categories.html</loc>
+<lastmod>2025-05-09T12:55:48-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/authors.html</loc>
-<lastmod>2025-05-09T12:47:56-00:00</lastmod>
+<loc>https://devonfire.blog/authors.html</loc>
+<lastmod>2025-05-09T12:55:48-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/archives.html</loc>
-<lastmod>2025-05-09T12:47:56-00:00</lastmod>
+<loc>https://devonfire.blog/archives.html</loc>
+<lastmod>2025-05-09T12:55:48-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/chatgpt-no-dia-a-dia.html</loc>
+<loc>https://devonfire.blog/chatgpt-no-dia-a-dia.html</loc>
 <lastmod>2025-05-09T12:23:21-03:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/estado-da-arte-ia.html</loc>
+<loc>https://devonfire.blog/estado-da-arte-ia.html</loc>
 <lastmod>2025-05-09T12:23:19-03:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/projeto-expediente-automatizado.html</loc>
+<loc>https://devonfire.blog/projeto-expediente-automatizado.html</loc>
 <lastmod>2025-05-09T12:23:16-03:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/category/blog.html</loc>
+<loc>https://devonfire.blog/category/blog.html</loc>
 <lastmod>2025-05-09T12:23:21-03:06</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 
 <url>
-<loc>https://www.devonfire.blog/author/robsings.html</loc>
+<loc>https://devonfire.blog/author/robsings.html</loc>
 <lastmod>2025-05-09T12:23:21-03:06</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
