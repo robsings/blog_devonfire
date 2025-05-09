@@ -186,6 +186,10 @@ p.card-text{
     margin-bottom: 20px!important;
     padding: 0 20px!important;
 }
+.nextprev-group {
+    display: flex;
+    gap: 10px; /* Ajuste conforme desejar */
+}
 
 .btn-nextprev{
     background-color: #EE471D!important;
@@ -205,8 +209,6 @@ p.card-text{
     word-break:break-word!important;
     text-align:center!important;
     margin-bottom:10px!important;
-    padding-left:10px!important;
-    padding-right:10px!important;
 }
 .btn-nextprev:hover{
     background-color:#D63E1A!important;
