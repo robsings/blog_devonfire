@@ -171,7 +171,6 @@ pre, pre code{
     border-radius:5px!important;
     color:white!important;
     overflow-x: auto!important;
-    text-wrap: normal!important;
     font-family: var(--font-body)!important;
     font-size:0.95rem!important;
     line-height: 1.5!important;
