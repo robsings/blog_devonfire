@@ -175,7 +175,7 @@ pre, pre code, .highlight, .highlight pre {
     line-height: 1.5 !important;
     padding: 1rem !important;
     border-radius: 5px !important;
-    overflow-x: auto !important;
+    overflow-y: auto !important;
     white-space: pre !important;
 }
 .highlight .nb { color: #f92672; } /* keyword: set */
