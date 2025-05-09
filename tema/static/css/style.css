@@ -179,12 +179,13 @@ p.card-text{
     animation:glow 2s infinite ease-in-out!important;
 }
 .post-navigation{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0 20px;
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    margin-right: 3px!important;
+    padding: 0 20px!important;
 }
 
 .btn-nextprev{
