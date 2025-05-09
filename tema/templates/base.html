@@ -14,12 +14,14 @@
     <link rel="canonical" href="{{ SITEURL }}/{{ article.url if article else '' }}">
 
     <!-- Indexação (bloqueia autores, categorias, arquivos, tags e outros) -->
-    {% set noindex_pages = ["authors", "categories", "archives", "tags", "404"] %}
-    {% if page_name in noindex_pages %}
-        <meta name="robots" content="noindex, follow">
+    {% if page and (page.author or page.category or page.tag or '404' in page.url) %}
+    <meta name="robots" content="noindex, follow">
+    {% elif author or category or tag or archive %}
+    <meta name="robots" content="noindex, follow">
     {% else %}
-        <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">
     {% endif %}
+
 
     <!-- Descrição -->
     <meta name="description" content="{% if article and article.metadata.meta_description %}{{ article.metadata.meta_description }}{% elif article and article.summary %}{{ article.summary }}{% else %}{{ SITEDESCRIPTION | default('Descrição padrão do blog') }}{% endif %}">
