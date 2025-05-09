@@ -62,7 +62,7 @@ SOCIAL = (
     ("Another social link", "#"),
 )
 MARKDOWN = {
-    'extensions': ['codehilite', 'extra'],
+    'extensions': ['codehilite', 'extra','fenced_code'],
     'extension_configs': {
         'codehilite': {'css_class': 'highlight'},
     },
