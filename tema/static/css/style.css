@@ -178,6 +178,10 @@ pre, pre code, .highlight, .highlight pre {
     overflow-x: auto !important;
     white-space: pre !important;
 }
+.highlight .nb { color: #f92672; } /* keyword: set */
+.highlight .s2 { color: #e6db74; } /* string: "..." */
+.highlight .w  { color: #75715e; } /* whitespace/indentation */
+
 
 /* #endregion */
 

@@ -66,7 +66,12 @@ SOCIAL = (
 MARKDOWN = {
     'extensions': ['codehilite', 'extra','fenced_code'],
     'extension_configs': {
-        'codehilite': {'css_class': 'highlight'},
+        'codehilite': {
+            'css_class': 'highlight',
+            'linenums':False,
+            'guess_lang': False,
+            'use_pygments': True
+            },
     },
     'output_format': 'html5',
 }
