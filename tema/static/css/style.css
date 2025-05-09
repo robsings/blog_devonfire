@@ -167,6 +167,10 @@ p.card-text{
     color: #EE471D!important;
     font-weight: 900!important;
 }
+code{
+    color: #EE471D!important; 
+    font-weight: 900!important;
+}
 pre, pre code, .highlight, .highlight pre {
     background-color: #383636 !important;
     color: white !important;

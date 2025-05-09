@@ -15,9 +15,9 @@ Com o tempo, encontrei maneiras mais eficientes e práticas de me organizar, mas
 
 De todo modo, este projeto foi extremamente útil para que eu  aprendesse mais sobre programação em Batch Script e C.
 
-A estrutura do projeto é simples: O arquivo principal, `Expediente Automatizado.c`, corresponde ao menu principal da aplicação. Cada item deste menu direciona para um script `.bat` específico.
+A estrutura do projeto é simples: O arquivo principal, **Expediente Automatizado.c**, corresponde ao menu principal da aplicação. Cada item deste menu direciona para um script `.bat` específico.
 
-## `Expediente Automatizado.c`
+## Expediente Automatizado.c
 
 ```c
 #include <stdio.h>
