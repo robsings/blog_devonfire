@@ -17,7 +17,7 @@ De todo modo, este projeto foi extremamente útil para que eu  aprendesse mais s
 
 A estrutura do projeto é simples: O arquivo principal, **Expediente Automatizado.c**, corresponde ao menu principal da aplicação. Cada item deste menu direciona para um script `.bat` específico.
 
-## Expediente Automatizado.c
+## **Expediente Automatizado.c**
 
 ```c
 #include <stdio.h>
@@ -108,11 +108,11 @@ O loop infinito permite que o menu seja mostrado repetidamente. No entanto, o pr
 - `_getch` lê um caractere do console sem exibi-lo, permitindo que a escolha do usuário seja capturada discretamente.
 - Estrutura `switch` para escolha
 
-## Arquivos `.bat`
+## **Arquivos `.bat`**
 
 Nesse nosso projeto, os arquivos `.bat` receberão essencialmente a mesma estrutura. A única coisa que diferenciará um arquivo do outro é o conteúdo que armazenam, as URLs que eles contém.
 
-### Estrutura básica código dos arquivos `.bat`
+## **Estrutura básica código dos arquivos `.bat`**
 
 ```bash
 @echo off
