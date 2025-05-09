@@ -176,12 +176,23 @@ pre, pre code, .highlight, .highlight pre {
     background-color: #383636 !important;
     color: white !important;
     font-family: "Fira Code", "Courier New", monospace !important;
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.5 !important;
     padding: 1rem !important;
-    border-radius: 5px !important; /*overflow-y: auto !important;
-    white-space: pre !important;*/
+    border-radius: 5px !important;
+
+    overflow-x: auto !important;       /* scroll horizontal se necessário */
+    white-space: pre-wrap !important;  /* wrap do conteúdo longo */
+    word-break: break-word !important; /* quebra palavras longas */
+    box-sizing: border-box !important; /* evita estouro do box */
+    max-width: 100% !important;        /* evita passar da tela */
 }
+.highlight .w {
+    display: inline !important;
+    color: inherit !important;
+    background: none !important;
+}
+
 
 /* #endregion */
 
