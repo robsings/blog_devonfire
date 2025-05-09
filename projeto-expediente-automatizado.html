@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- #region Configurações Meta/SEO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Verificação do Google Search Console -->
+    <meta name="google-site-verification" content="i_GsLDFvA8fL51KmkOzC-K87M-hGrPqJwXDcawZPdlk" />
+    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.devonfire.blog/projeto-expediente-automatizado.html">
+
+    <!-- Indexação (bloqueia autores, categorias, arquivos, tags e outros) -->
+        <meta name="robots" content="index, follow">
+
+    <!-- Descrição -->
+    <meta name="description" content="Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links">
+    <meta property="og:description" content="Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links">
+    <meta name="twitter:description" content="Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links">
+
+
+    <!-- Título -->
+    <title>Expediente automatizado - Projeto em C e Batch Script |  Blog DevOnFire - Artigos, códigos e devaneios </title>
+    <meta property="og:title" content="Expediente automatizado - Projeto em C e Batch Script |  Blog DevOnFire - Artigos, códigos e devaneios ">
+    <meta name="twitter:title" content="Expediente automatizado - Projeto em C e Batch Script |  Blog DevOnFire - Artigos, códigos e devaneios ">
+
+    <!-- Imagem (social preview) -->
+    <meta property="og:image" content="images/imagem_destaque/imagem post 3.jpg">
+    <meta name="twitter:image" content="images/imagem_destaque/imagem post 3.jpg">
+
+
+
+    <!-- Outras propriedades Open Graph -->
+    <meta property="og:url" content="https://www.devonfire.blog">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content=" Blog DevOnFire - Artigos, códigos e devaneios ">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter card type -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://www.devonfire.blog">
+
+    <!-- Palavras-chave e autor -->
+    <meta name="keywords" content="Organização, Ambiente de Trabalho, Batch Script, C, Projeto de Programação">
+    <meta name="author" content="Roberto Santos, @rob.sings">
+
+    <!-- #endregion -->
+
+    <!-- #region Fontes e Estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+          integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon e CSS principal -->
+    <link rel="icon" href="https://www.devonfire.blog/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.devonfire.blog/theme/css/style.css">
+    <!-- #endregion -->
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- #region Header -->
+<header class="bg-dark text-white text-center py-4">
+    <div class="container text-center">
+        <a href="https://www.devonfire.blog/" 
+        class="logo-img">
+        <i class="fas fa-home fa-2x"
+        title="Voltar para a página inicial"
+        style="text-decoration: none; color: #EE471D;"></i>
+        </a>
+    </div>
+</header>
+    <!-- #endregion -->
+    <!-- #region Espaço reservado para o botão e a funcionalidade de arquivo do Blog -->
+    <!-- Botão para abrir o arquivo -->
+<button class="btn btn-secondary position-fixed open-button" id="openButton" title="Arquivo Do Blog"
+style="top: 260px; right: 10px; z-index: 1050;background-color:#212529;"
+type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria-controls="archiveOffcanvas">
+<i class="fas fa-folder-open"></i>
+</button>
+
+<!-- Offcanvas com conteúdo dos arquivos -->
+<div class="offcanvas offcanvas-end" style="font-family:'Poiret One', serif!important; font-weight:bolder" tabindex="-1" id="archiveOffcanvas" aria-labelledby="archiveOffcanvasLabel">
+<div class="offcanvas-header">
+    <h5 id="archiveOffcanvasLabel" class="text-capitalize" style="color:#212529!important;font-size: 23pt;">Arquivo do Blog</h5>
+</div>
+<div class="offcanvas-body">
+    <!-- Botão de fechamento -->
+    <button type="button" 
+    class="btn-close custom-close-button position-fixed" 
+    text="Fechar Arquivo" 
+    id="customCloseButton"
+    style="top: 10px; right: 10px; z-index: 1051; 
+    color:#212529!important" 
+    aria-label="Close"
+    data-bs-dismiss="offcanvas"></button>
+
+<ul class="list-unstyled text-sm-left">
+        <li class="mb-3">
+            <strong>2025</strong>
+            <ul class="list-unstyled ms-3">
+                    <li class="mb-2">
+                        <span>maio</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://www.devonfire.blog/projeto-expediente-automatizado.html" class="text-decoration-none" style="color:#D63E1A!important;">Expediente automatizado - Projeto em C e Batch Script</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>abril</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://www.devonfire.blog/estado-da-arte-ia.html" class="text-decoration-none" style="color:#D63E1A!important;">As IAs e o seu estado da arte - 2025</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>março</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://www.devonfire.blog/chatgpt-no-dia-a-dia.html" class="text-decoration-none" style="color:#D63E1A!important;">ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</a>
+                                </li>
+                        </ul>
+                    </li>
+            </ul>
+        </li>
+</ul></div>
+</div>
+    
+    <!-- #endregion-->
+    <!-- #region conteúdo Principal -->
+    <main class="flex-glow-1">
+<div class="container my-5">
+    <h1 class="mb-5">
+        Expediente automatizado - Projeto em C e Batch Script
+    </h1>
+    <p class="text-muted publication-date mb-5 text-end">
+        Publicado em 09/05/2025 12:18
+    </p>
+
+        <img src="https://www.devonfire.blog/images/imagem_destaque/imagem post 3.jpg" 
+        alt="Expediente automatizado - Projeto em C e Batch Script" 
+        class="img-fluid mb-5 feature-image">
+
+    <div class="article-content mb-5 post">
+        <p>Concebi este projeto com o objetivo de armazenar, em um único lugar, os links dos aplicativos e portais que utilizo ao longo da semana, durante o tempo em que estou em frente ao computador.</p>
+<p>Com o tempo, encontrei maneiras mais eficientes e práticas de me organizar, mas ainda gosto de utilizar esse programinha para salvar links de mangás e blogs que eu gosto de ler e acompanhar, além de documentos de bibliotecas úteis para meus projetos. </p>
+<p>De todo modo, este projeto foi extremamente útil para que eu  aprendesse mais sobre programação em Batch Script e C.</p>
+<p>A estrutura do projeto é simples: O arquivo principal, <code>Expediente Automatizado.c</code>, corresponde ao menu principal da aplicação. Cada item deste menu direciona para um script <code>.bat</code> específico.</p>
+<h2><code>Expediente Automatizado.c</code></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;conio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;locale.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windows.h&gt;</span>
+
+<span class="c1">//#region função para rodar os script .bat</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">runScript</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">scriptName</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">command</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="w">    </span><span class="n">sprintf</span><span class="p">(</span><span class="n">command</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;start %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">scriptName</span><span class="p">);</span>
+<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//#endregion</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;chcp 65001 &gt; nul&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span><span class="s">&quot;pt_BR.UTF-8&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Em quais atividades deseja se focar?</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 1 - Projetos E Atividades GOL/Smiles</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 2 - Marketing Digital (Afiliados, Lojas Digitais, Etc...)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 3 - Estudos - Cursos Em Andamento</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 4 - Estudos - Programação</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 5 - Lazer, Arte, Curiosidades E Afins</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 6 - Sites variados para diferentes fins</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 7 - Ferramentas Online</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;*** 0 - Editar O Código Deste Projeto</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">choice</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite o número da opção desejada: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">choice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_getch</span><span class="p">();</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">choice</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="p">){</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;ProjetosGolSmiles.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;2&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;MarketingDigital.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;3&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;CursosEmAndamento.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;4&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;EstudosProgramacao.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;5&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;LazerArteCuriosidadesEAfins.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;6&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;OutrosSites.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;7&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">runScript</span><span class="p">(</span><span class="s">&quot;FerramentasOnline.bat&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;code .&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>A função <code>runScript</code> é usada para executar nossos scripts <code>.bat</code>. Note que:</p>
+<ul>
+<li>Ela não retorna nenhum valor por ser uma função do tipo <code>void</code></li>
+<li><code>const char *scriptName</code>: Um ponteiro constante para um caractere, representando o nome do script a ser executado. O <code>const</code> indica que o conteúdo apontado pelo ponteiro não deve ser modificado pela função.</li>
+<li>Um array de caracteres (<code>char</code>) de tamanho 100, que será usado para armazenar o comando que será executado.</li>
+<li><code>sprintf</code>: Função da biblioteca padrão do C que escreve uma string formatada em um buffer.</li>
+<li><code>command</code>: Buffer onde a string formatada será armazenada.</li>
+<li><code>"start %s"</code>: String de formato. <code>start</code> é o comando (no contexto de sistemas Windows, <code>start</code> é usado para iniciar um programa ou script). <code>%s</code> é um especificador de formato que será substituído pelo valor de <code>scriptName</code>.</li>
+<li><code>scriptName</code>: Nome do script que será inserido no lugar de <code>%s</code>.</li>
+<li><code>system</code>: Função da biblioteca padrão do C que passa o comando para o interpretador de comandos do sistema operacional. Executa o comando armazenado na variável <code>command</code>.</li>
+</ul>
+<p>O loop infinito permite que o menu seja mostrado repetidamente. No entanto, o programa termina com <code>exit(0)</code> após executar uma ação.</p>
+<ul>
+<li>O <code>system("chcp 65001 &gt; nul");</code> - Configura o console para usar UTF-8, garantindo que caracteres especiais sejam exibidos corretamente.</li>
+<li><code>setlocale(LC_ALL, "pt_BR.UTF-8");</code> - Define a localidade para Português do Brasil com UTF-8, afetando a formatação de saída, como datas e números.</li>
+<li><code>system("cls");</code> - Limpa a tela do console, útil para manter a interface do usuário limpa e legível.</li>
+<li><code>_getch</code> lê um caractere do console sem exibi-lo, permitindo que a escolha do usuário seja capturada discretamente.</li>
+<li>Estrutura <code>switch</code> para escolha</li>
+</ul>
+<h2>Arquivos <code>.bat</code></h2>
+<p>Nesse nosso projeto, os arquivos <code>.bat</code> receberão essencialmente a mesma estrutura. A única coisa que diferenciará um arquivo do outro é o conteúdo que armazenam, as URLs que eles contém.</p>
+<h3>Estrutura básica código dos arquivos <code>.bat</code></h3>
+<div class="highlight"><pre><span></span><code>@echo<span class="w"> </span>off
+echo.
+chcp<span class="w"> </span><span class="m">65001</span><span class="w"> </span>&gt;<span class="w"> </span>nul
+
+<span class="nb">set</span><span class="w"> </span><span class="s2">&quot;firefoxPath=C:\Program Files\Mozilla Firefox\firefox.exe&quot;</span>
+<span class="nb">set</span><span class="w"> </span><span class="s2">&quot;edgePath=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe&quot;</span>
+<span class="nb">set</span><span class="w"> </span><span class="s2">&quot;chromePath=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span>Ok.<span class="w"> </span>Confira<span class="w"> </span>as<span class="w"> </span>opções<span class="w"> </span>abaixo:
+<span class="nb">echo</span><span class="w"> </span><span class="m">1</span>.Coleção<span class="w"> </span>de<span class="w"> </span>links<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="m">2</span>.Coleção<span class="w"> </span>de<span class="w"> </span>links<span class="w"> </span><span class="m">2</span>
+::inclua<span class="w"> </span>quantas<span class="w"> </span>opções<span class="w"> </span>desejar,<span class="w"> </span>e<span class="w"> </span>dentro<span class="w"> </span>da<span class="w"> </span>estrutura<span class="w"> </span><span class="k">if</span>,<span class="w"> </span>inclua<span class="w"> </span>quantos<span class="w"> </span>links<span class="w"> </span>desejar
+
+<span class="nb">set</span><span class="w"> </span>/p<span class="w"> </span><span class="nv">escolha</span><span class="o">=</span>Digite<span class="w"> </span>o<span class="w"> </span>número<span class="w"> </span>da<span class="w"> </span>opção<span class="w"> </span>desejada:
+
+<span class="k">if</span><span class="w"> </span><span class="s2">&quot;%escolha%&quot;</span><span class="o">==</span><span class="s2">&quot;1&quot;</span><span class="w"> </span><span class="o">(</span>
+<span class="w">    </span>start<span class="w"> </span><span class="s2">&quot;link 1&quot;</span><span class="w"> </span><span class="s2">&quot;%edgePath%&quot;</span><span class="w"> </span><span class="s2">&quot;https://www.link1.com&quot;</span>
+<span class="w">    </span>start<span class="w"> </span><span class="s2">&quot;link 2&quot;</span><span class="w"> </span><span class="s2">&quot;%edgePath%&quot;</span><span class="w"> </span><span class="s2">&quot;https://www.link2.com&quot;</span>
+<span class="o">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="s2">&quot;%escolha%&quot;</span><span class="o">==</span><span class="s2">&quot;2&quot;</span><span class="w"> </span><span class="o">(</span>
+<span class="w">    </span>start<span class="w"> </span><span class="s2">&quot;link 1&quot;</span><span class="w"> </span><span class="s2">&quot;%edgePath%&quot;</span><span class="w"> </span><span class="s2">&quot;https://www.link1.com&quot;</span>
+<span class="w">    </span>start<span class="w"> </span><span class="s2">&quot;link 2&quot;</span><span class="w"> </span><span class="s2">&quot;%edgePath%&quot;</span><span class="w"> </span><span class="s2">&quot;https://www.link2.com&quot;</span>
+<span class="o">)</span>
+<span class="nb">exit</span>
+</code></pre></div>
+
+<p>Para finalizarmos o nosso projeto agora só resta criarmos um <code>.exe</code> do nosso arquivo <code>.c</code>
+Você pode criar um atalho desse <code>.exe</code> e deixá-lo na área de trabalho</p>
+<p><strong>O diretório do meu projeto no fim ficou assim:</strong></p>
+<p><img alt="img1.png" src="./images/imagem_post/post_projeto_c_bat/img6.png"></p>
+<p><strong>Aqui está o atalho do executável que eu criei na área de trabalho:</strong></p>
+<p><img alt="img2.png" src="./images/imagem_post/post_projeto_c_bat/img7.png"></p>
+<p><strong>Este é o programa em execução:</strong></p>
+<p><img alt="img3.png" src="./images/imagem_post/post_projeto_c_bat/img8.png"></p>
+<p><img alt="img4.png" src="./images/imagem_post/post_projeto_c_bat/img9.png"></p>
+    </div>
+
+    <!--#endregion-->
+
+    <br/>
+        <!-- #region Botão de comentário no GitHub e de like-->
+        <div class="post-interactions">
+            <a href="https://github.com/robsings/blog_devonfire/issues/new?title=Coment%C3%A1rio%20sobre%20o%20artigo%20Expediente%20automatizado%20-%20Projeto%20em%20C%20e%20Batch%20Script" 
+               target="_blank"
+               class="github-comment-button">
+              Comente no GitHub
+            </a>
+        </div>
+
+    <!--#region Botões de navegação-->
+    <div class="post-navigation">
+        
+
+        <a href="https://www.devonfire.blog/estado-da-arte-ia.html" class="btn-nextprev" style="margin-right: 10px;">
+            As IAs e o seu estado da arte - 2025 →
+        </a>
+        
+        <a href="https://www.devonfire.blog/" class="btn-voltarlista">
+            Voltar para a lista de posts
+        </a>
+    </div>
+    <!--#endregion-->
+
+    
+</div>
+    </main>
+    <!-- #endregion -->
+    <!-- #region footer -->
+    <footer class="footer mt-auto py-4" style="background-color: #000; color: #fff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start">
+                    <a href="https://www.devonfire.blog/">
+                    <img src="https://www.devonfire.blog/theme/images/logo2.png" 
+                    alt="Logo" 
+                    class="logo-img" 
+                    style="max-width: 100px;"
+                    title="Voltar para a página inicial">
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" 
+                    style="color: #EE471D; font-size:small;">
+                    &copy; 2025 
+                    DevOnFire. Todos os direitos reservados a 
+                    <a href="https://linktr.ee/rob.sings" 
+                        target="_blank"
+                        style="color:#fcfcfc;text-decoration:none;font-weight:900">
+                        rob.sings
+                    </a>.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="https://github.com/robsings" 
+                    target="_blank" 
+                    class="text-white me-3" 
+                    title="Github - robsings">
+                    <i class="fa-brands fa-square-github"></i>
+                    </a>
+                    <!-- TODO: Inclua novas redes sociais aqui -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- #endregion -->
+
+    <!-- #region Bootstrap Lib -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js">
+    </script>
+    <!-- #endregion -->
+    
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todas as imagens dentro do conteúdo do artigo
+  document.querySelectorAll('.article-content img').forEach(img => {
+    img.addEventListener('click', () => {
+      // Abre a URL da imagem em uma nova aba
+      window.open(img.src, '_blank', 'noopener,noreferrer');
+      window.focus();
+    });
+  });
+});
+    </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todos os <a> do documento
+  document.querySelectorAll('.article-content a').forEach(link => {
+    // Define target="_blank" para abrir em nova aba
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+});
+    </script>
+
+</body>
+</html>
