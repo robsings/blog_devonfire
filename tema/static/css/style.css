@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5{
 font-family:var(--font-title)!important;
 font-weight: 900!important;
 }
-p{
+p, ul, ol, li{
     font-size: 25px!important;
     line-height: 2!important;
 }
@@ -176,7 +176,7 @@ pre, pre code, .highlight, .highlight pre {
     background-color: #383636 !important;
     color: white !important;
     font-family: "Fira Code", "Courier New", monospace !important;
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
     line-height: 1.5 !important;
     padding: 1rem !important;
     border-radius: 5px !important; /*overflow-y: auto !important;
