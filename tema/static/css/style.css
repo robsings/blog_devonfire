@@ -165,6 +165,17 @@ p.card-text{
     color: #EE471D!important;
     font-weight: 900!important;
 }
+pre, pre code{
+    background-color:#383636!important;
+    padding: 1rem !important;
+    border-radius:5px!important;
+    color:white!important;
+    overflow-x: auto!important;
+    text-wrap: normal!important;
+    font-family: var(--font-body)!important;
+    font-size:0.95rem!important;
+    line-height: 1.5!important;
+}
 /* #endregion */
 
 /* #region estilização dos botões e icones do blog */
