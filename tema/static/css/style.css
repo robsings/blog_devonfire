@@ -179,6 +179,16 @@ pre, pre code {
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
 }
+.highlight, .highlight pre {
+    background-color: #383636 !important;
+    color: white !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 0.95rem !important;
+    padding: 1rem !important;
+    border-radius: 5px !important;
+    overflow-x: auto !important;
+    line-height: 1.5 !important;
+}
 
 /* #endregion */
 
