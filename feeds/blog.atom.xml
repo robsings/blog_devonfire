@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - Artigos, códigos e devaneios - Blog</title><link href="https://devonfire.blog/" rel="alternate"></link><link href="https://devonfire.blog/feeds/blog.atom.xml" rel="self"></link><id>https://devonfire.blog/</id><updated>2025-05-09T15:43:22-03:00</updated><entry><title>Expediente automatizado - Projeto em C e Batch Script</title><link href="https://devonfire.blog/projeto-expediente-automatizado.html" rel="alternate"></link><published>2025-05-09T12:18:00-03:00</published><updated>2025-05-09T15:43:22-03:00</updated><author><name>rob.sings</name></author><id>tag:devonfire.blog,2025-05-09:/projeto-expediente-automatizado.html</id><summary type="html">&lt;p&gt;Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links&lt;/p&gt;</summary><content type="html">&lt;p&gt;Concebi este projeto com o objetivo de armazenar, em um único lugar, os links dos aplicativos e portais que utilizo ao longo da semana, durante o tempo em que estou em frente ao computador.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - Artigos, códigos e devaneios - Blog</title><link href="https://devonfire.blog/" rel="alternate"></link><link href="https://devonfire.blog/feeds/blog.atom.xml" rel="self"></link><id>https://devonfire.blog/</id><updated>2025-05-09T15:53:47-03:00</updated><entry><title>Expediente automatizado - Projeto em C e Batch Script</title><link href="https://devonfire.blog/projeto-expediente-automatizado.html" rel="alternate"></link><published>2025-05-09T12:18:00-03:00</published><updated>2025-05-09T15:53:47-03:00</updated><author><name>rob.sings</name></author><id>tag:devonfire.blog,2025-05-09:/projeto-expediente-automatizado.html</id><summary type="html">&lt;p&gt;Um projeto pessoal útil para estudos em Batch Script ou C. Um programa simples para organização de links&lt;/p&gt;</summary><content type="html">&lt;p&gt;Concebi este projeto com o objetivo de armazenar, em um único lugar, os links dos aplicativos e portais que utilizo ao longo da semana, durante o tempo em que estou em frente ao computador.&lt;/p&gt;
 &lt;p&gt;Com o tempo, encontrei maneiras mais eficientes e práticas de me organizar, mas ainda gosto de utilizar esse programinha para salvar links de mangás e blogs que eu gosto de ler e acompanhar, além de documentos de bibliotecas úteis para meus projetos. &lt;/p&gt;
 &lt;p&gt;De todo modo, este projeto foi extremamente útil para que eu  aprendesse mais sobre programação em Batch Script e C.&lt;/p&gt;
 &lt;p&gt;A estrutura do projeto é simples: O arquivo principal, &lt;strong&gt;Expediente Automatizado.c&lt;/strong&gt;, corresponde ao menu principal da aplicação. Cada item deste menu direciona para um script &lt;code&gt;.bat&lt;/code&gt; específico.&lt;/p&gt;
-&lt;h2&gt;&lt;strong&gt;Expediente Automatizado.c&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2&gt;⚫&lt;strong&gt;Expediente Automatizado.c&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;conio.h&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;locale.h&amp;gt;&lt;/span&gt;
@@ -92,9 +92,9 @@
 &lt;li&gt;&lt;code&gt;_getch&lt;/code&gt; lê um caractere do console sem exibi-lo, permitindo que a escolha do usuário seja capturada discretamente.&lt;/li&gt;
 &lt;li&gt;Estrutura &lt;code&gt;switch&lt;/code&gt; para escolha&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;&lt;strong&gt;Arquivos &lt;code&gt;.bat&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2&gt;⚫&lt;strong&gt;Arquivos &lt;code&gt;.bat&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Nesse nosso projeto, os arquivos &lt;code&gt;.bat&lt;/code&gt; receberão essencialmente a mesma estrutura. A única coisa que diferenciará um arquivo do outro é o conteúdo que armazenam, as URLs que eles contém.&lt;/p&gt;
-&lt;h2&gt;&lt;strong&gt;Estrutura básica código dos arquivos &lt;code&gt;.bat&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2&gt;⚫&lt;strong&gt;Estrutura básica código dos arquivos &lt;code&gt;.bat&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;@echo&lt;span class="w"&gt; &lt;/span&gt;off
 echo.
 chcp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;65001&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;nul
