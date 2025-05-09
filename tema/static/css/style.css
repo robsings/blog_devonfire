@@ -195,10 +195,20 @@ pre, pre code, .highlight, .highlight pre {
     background: none !important;
 }
 .highlight span {
-    position: static !important;
     background: none !important;
     box-shadow: none !important;
+    text-shadow: none !important;
+    position: static !important;
+    z-index: auto !important;
 }
+.highlight span::before,
+.highlight span::after {
+    content: "" !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit !important;
+}
+
 
 /* #endregion */
 
