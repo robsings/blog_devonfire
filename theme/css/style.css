@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root{
     --font-logo: 'Audiowide', cursive;
     --font-title: 'Poiret One', cursive;
     --font-body: 'Quicksand', sans-serif;
+    --font-pre-code: 'Fira Code', monospace;
 }
 
 body{
@@ -171,7 +173,7 @@ pre, pre code{
     border-radius:5px!important;
     color:white!important;
     overflow-x: auto!important;
-    font-family: var(--font-body)!important;
+    font-family: var(--font-pre-code)!important;
     font-size:0.95rem!important;
 }
 /* #endregion */
