@@ -167,15 +167,17 @@ p.card-text{
     color: #EE471D!important;
     font-weight: 900!important;
 }
-pre, pre code{
-    background-color:#383636!important;
+pre, pre code {
+    background-color: #383636 !important;
     padding: 1rem !important;
-    border-radius:5px!important;
-    color:white!important;
-    overflow-x: auto!important;
-    font-family: var(--font-pre-code)!important;
-    font-size:0.95rem!important;
+    border-radius: 5px !important;
+    color: white !important;
+    overflow-x: auto !important;
+    font-family: "Fira Code", "Courier New", monospace !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
 }
+
 /* #endregion */
 
 /* #region estilização dos botões e icones do blog */
