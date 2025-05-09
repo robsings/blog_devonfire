@@ -29,7 +29,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 # Aqui no plugins anteriormente só havia o neighbors
 PLUGINS = ['neighbors', 'sitemap', 'related_posts','archive_menu_generator']
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'en' #'en'
 
 THEME = "./tema/"
 
@@ -55,7 +55,9 @@ LOAD_CONTENT_CACHE = False
 LINKS = (
     ("GitHub", "https://github.com/robsings"),
 )
-
+READERS={
+    'html':None,
+}
 # Social widget
 SOCIAL = (
     ("You can add links in your config file", "#"),
@@ -68,6 +70,7 @@ MARKDOWN = {
     },
     'output_format': 'html5',
 }
+PYGMENTS_STYLE = 'monokai'
 SITEMAP = {
     'format': 'xml',
     'priorities':{
