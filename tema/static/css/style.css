@@ -169,7 +169,7 @@ p.card-text{
 }
 code{
     color: #EE471D!important; 
-    font-size:1rem!important;
+    font-size:2rem!important;
     font-weight: 900!important;
 }
 pre, pre code, .highlight, .highlight pre {
@@ -179,14 +179,9 @@ pre, pre code, .highlight, .highlight pre {
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
     padding: 1rem !important;
-    border-radius: 5px !important;
-    overflow-y: auto !important;
-    white-space: pre !important;
+    border-radius: 5px !important; /*overflow-y: auto !important;
+    white-space: pre !important;*/
 }
-.highlight .nb { color: #f92672; } /* keyword: set */
-.highlight .s2 { color: #e6db74; } /* string: "..." */
-.highlight .w  { color: #75715e; } /* whitespace/indentation */
-
 
 /* #endregion */
 
