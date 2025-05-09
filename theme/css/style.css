@@ -167,12 +167,11 @@ p.card-text{
     color: #EE471D!important;
     font-weight: 900!important;
 }
-code{
-    color: #EE471D!important; 
-    font-size:1.5rem!important;
-    font-weight: 900!important;
+code {
+    color: #EE471D !important;
 }
-pre, pre code, .highlight, .highlight pre {
+
+pre, .highlight {
     background-color: #383636 !important;
     color: white !important;
     font-family: "Fira Code", "Courier New", monospace !important;
@@ -180,34 +179,21 @@ pre, pre code, .highlight, .highlight pre {
     line-height: 1.5 !important;
     padding: 1rem !important;
     border-radius: 5px !important;
-
     overflow-x: auto !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
 }
-.highlight .w,
-.highlight .err {
-    all: unset !important;
-    display: inline !important;
-    color: inherit !important;
-    background: none !important;
+
+pre code {
+    color: #EE471D !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.03em !important;
 }
-.highlight span {
-    background: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    position: static !important;
-    z-index: auto !important;
-}
-.highlight span::before,
-.highlight span::after {
-    content: "" !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    color: inherit !important;
-}
+
+
 
 
 /* #endregion */
