@@ -172,6 +172,8 @@ pre, pre code {
     padding: 1rem !important;
     border-radius: 5px !important;
     color: white !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
     overflow-x: auto !important;
     font-family: "Fira Code", "Courier New", monospace !important;
     font-size: 0.95rem !important;
