@@ -40,7 +40,7 @@ EXTRA_PATH_METADATA = {
 DEFAULT_METADATA = {
     'meta_description': SITEDESCRIPTION,
     'seo_keywords': 'blog, devonfire, tecnologia, programação, rob.sings, @rob.sings, Robsings, robsings, rob_sings, dev, nerd, geek',
-    'seo_author': 'Roberto Santos, @rob.sings',
+    'seo_author': 'Roberto Santos, @rob.sings, @Robsings_, rob.sings, robsings',
 }
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -54,6 +54,8 @@ LOAD_CONTENT_CACHE = False
 # Blogroll
 LINKS = (
     ("GitHub", "https://github.com/robsings"),
+    ("X", "https://x.com/Robsings_"),
+    ("Medium","https://medium.com/@rob.sings")
 )
 READERS={
     'html':None,
