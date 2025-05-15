@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- #region Configurações Meta/SEO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Verificação do Google Search Console -->
+    <meta name="google-site-verification" content="i_GsLDFvA8fL51KmkOzC-K87M-hGrPqJwXDcawZPdlk" />
+    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://devonfire.blog/automacao-apontamento-horas.html">
+
+    <!-- Indexação (bloqueia autores, categorias, arquivos, tags e outros) -->
+    <meta name="robots" content="noindex, follow">
+
+
+    <!-- Descrição -->
+    <meta name="description" content="Veja como automatizei o apontamento de horas na empresa usando Selenium e Python, para nunca mais esquecer de registrar no fim do dia.">
+    <meta property="og:description" content="Veja como automatizei o apontamento de horas na empresa usando Selenium e Python, para nunca mais esquecer de registrar no fim do dia.">
+    <meta name="twitter:description" content="Veja como automatizei o apontamento de horas na empresa usando Selenium e Python, para nunca mais esquecer de registrar no fim do dia.">
+
+
+    <!-- Título -->
+    <title>Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos |  Blog DevOnFire - Artigos, códigos e devaneios </title>
+    <meta property="og:title" content="Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos |  Blog DevOnFire - Artigos, códigos e devaneios ">
+    <meta name="twitter:title" content="Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos |  Blog DevOnFire - Artigos, códigos e devaneios ">
+
+    <!-- Imagem (social preview) -->
+    <meta property="og:image" content="images/imagem_destaque/imagem post 4.png">
+    <meta name="twitter:image" content="images/imagem_destaque/imagem post 4.png">
+
+
+
+    <!-- Outras propriedades Open Graph -->
+    <meta property="og:url" content="https://devonfire.blog">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content=" Blog DevOnFire - Artigos, códigos e devaneios ">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter card type -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://devonfire.blog">
+
+    <!-- Palavras-chave e autor -->
+    <meta name="keywords" content="Automação, Programação, Selenium, Powershell, Python, Praticidade no dia a dia, Ambiente de trabalho">
+    <meta name="author" content="Roberto Santos, @rob.sings, @Robsings_, rob.sings, robsings">
+
+    <!-- #endregion -->
+
+    <!-- #region Fontes e Estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+          integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon e CSS principal -->
+    <link rel="icon" href="https://devonfire.blog/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://devonfire.blog/theme/css/style.css">
+    <!--Pygments-->
+    <link rel="stylesheet" href="https://devonfire.blog/theme/css/pygments.css">
+
+
+    <!-- #endregion -->
+    
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- #region Header -->
+<header class="bg-dark text-white text-center py-4">
+    <div class="container text-center">
+        <a href="https://devonfire.blog/" 
+        class="logo-img">
+        <i class="fas fa-home fa-2x"
+        title="Voltar para a página inicial"
+        style="text-decoration: none; color: #EE471D;"></i>
+        </a>
+    </div>
+</header>
+    <!-- #endregion -->
+    <!-- #region Espaço reservado para o botão e a funcionalidade de arquivo do Blog -->
+    <!-- Botão para abrir o arquivo -->
+<button class="btn btn-secondary position-fixed open-button" id="openButton" title="Arquivo Do Blog"
+style="top: 260px; right: 10px; z-index: 1050;background-color:#212529;"
+type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria-controls="archiveOffcanvas">
+<i class="fas fa-folder-open"></i>
+</button>
+
+<!-- Offcanvas com conteúdo dos arquivos -->
+<div class="offcanvas offcanvas-end" style="font-family:'Poiret One', serif!important; font-weight:bolder" tabindex="-1" id="archiveOffcanvas" aria-labelledby="archiveOffcanvasLabel">
+<div class="offcanvas-header">
+    <h5 id="archiveOffcanvasLabel" class="text-capitalize" style="color:#212529!important;font-size: 23pt;">Arquivo do Blog</h5>
+</div>
+<div class="offcanvas-body">
+    <!-- Botão de fechamento -->
+    <button type="button" 
+    class="btn-close custom-close-button position-fixed" 
+    text="Fechar Arquivo" 
+    id="customCloseButton"
+    style="top: 10px; right: 10px; z-index: 1051; 
+    color:#212529!important" 
+    aria-label="Close"
+    data-bs-dismiss="offcanvas"></button>
+
+<ul class="list-unstyled text-sm-left">
+        <li class="mb-3">
+            <strong>2025</strong>
+            <ul class="list-unstyled ms-3">
+                    <li class="mb-2">
+                        <span>maio</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/projeto-expediente-automatizado.html" class="text-decoration-none" style="color:#D63E1A!important;">Expediente automatizado - Projeto em C e Batch Script</a>
+                                </li>
+                                <li>
+                                    <a href="https://devonfire.blog/automacao-apontamento-horas.html" class="text-decoration-none" style="color:#D63E1A!important;">Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>abril</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/estado-da-arte-ia.html" class="text-decoration-none" style="color:#D63E1A!important;">As IAs e o seu estado da arte - 2025</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>março</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/chatgpt-no-dia-a-dia.html" class="text-decoration-none" style="color:#D63E1A!important;">ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</a>
+                                </li>
+                        </ul>
+                    </li>
+            </ul>
+        </li>
+</ul></div>
+</div>
+    
+    <!-- #endregion-->
+    <!-- #region conteúdo Principal -->
+    <main class="flex-glow-1">
+<div class="container my-5">
+    <h1 class="mb-5">
+        Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos
+    </h1>
+    <p class="text-muted publication-date mb-5 text-end">
+        Publicado em 15/05/2025 17:06
+    </p>
+
+        <img src="https://devonfire.blog/images/imagem_destaque/imagem post 4.png" 
+        alt="Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos" 
+        class="img-fluid mb-5 feature-image">
+
+    <div class="article-content mb-5 post">
+        <p><strong>Este é um simples projeto de automação em Selenium Python concebido pela necessidade de deixar de me esquecer de fazer o meu apontamento de horas no fim do dia.</strong></p>
+<h2>Requisitos para o projeto:</h2>
+<ul>
+<li>Tenha instalado o Python e a biblioteca Selenium.</li>
+</ul>
+<p><strong>O projeto terá a seguinte estrutura de arquivos e pastas:</strong></p>
+<p><img alt="Imagem 1" src="./images/imagem_post/post_timesheet/Untitled.png"></p>
+<ul>
+<li>Nessa estrutura, o diretório <code>utils</code> irá conter o arquivo <code>Config.py</code> e <code>Extract_infos_from_date</code>. Criar uma pasta chamada "utils" é uma prática comum em muitos projetos de programação. Esta pasta é frequentemente usada para armazenar módulos, classes ou funções que fornecem funcionalidades auxiliares, utilitárias ou complementares ao projeto principal.<ul>
+<li>A <code>Config.py</code> contém informações referentes a URL da aplicação, meu login e senha.</li>
+<li>O <code>Extract_infos_from_date.py</code> possui 2 funções para extrair informações relativas a data (Ano, Mês e dia)</li>
+</ul>
+</li>
+<li><code>Page Objects</code> é um padrão de projeto utilizado em automação de testes de interface de usuário (UI). Ele ajuda a organizar e estruturar o código de automação, tornando-o mais fácil de entender, manter e escalar.
+Basicamente, <code>Page Objects</code> representam as páginas ou componentes de uma aplicação web como objetos em seu código de automação. Cada página ou componente é representado por uma classe, e os elementos dessa página (como botões, campos de texto, etc.) são encapsulados como métodos e atributos dentro dessa classe. Note no print, que foram criadas uma classe para cada página da aplicação Web que vamos automatizar. Entre essas classes, a mais importante é a <code>BasePage.py</code>, pois:<ul>
+<li>Ela encapsula métodos que são comumente usados para interagir com elementos da página, como clicar em um elemento ou enviar texto para um campo de entrada. O conceito de abstração em programação orientada a objetos (POO) envolve a criação de interfaces ou classes abstratas que representam características comuns entre diferentes objetos. Na situação da BasePage, estamos abstraindo a lógica de interação com elementos da página.</li>
+<li>A utilização de métodos como WebDriverWait e expected_conditions garante que o Selenium aguarde até que um determinado elemento esteja disponível na página antes de interagir com ele. Isso ajuda a evitar falhas de teste devido a elementos não encontrados ou indisponíveis.</li>
+<li>Ao inicializar o driver e criar uma instância de ActionChains na BasePage, você centraliza essa lógica em um único lugar. Isso torna mais fácil configurar e modificar o comportamento do driver em toda a sua aplicação. Em POO chamamos isso de encapsulamento</li>
+<li>Outras classes de página em seu projeto podem herdar da BasePage, o que significa que elas terão acesso aos métodos e funcionalidades definidos na BasePage. Isso promove a consistência e a padronização em todo o seu projeto. Em POO chamamos isso de Herança</li>
+</ul>
+</li>
+</ul>
+<p><strong>Confira a seguir o conteúdo de cada um dos arquivos, e a ordem de criação do projeto:</strong></p>
+<h2>⚫ Criação do diretório page_objects e <code>BasePage.py</code></h2>
+<p><strong><code>BasePage.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver</span> <span class="kn">import</span> <span class="n">ActionChains</span>
+
+<span class="k">class</span> <span class="nc">BasePage</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driver</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">driver</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ac</span> <span class="o">=</span> <span class="n">ActionChains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span>
+
+<span class="c1">#region Métodos tratados com expected_conditions para click, e send_keys</span>
+    <span class="k">def</span> <span class="nf">find_and_send_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">locator</span><span class="p">,</span> <span class="o">*</span><span class="n">keys</span><span class="p">):</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">visibility_of_element_located</span><span class="p">(</span><span class="n">locator</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">move_to_element</span><span class="p">(</span><span class="n">element</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="o">*</span><span class="n">keys</span><span class="p">)</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">find_and_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">locator</span><span class="p">):</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">(</span><span class="n">locator</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">move_to_element</span><span class="p">(</span><span class="n">element</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+<span class="c1">#endregion</span>
+</code></pre></div>
+
+<h2>⚫ Criação do diretório utils, do <code>Config.py</code> e <code>LoginPage.py</code></h2>
+<p><strong><code>Config.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;URL_da_aplicação_WEB&quot;</span>
+<span class="n">LOGIN_USER</span> <span class="o">=</span> <span class="s2">&quot;Login&quot;</span>
+<span class="n">LOGIN_PASS</span> <span class="o">=</span> <span class="s2">&quot;Senha&quot;</span>
+</code></pre></div>
+
+<p><strong><code>LoginPage.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">page_objects.BasePage</span> <span class="kn">import</span> <span class="n">BasePage</span>
+<span class="kn">from</span> <span class="nn">utils.Config</span> <span class="kn">import</span> <span class="n">LOGIN_PASS</span><span class="p">,</span><span class="n">LOGIN_USER</span>
+<span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+
+<span class="k">class</span> <span class="nc">LoginPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driver</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">logar_no_sharepoint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Elementos</span>
+        <span class="n">username_input</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">NAME</span><span class="p">,</span><span class="s1">&#39;loginfmt&#39;</span><span class="p">)</span>
+        <span class="n">button</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span><span class="s1">&#39;idSIButton9&#39;</span><span class="p">)</span>
+        <span class="n">pass_input</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">NAME</span><span class="p">,</span><span class="s1">&#39;passwd&#39;</span><span class="p">)</span>
+        <span class="c1"># Ações</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">username_input</span><span class="p">,</span> <span class="n">LOGIN_USER</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">pass_input</span><span class="p">,</span> <span class="n">LOGIN_PASS</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">while</span> <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span><span class="n">button</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2>⚫ Criação do arquivo <code>Extract_infos_from_date.py</code> e das classes <strong>page_objects</strong> restantes</h2>
+<p><strong><code>Extract_infos_from_date.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="k">def</span> <span class="nf">extrair_mes_ano</span><span class="p">():</span>
+    <span class="c1"># Lista com os nomes dos meses</span>
+    <span class="n">meses_do_ano</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Janeiro&quot;</span><span class="p">,</span> <span class="s2">&quot;Fevereiro&quot;</span><span class="p">,</span> <span class="s2">&quot;Março&quot;</span><span class="p">,</span> <span class="s2">&quot;Abril&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Maio&quot;</span><span class="p">,</span> <span class="s2">&quot;Junho&quot;</span><span class="p">,</span> <span class="s2">&quot;Julho&quot;</span><span class="p">,</span> <span class="s2">&quot;Agosto&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Setembro&quot;</span><span class="p">,</span> <span class="s2">&quot;Outubro&quot;</span><span class="p">,</span> <span class="s2">&quot;Novembro&quot;</span><span class="p">,</span> <span class="s2">&quot;Dezembro&quot;</span><span class="p">]</span>
+
+    <span class="c1"># Obter o tempo atual em segundos</span>
+    <span class="n">tempo_atual</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="c1"># Converter o tempo atual em uma tupla com as informações locais</span>
+    <span class="n">info_tempo_local</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">tempo_atual</span><span class="p">)</span>
+
+    <span class="c1">#Extrair o mês da tupla</span>
+    <span class="n">mes_vigente</span> <span class="o">=</span> <span class="n">info_tempo_local</span><span class="o">.</span><span class="n">tm_mon</span>
+    <span class="c1">#Extrair o ano da tupla</span>
+    <span class="n">ano_vigente</span> <span class="o">=</span> <span class="n">info_tempo_local</span><span class="o">.</span><span class="n">tm_year</span>
+    <span class="c1">#Obter o nome do mês correspondente</span>
+    <span class="n">nome_mes_vigente</span> <span class="o">=</span> <span class="n">meses_do_ano</span><span class="p">[</span><span class="n">mes_vigente</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">nome_mes_e_ano_vigente</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">nome_mes_vigente</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">ano_vigente</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="k">return</span> <span class="n">nome_mes_e_ano_vigente</span><span class="p">,</span> <span class="n">nome_mes_vigente</span><span class="p">,</span> <span class="n">ano_vigente</span>
+
+<span class="k">def</span> <span class="nf">extrair_data_completa</span><span class="p">():</span>
+    <span class="n">_</span><span class="p">,</span><span class="n">nome_mes_vigente</span><span class="p">,</span> <span class="n">ano_vigente</span> <span class="o">=</span> <span class="n">extrair_mes_ano</span><span class="p">()</span>
+    <span class="c1">#mes_e_ano_vigente, nome_mes_vigente, ano_vigente = extrair_mes_ano()</span>
+    <span class="c1">#Extrair o dia da tupla</span>
+    <span class="n">dia_vigente</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_mday</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">nome_mes_vigente</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dia_vigente</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">ano_vigente</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<p><strong><code>MainPage.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">page_objects.BasePage</span> <span class="kn">import</span> <span class="n">BasePage</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">utils.Extract_infos_from_date</span> <span class="kn">import</span> <span class="n">extrair_mes_ano</span>
+
+<span class="k">class</span> <span class="nc">MainPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driver</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">selecionar_o_mes_para_realizar_lancamento</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nome_mes_e_ano_vigente</span> <span class="o">=</span> <span class="n">extrair_mes_ano</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Elementos</span>
+        <span class="n">month_selection_area</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@role=&quot;gridcell&quot;]/..//*[@data-automationid=&quot;DetailsRowCell&quot;]/..//*[contains(text(),&quot;&#39;</span><span class="o">+</span><span class="n">nome_mes_e_ano_vigente</span><span class="o">+</span><span class="s1">&#39;&quot;)]&#39;</span><span class="p">)</span>
+        <span class="n">launch_button</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s2">&quot;//*[contains(text(),&#39;Lançamentos&#39;)]&quot;</span><span class="p">)</span>
+        <span class="c1">#Ações</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">month_selection_area</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">launch_button</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong><code>TimeRecordingFormPage.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">page_objects.BasePage</span> <span class="kn">import</span> <span class="n">BasePage</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+<span class="kn">from</span> <span class="nn">utils.Extract_infos_from_date</span> <span class="kn">import</span> <span class="n">extrair_data_completa</span>
+
+<span class="k">class</span> <span class="nc">TimeRecordingFormPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driver</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">preencher_o_form_e_salvar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data_completa</span> <span class="o">=</span> <span class="n">extrair_data_completa</span><span class="p">()</span>
+        <span class="c1"># Elementos mapeados e ações para Novos Lançamentos - Formulário de preenchimento</span>
+        <span class="n">date_select_box</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@aria-label=&quot;Selecione uma data&quot;]&#39;</span><span class="p">)</span>
+        <span class="n">day_item</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@aria-label=&quot;&#39;</span><span class="o">+</span><span class="n">data_completa</span><span class="o">+</span><span class="s1">&#39;&quot;]&#39;</span><span class="p">)</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@name=&quot;horaInicial&quot;]&#39;</span><span class="p">)</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@name=&quot;horaFinal&quot;]&#39;</span><span class="p">)</span>
+        <span class="n">lunchtime</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@name=&quot;horaAlmoco&quot;]&#39;</span><span class="p">)</span>
+        <span class="n">project_select_box</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span><span class="s1">&#39;(//*[@role=&quot;listbox&quot;])[2]&#39;</span><span class="p">)</span>
+        <span class="n">task_select_box</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span><span class="s1">&#39;(//*[@role=&quot;listbox&quot;])[3]&#39;</span><span class="p">)</span>
+        <span class="n">save_button</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span><span class="s1">&#39;//*[button]/..//*[contains(text(),&quot;Salvar&quot;)]&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">date_select_box</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">day_item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="s2">&quot;AM&quot;</span><span class="p">,</span> <span class="n">Keys</span><span class="o">.</span><span class="n">ARROW_LEFT</span><span class="p">,</span> <span class="n">Keys</span><span class="o">.</span><span class="n">ARROW_LEFT</span><span class="p">,</span> <span class="s2">&quot;0900&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">end_time</span><span class="p">,</span> <span class="s2">&quot;PM&quot;</span><span class="p">,</span> <span class="n">Keys</span><span class="o">.</span><span class="n">ARROW_LEFT</span><span class="p">,</span> <span class="n">Keys</span><span class="o">.</span><span class="n">ARROW_LEFT</span><span class="p">,</span> <span class="s2">&quot;0600&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">lunchtime</span><span class="p">,</span> <span class="s2">&quot;AM&quot;</span><span class="p">,</span> <span class="n">Keys</span><span class="o">.</span><span class="n">ARROW_LEFT</span><span class="p">,</span> <span class="n">Keys</span><span class="o">.</span><span class="n">ARROW_LEFT</span><span class="p">,</span> <span class="s2">&quot;0100&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">project_select_box</span><span class="p">,</span><span class="n">Keys</span><span class="o">.</span><span class="n">TAB</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_send_keys</span><span class="p">(</span><span class="n">task_select_box</span><span class="p">,</span><span class="n">Keys</span><span class="o">.</span><span class="n">TAB</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find_and_click</span><span class="p">(</span><span class="n">save_button</span><span class="p">)</span>
+        <span class="c1">#endregion</span>
+</code></pre></div>
+
+<h2>⚫ Criação do arquivo <code>Client.py</code></h2>
+<p><strong><code>Client.py</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">utils.Config</span> <span class="kn">import</span> <span class="n">URL</span>
+<span class="kn">from</span> <span class="nn">page_objects.LoginPage</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">page_objects.MainPage</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">page_objects.TimeRecordingFormPage</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">()</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+
+<span class="n">login_page</span> <span class="o">=</span> <span class="n">LoginPage</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+<span class="n">main_page</span> <span class="o">=</span> <span class="n">MainPage</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+<span class="n">time_recording_form_page</span> <span class="o">=</span> <span class="n">TimeRecordingFormPage</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+
+<span class="n">login_page</span><span class="o">.</span><span class="n">logar_no_sharepoint</span><span class="p">()</span>
+<span class="n">main_page</span><span class="o">.</span><span class="n">selecionar_o_mes_para_realizar_lancamento</span><span class="p">()</span>
+<span class="n">time_recording_form_page</span><span class="o">.</span><span class="n">preencher_o_form_e_salvar</span><span class="p">()</span>
+</code></pre></div>
+
+<hr>
+<p><strong>Aqui terminamos tudo o que era necessário ao projeto em termos de automação, mas ainda há algumas coisas interessantes que podemos fazer, como:</strong></p>
+<h2>⚫ Criar um executável da automação que acabamos de criar</h2>
+<p>Para isso, existem muitas opções como o <code>cxFreeze</code>, ou o <code>pyinstaller</code>, mas aqui, eu decidi utilizar a biblioteca <code>Nuitka</code>.</p>
+<p>Para instalar esta biblioteca, dê o comando:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>nuitka
+</code></pre></div>
+
+<p>Confira no link a seguir a documentação oficial da biblioteca: <a href="https://nuitka.net/user-documentation/">Nuitka - User Documentation</a></p>
+<p>Queremos derivar um arquivo <code>.exe</code> do nosso <code>Client.py</code>. Queremos também que esse <code>.exe</code> tenha todas as dependências necessárias, tornando-o autocontido e portátil. Para isso, servirá a opção <code>--standlone</code>. Por fim, vamos definir um destino para o nosso executável e um ícone. Podemos criar um diretório em nosso projeto chamado assets e incluir nele um ícone qualquer. Nossa linha de comando então ficará assim:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>nuitka<span class="w"> </span>--standalone<span class="w"> </span>Client.py<span class="w"> </span>--windows-icon-from-ico<span class="o">=</span>assets/robotic.ico<span class="w"> </span>--output-dir<span class="o">=</span>../../<span class="s2">&quot;Timesheet Automatizado&quot;</span>
+</code></pre></div>
+
+<p>O processo demora um pouco, mas ao final dele teremos:</p>
+<ul>
+<li>O diretório com o nome que definimos na linha de comando ("Timesheet Automatizado") e dentro dele, mais dois diretórios: <code>Client.build</code> e <code>Client.dist</code></li>
+</ul>
+<p><img alt="Imagem 2" src="./images/imagem_post/post_timesheet/Untitled%201.png"></p>
+<p><img alt="Imagem 3" src="./images/imagem_post/post_timesheet/Untitled%202.png"></p>
+<p>Nos projetos Python, os diretórios <code>build</code> e <code>dist</code> são comumente usados durante o processo de construção e distribuição de pacotes ou aplicativos.
+O <code>build</code> é geralmente usado como o local onde são armazenados os arquivos intermediários gerados durante o processo de construção do projeto.
+O <code>dist</code>, por sua vez, é usado para armazenar os arquivos de distribuição final gerados após o processo de construção.</p>
+<p>Encontramos o nosso arquivo executável no dist:</p>
+<p><img alt="Imagem 4" src="./images/imagem_post/post_timesheet/Untitled%203.png"></p>
+<p>Gosto de criar um atalho para a área de trabalho, e uma vez lá, definir uma tecla de atalho para acionar o programa de forma facilitada.</p>
+<p><img alt="Imagem 5" src="./images/imagem_post/post_timesheet/Untitled%204.png"></p>
+<p>Isso tudo já deve resolver o meu problema, mas vamos automatizar ainda mais - por que eu adoro isso. Posso criar aqui um script em Powershell, e chama-lo em um <code>.bat</code> .por exemplo. inclui-lo na pasta startup <code>C:\\Users\\Particular\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup</code></p>
+<h2>⚫ Criando um script em Powershell para que rode a automação apenas quando for 21h e se eu assim quiser</h2>
+<p>Não há muito segredo aqui, e o Powershell não é tão difícil de entender também. Precisaremos verificar se o horário atual corresponde a 21h, e disparar um popup caso seja. Precisaremos também validar a resposta do usuário, e de acordo com ela rodar ou não a automação.</p>
+<p><strong><code>scheduled_to_9pm.ps1</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># Exibe uma mensagem de alerta informando que o script está rodando</span>
+<span class="nb">Add-Type</span> <span class="n">-AssemblyName</span> <span class="s1">&#39;System.Windows.Forms&#39;</span>
+<span class="no">[System.Windows.Forms.MessageBox]</span><span class="p">::</span><span class="n">Show</span><span class="p">(</span><span class="s2">&quot;Script em funcionamento!&quot;</span><span class="p">,</span> <span class="s2">&quot;Alerta&quot;</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="s2">&quot;Information&quot;</span><span class="p">)</span>
+
+<span class="c"># Aguarda até que seja 21h</span>
+<span class="k">while</span> <span class="p">((</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">Hour</span> <span class="o">-ne</span> <span class="n">11</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">Start-Sleep</span> <span class="n">-Hours</span> <span class="n">1</span>
+<span class="p">}</span>
+
+<span class="c"># Agora é 21h, exibe o popup perguntando se deseja rodar a automação do timesheet</span>
+<span class="nv">$result</span> <span class="p">=</span> <span class="no">[System.Windows.Forms.MessageBox]</span><span class="p">::</span><span class="n">Show</span><span class="p">(</span><span class="s2">&quot;Deseja rodar o Timesheet Automatizado hoje?&quot;</span><span class="p">,</span> <span class="s2">&quot;Alerta&quot;</span><span class="p">,</span> <span class="s2">&quot;YesNo&quot;</span><span class="p">,</span> <span class="s2">&quot;Question&quot;</span><span class="p">)</span>
+
+<span class="c"># Verifica a resposta do usuário</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">-eq</span> <span class="s2">&quot;Yes&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c"># Caminho do executável</span>
+    <span class="nv">$exePath</span> <span class="p">=</span> <span class="s2">&quot;$env:UserProfile\\Desktop\\Timesheet Automatizado.lnk&quot;</span>
+    <span class="c"># Executa o executável da automação do timesheet</span>
+    <span class="nb">Start-Process</span> <span class="n">-FilePath</span> <span class="nv">$exePath</span>
+<span class="p">}</span>
+
+<span class="c"># Encerra o script</span>
+<span class="n">Exit</span>
+</code></pre></div>
+
+<p>Podemos testar se deu certo, modificando manualmente o horário do nosso PC.
+Por fim, vamos criar mais um arquivo. Agora um <code>.bat</code>.</p>
+<div class="highlight"><pre><span></span><code>@echo off
+
+powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File &quot;./scheduled_to_9pm.ps1&quot; &gt; NUL 2&gt;&amp;1
+</code></pre></div>
+
+<p>Inclua esse .bat no seu diretório Startup e teste o funcionamento de tudo.</p>
+    </div>
+
+    <!--#endregion-->
+
+    <br/>
+        <!-- #region Botão de comentário no GitHub e de like-->
+        <div class="post-interactions">
+            <a href="https://github.com/robsings/blog_devonfire/issues/new?title=Coment%C3%A1rio%20sobre%20o%20artigo%20Automatizei%20o%20Apontamento%20de%20Horas%20e%20Parei%20de%20Me%20Preocupar%20com%20Esquecimentos" 
+               target="_blank"
+               class="github-comment-button">
+              Comente no GitHub
+            </a>
+        </div>
+
+    <!--#region Botões de navegação-->
+    <div class="post-navigation">
+     <div class="nextprev-group">
+
+        <a href="https://devonfire.blog/projeto-expediente-automatizado.html" class="btn-nextprev" style="margin-right: 10px;">
+            Expediente automatizado - Projeto em C e Batch Script →
+        </a>
+     </div> 
+        <a href="https://devonfire.blog/" class="btn-voltarlista">
+            Voltar para a lista de posts
+        </a>
+    </div>
+    <!--#endregion-->
+
+    
+</div>
+    </main>
+    <!-- #endregion -->
+    <!-- #region footer -->
+    <footer class="footer mt-auto py-4" style="background-color: #000; color: #fff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start">
+                    <a href="https://devonfire.blog/">
+                    <img src="https://devonfire.blog/theme/images/logo2.png" 
+                    alt="Logo" 
+                    class="logo-img" 
+                    style="max-width: 100px;"
+                    title="Voltar para a página inicial">
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" 
+                    style="color: #EE471D; font-size:small;">
+                    &copy; 2025 
+                    DevOnFire. Todos os direitos reservados a 
+                    <a href="https://linktr.ee/rob.sings" 
+                        target="_blank"
+                        style="color:#fcfcfc;text-decoration:none;font-weight:900">
+                        robsings
+                    </a>.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <!--#region Github icon-->
+                    <a href="https://github.com/robsings" target="_blank" class="text-white me-3" title="Github - robsings"><i class="fa-brands fa-square-github"></i></a>
+                    <!--#endregion-->
+                    <!--#region Medium icon-->
+                    <a href="https://medium.com/@rob.sings" target="_blank" class="text-white me-3" title="Medium - rob.sings"><i class="fa-brands fa-medium"></i></a>
+                    <!--endregion-->
+                    <!--#region X icon-->
+                    <a href="https://x.com/Robsings_" target="_blank" class="text-white me-3" title="X - Robsings_"><i class="fa-brands fa-x-twitter"></i></a>
+                    <!--endregion-->   
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- #endregion -->
+
+    <!-- #region Bootstrap Lib -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js">
+    </script>
+    <!-- #endregion -->
+    
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todas as imagens dentro do conteúdo do artigo
+  document.querySelectorAll('.article-content img').forEach(img => {
+    img.addEventListener('click', () => {
+      // Abre a URL da imagem em uma nova aba
+      window.open(img.src, '_blank', 'noopener,noreferrer');
+      window.focus();
+    });
+  });
+});
+    </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todos os <a> do documento
+  document.querySelectorAll('.article-content a').forEach(link => {
+    // Define target="_blank" para abrir em nova aba
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+});
+    </script>
+
+</body>
+</html>
