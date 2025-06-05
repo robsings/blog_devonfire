@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- #region Configurações Meta/SEO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Verificação do Google Search Console -->
+    <meta name="google-site-verification" content="i_GsLDFvA8fL51KmkOzC-K87M-hGrPqJwXDcawZPdlk" />
+    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://devonfire.blog/blog-com-pelican-e-githubpages.html">
+
+    <!-- Indexação (bloqueia autores, categorias, arquivos, tags e outros) -->
+    <meta name="robots" content="noindex, follow">
+
+
+    <!-- Descrição -->
+    <meta name="description" content="Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages">
+    <meta property="og:description" content="Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages">
+    <meta name="twitter:description" content="Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages">
+
+
+    <!-- Título -->
+    <title>Blog no GitHub Pages com Pelican e Python |  Blog DevOnFire - Artigos, códigos e devaneios </title>
+    <meta property="og:title" content="Blog no GitHub Pages com Pelican e Python |  Blog DevOnFire - Artigos, códigos e devaneios ">
+    <meta name="twitter:title" content="Blog no GitHub Pages com Pelican e Python |  Blog DevOnFire - Artigos, códigos e devaneios ">
+
+    <!-- Imagem (social preview) -->
+    <meta property="og:image" content="images/imagem_destaque/imagem post 5.png">
+    <meta name="twitter:image" content="images/imagem_destaque/imagem post 5.png">
+
+
+
+    <!-- Outras propriedades Open Graph -->
+    <meta property="og:url" content="https://devonfire.blog">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content=" Blog DevOnFire - Artigos, códigos e devaneios ">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter card type -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://devonfire.blog">
+
+    <!-- Palavras-chave e autor -->
+    <meta name="keywords" content="Pelican, Python, Gerador de sites estáticos">
+    <meta name="author" content="Roberto Santos, _robsings, @rob.sings, @Robsings_, rob.sings, robsings, @devonfire, devon, devonfire,@robsings_qadev, @robsings_writer">
+
+    <!-- #endregion -->
+
+    <!-- #region Fontes e Estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+          integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon e CSS principal -->
+    <link rel="icon" href="https://devonfire.blog/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://devonfire.blog/theme/css/style.css">
+    <!--Pygments-->
+    <link rel="stylesheet" href="https://devonfire.blog/theme/css/pygments.css">
+
+
+    <!-- #endregion -->
+    
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- #region Header -->
+<header class="bg-dark text-white text-center py-4">
+    <div class="container text-center">
+        <a href="https://devonfire.blog/" 
+        class="logo-img">
+        <i class="fas fa-home fa-2x"
+        title="Voltar para a página inicial"
+        style="text-decoration: none; color: #EE471D;"></i>
+        </a>
+    </div>
+</header>
+    <!-- #endregion -->
+    <!-- #region Espaço reservado para o botão e a funcionalidade de arquivo do Blog -->
+    <!-- Botão para abrir o arquivo -->
+<button class="btn btn-secondary position-fixed open-button" id="openButton" title="Arquivo Do Blog"
+style="top: 260px; right: 10px; z-index: 1050;background-color:#212529;"
+type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria-controls="archiveOffcanvas">
+<i class="fas fa-folder-open"></i>
+</button>
+
+<!-- Offcanvas com conteúdo dos arquivos -->
+<div class="offcanvas offcanvas-end" style="font-family:'Poiret One', serif!important; font-weight:bolder" tabindex="-1" id="archiveOffcanvas" aria-labelledby="archiveOffcanvasLabel">
+<div class="offcanvas-header">
+    <h5 id="archiveOffcanvasLabel" class="text-capitalize" style="color:#212529!important;font-size: 23pt;">Arquivo do Blog</h5>
+</div>
+<div class="offcanvas-body">
+    <!-- Botão de fechamento -->
+    <button type="button" 
+    class="btn-close custom-close-button position-fixed" 
+    text="Fechar Arquivo" 
+    id="customCloseButton"
+    style="top: 10px; right: 10px; z-index: 1051; 
+    color:#212529!important" 
+    aria-label="Close"
+    data-bs-dismiss="offcanvas"></button>
+
+<ul class="list-unstyled text-sm-left">
+        <li class="mb-3">
+            <strong>2025</strong>
+            <ul class="list-unstyled ms-3">
+                    <li class="mb-2">
+                        <span>junho</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/blog-com-pelican-e-githubpages.html" class="text-decoration-none" style="color:#D63E1A!important;">Blog no GitHub Pages com Pelican e Python</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>maio</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/projeto-expediente-automatizado.html" class="text-decoration-none" style="color:#D63E1A!important;">Expediente automatizado - Projeto em C e Batch Script</a>
+                                </li>
+                                <li>
+                                    <a href="https://devonfire.blog/automacao-apontamento-horas.html" class="text-decoration-none" style="color:#D63E1A!important;">Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>abril</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/estado-da-arte-ia.html" class="text-decoration-none" style="color:#D63E1A!important;">As IAs e o seu estado da arte - 2025</a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <span>março</span>
+                        <ul class="list-unstyled ms-3">
+                                <li>
+                                    <a href="https://devonfire.blog/chatgpt-no-dia-a-dia.html" class="text-decoration-none" style="color:#D63E1A!important;">ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</a>
+                                </li>
+                        </ul>
+                    </li>
+            </ul>
+        </li>
+</ul></div>
+</div>
+    
+    <!-- #endregion-->
+    <!-- #region conteúdo Principal -->
+    <main class="flex-glow-1">
+<div class="container my-5">
+    <h1 class="mb-5">
+        Blog no GitHub Pages com Pelican e Python
+    </h1>
+    <p class="text-muted publication-date mb-5 text-end">
+        Publicado em 05/06/2025 13:37
+    </p>
+
+        <img src="https://devonfire.blog/images/imagem_destaque/imagem post 5.png" 
+        alt="Blog no GitHub Pages com Pelican e Python" 
+        class="img-fluid mb-5 feature-image">
+
+    <div class="article-content mb-5 post">
+        <p>Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.</p>
+<h1>Primeiros passos</h1>
+<p><strong><em>Todo esse blog foi construído graças ao Pelican que é um gerador de sites estáticos escrito em Python. Você pode conferir a documentação oficial através do link: <a href="https://getpelican.com/">https://getpelican.com/</a></em></strong></p>
+<p>No VsCode, após ter criado o diretório do seu projeto,</p>
+<ul>
+<li>
+<p>Crie um <a href="https://docs.python.org/pt-br/3.13/library/venv.html">ambiente virtual</a> e instale o Pelican:</p>
+<p>```bash
+python -m venv .
+source meu-blog/bin/activate  # No Windows: .\Scripts\activate
+pip install pelican markdown</p>
+<p>```</p>
+</li>
+<li>
+<p>Feita a instalação, crie um  novo projeto Pelican com o comando:</p>
+<p>```bash
+pelican-quickstart</p>
+<p>```</p>
+</li>
+</ul>
+<p><strong>Responda, por fim, as perguntas conforme forem aparecendo com Y/N.</strong></p>
+<p>Feito isso a estrutura do nosso projeto será formada:</p>
+<p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image.png"></p>
+<p>Importante notar que, o arquivo <a href="http://pelicanconf.py"><code>pelicanconf.py</code></a> é onde teremos as configurações referentes ao desenvolvimento, enquanto no <code>publishconf.py</code> teremos as nossas configurações de produção. Sendo assim, a variável: <code>SITEURL</code>,  estará vazia no <code>pelicanconf.py</code> e deve ter o seu domínio pessoal em <code>publishconf.py</code></p>
+<p>Configurado o arquivo <code>pelicanconf.py</code>, vamos ao nosso <code>hello world</code></p>
+<ul>
+<li>Acesse a pasta <code>content</code> e crie um arquivo <code>.md</code> para que seja sua página inicial. Ex: <code>home.md</code><ul>
+<li>Como a intenção é a criação de um blog, crie uma pasta chamada <code>pages</code> e outra chamada <code>posts</code></li>
+<li>Inclua a <code>home.md</code> na <code>pages</code></li>
+</ul>
+</li>
+<li>
+<p>No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores <code>---</code></p>
+<h2>```markdown</h2>
+<p>Title: Página Inicial
+Save_as: index.html</p>
+<hr>
+<p>[Seu conteúdo aqui]
+```</p>
+</li>
+<li>
+<p>Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:</p>
+<p>```bash
+pelican content</p>
+<p>```</p>
+</li>
+</ul>
+<p>Este comando processará os arquivos no diretório <code>content/</code> e gerará o site estático no diretório <code>output/</code>.</p>
+<p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%201.png"></p>
+<ul>
+<li>
+<p>Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:</p>
+<p>```bash
+pelican -r -l</p>
+<p>```</p>
+</li>
+</ul>
+<p>Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: <code>http://localhost:8000</code></p>
+<h2>Vamos criar agora o nosso próprio tema</h2>
+<p>Quando executamos o comando: <code>pelican content</code> ou o  <code>pelican content -s pelicanconf.py</code>, o <strong>Pelican</strong> gera na pasta <strong>output</strong> as pastas e arquivos referentes aos temas de sua página, porém, será um tema padrão, que no caso não nos interessa. </p>
+<p>Para trabalharmos com o nosso próprio tema, primeiro, temos que definir a seguinte estrutura de arquivos e pastas: </p>
+<p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%202.png"></p>
+<p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%203.png"></p>
+<p>Feita essa estrutura, temos que passar o <em>path</em> da pasta do nosso tema na variável <strong>THEME</strong> do arquivo <strong>pelicanconf.py</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;./tema/&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Acesse agora o arquivo <strong>base.html</strong>. O arquivo que será renderizado no navegador será o index.html. O base.html, nos servirá aqui para fins de encapsulamento. Ele terá o seguinte código:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    {% block content %}
+    {% endblock %}
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<ul>
+<li>Agora no <strong>index.html</strong>, podemos herdar o que há no arquivo base.html, através da linha <code>{% ’extends './base.html’ %}</code><ul>
+<li>Podemos chamar as variáveis contidas no arquivo <strong>pelicanconf.py</strong>, utilizando <code>{{ }}</code>  - Leia sobre <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> para entender mais do porque disso.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>{% extends &#39;./base.html&#39;%}
+
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ SITENAME }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Bem vindo ao meu blog<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%204.png"></p>
+<h3>Estilização do Blog</h3>
+<p>A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.</p>
+<h3>Base.html</h3>
+<p><strong><code>tema\templates\base.html</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;pt-br&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- #region Font Awesome e Bootstrap Libs --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot;</span> 
+    <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH&quot;</span> 
+    <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css&quot;</span> 
+    <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==&quot;</span>
+    <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span> 
+    <span class="na">referrerpolicy</span><span class="o">=</span><span class="s">&quot;no-referrer&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css&quot;</span>
+    <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==&quot;</span> 
+    <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span> 
+    <span class="na">referrerpolicy</span><span class="o">=</span><span class="s">&quot;no-referrer&quot;</span> <span class="p">/&gt;</span>
+    <span class="cm">&lt;!--#endregion--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/theme/css/style.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ SITENAME }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-column min-vh-100&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- #region Header --&gt;</span>
+     {% block header %}
+     <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bg-dark text-white text-center py-4&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;logo&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span>
+                <span class="s">&quot;{{ SITEURL }}/theme/images/logo2.png&quot;</span> 
+                <span class="na">alt</span><span class="o">=</span><span class="s">&quot;logo&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mb-3 logo-img&quot;</span> 
+                <span class="na">style</span><span class="o">=</span><span class="s">&quot;max-width:150px;&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;devonfire-text&quot;</span><span class="p">&gt;</span>
+                    DevOnFire
+                <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Artigos, códigos e devaneios<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;lead&quot;</span><span class="p">&gt;</span>Espero que curtam. Tudo aqui deu trabalho pra fazer 🤙<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+     {% endblock %}
+    <span class="cm">&lt;!-- #endregion --&gt;</span>
+    <span class="cm">&lt;!-- #region Espaço reservado para o botão e a funcionalidade de arquivo do Blog --&gt;</span>
+    <span class="cm">&lt;!-- #endregion--&gt;</span>
+    <span class="cm">&lt;!-- #region conteúdo Principal --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-glow-1&quot;</span><span class="p">&gt;</span>
+        {% block content %}
+        {% endblock %}
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- #endregion --&gt;</span>
+    <span class="cm">&lt;!-- #region footer --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;footer mt-auto py-4&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color: #000; color: #fff;&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row align-items-center&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-4 text-center text-md-start&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/theme/images/logo2.png&quot;</span> 
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Logo&quot;</span> 
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;logo-img&quot;</span> 
+                    <span class="na">style</span><span class="o">=</span><span class="s">&quot;max-width: 100px;&quot;</span>
+                    <span class="na">title</span><span class="o">=</span><span class="s">&quot;Voltar para a página inicial&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-4 text-center&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mb-0&quot;</span> 
+                    <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: #EE471D;&quot;</span><span class="p">&gt;</span>
+                    <span class="ni">&amp;copy;</span> {{ SITEYEAR }} 
+                    DevOnFire. Todos os direitos reservados a 
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://github.com/robsings&quot;</span> 
+                        <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
+                        <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:#fcfcfc;text-decoration:none;font-weight:900&quot;</span><span class="p">&gt;</span>
+                        robsings
+                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.
+                    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-4 text-center text-md-end&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://github.com/robsings&quot;</span> 
+                    <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> 
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-white me-3&quot;</span> 
+                    <span class="na">title</span><span class="o">=</span><span class="s">&quot;Github - robsings&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fa-brands fa-square-github&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                    <span class="cm">&lt;!-- TODO: Inclua novas redes sociais aqui --&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- #endregion --&gt;</span>
+
+    <span class="cm">&lt;!-- #region Bootstrap Lib --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js&quot;</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- #endregion --&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">siteName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;{{ SITENAME }}&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// sem escapejs</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;🔥 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">siteName</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">290</span><span class="p">;</span>
+
+<span class="w">            </span><span class="kd">function</span><span class="w"> </span><span class="nx">scrollTitle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="p">;</span>
+<span class="w">                </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">scrollTitle</span><span class="p">,</span><span class="w"> </span><span class="nx">speed</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="nx">scrollTitle</span><span class="p">();</span>
+<span class="w">        </span><span class="p">})();</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3>Index.html</h3>
+<p><code>tema\templates\index.html</code></p>
+<div class="highlight"><pre><span></span><code>{% extends &#39;./base.html&#39; %}
+
+{% block content %}
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container my-5&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+        {% for article in articles %}
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-12 col-md-6 col-lg-4 mb-4&quot;</span><span class="p">&gt;</span><span class="cm">&lt;!--col-md-4 mb-4--&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/{{ article.url }}&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-link&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-decoration: none; color: inherit;&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card h-100 shadow-sm&quot;</span><span class="p">&gt;</span>
+
+                        {% if article.metadata.image %}
+                            <span class="p">&lt;</span><span class="nt">img</span> 
+                                <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/{{ article.metadata.image }}&quot;</span> 
+                                <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-img-top&quot;</span>
+                                <span class="na">alt</span><span class="o">=</span><span class="s">&quot;{{ article.title }}&quot;</span>
+                                <span class="na">style</span><span class="o">=</span><span class="s">&quot;object-fit: center; width: 100%; height: 200px;&quot;</span><span class="p">&gt;</span>
+                        {% endif %}
+
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-body d-flex flex-column&quot;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-title mb-2&quot;</span><span class="p">&gt;</span>{{ article.title }}<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-text flex-grow-1&quot;</span><span class="p">&gt;</span>
+                                {{ article.summary|striptags|truncate(140) }}
+                            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-text mt-3&quot;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-muted publication-date&quot;</span><span class="p">&gt;</span>
+                                    Publicado em: {{ article.date.strftime(&#39;%d/%m/%Y %H:%M&#39;) }}
+                                <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        {% else %}
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-12&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Nenhum artigo encontrado.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        {% endfor %}
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{% endblock %}
+</code></pre></div>
+
+<h3>Article.html</h3>
+<p><code>tema\templates\article.html</code></p>
+<div class="highlight"><pre><span></span><code>{% extends &#39;base.html&#39; %}
+
+<span class="cm">&lt;!-- #region Header--&gt;</span>
+{% block header %}
+<span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bg-dark text-white text-center py-4&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container text-center&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/&quot;</span> 
+        <span class="na">class</span><span class="o">=</span><span class="s">&quot;logo-img&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fas fa-home fa-2x&quot;</span>
+        <span class="na">title</span><span class="o">=</span><span class="s">&quot;Voltar para a página inicial&quot;</span>
+        <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-decoration: none; color: #EE471D;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+{% endblock %}
+
+{% block content %}
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container my-5&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mb-3&quot;</span><span class="p">&gt;</span>
+        {{ article.title }}
+    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-muted publication-date mb-5 text-end&quot;</span><span class="p">&gt;</span>
+        Publicado em {{ article.date.strftime(&#39;%d/%m/%Y %H:%M&#39;) }}
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    {% if article.metadata.image %}
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ SITEURL }}/{{ article.metadata.image }}&quot;</span> 
+        <span class="na">alt</span><span class="o">=</span><span class="s">&quot;{{ article.title }}&quot;</span> 
+        <span class="na">class</span><span class="o">=</span><span class="s">&quot;img-fluid mb-5 feature-image&quot;</span><span class="p">&gt;</span>
+    {% endif %}
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;article-content mb-5&quot;</span><span class="p">&gt;</span>
+        {{ article.content }}
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{% endblock %}
+</code></pre></div>
+
+<h3>Style.css</h3>
+<p><code>tema\static\css\style.css</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Audiowide&amp;display=swap&#39;</span><span class="o">)</span><span class="p">;</span>
+<span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Poiret+One&amp;display=swap&#39;</span><span class="o">)</span><span class="p">;</span>
+<span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Quicksand&amp;display=swap&#39;</span><span class="o">)</span><span class="p">;</span>
+
+<span class="p">:</span><span class="nd">root</span><span class="p">{</span>
+<span class="w">    </span><span class="nv">--font-logo</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Audiowide&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">cursive</span><span class="p">;</span>
+<span class="w">    </span><span class="nv">--font-title</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Poiret One&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">cursive</span><span class="p">;</span>
+<span class="w">    </span><span class="nv">--font-body</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Quicksand&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-body</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span><span class="o">,</span><span class="w"> </span><span class="nt">h2</span><span class="o">,</span><span class="w"> </span><span class="nt">h3</span><span class="o">,</span><span class="w"> </span><span class="nt">h4</span><span class="o">,</span><span class="w"> </span><span class="nt">h5</span><span class="p">{</span>
+<span class="k">font-family</span><span class="p">:</span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-title</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* #region responsividade*/</span>
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">767px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">        </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">.</span><span class="nc">card-img-top</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">        </span><span class="k">object-fit</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">.</span><span class="nc">card-body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">.</span><span class="nc">card-link</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">        </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c">/* #endregion*/</span>
+
+<span class="c">/* #region animações*/</span>
+<span class="p">@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">glow</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">0</span><span class="o">%,</span><span class="w"> </span><span class="nt">100</span><span class="o">%</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">filter</span><span class="p">:</span><span class="w"> </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">))</span>
+<span class="w">              </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p">))</span>
+<span class="w">              </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">50</span><span class="o">%</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">filter</span><span class="p">:</span><span class="w"> </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.7</span><span class="p">))</span>
+<span class="w">              </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">))</span>
+<span class="w">              </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="c">/* #endregion*/</span>
+
+<span class="c">/* #region estilização do header e logo*/</span>
+<span class="p">.</span><span class="nc">logo-img</span><span class="p">{</span>
+<span class="w">    </span><span class="k">filter</span><span class="p">:</span><span class="w"> </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">))</span>
+<span class="w">    </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">))</span>
+<span class="w">    </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p">))</span>
+<span class="w">    </span><span class="nb">drop-shadow</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">));</span>
+<span class="w">    </span><span class="k">animation</span><span class="p">:</span><span class="n">glow</span><span class="w"> </span><span class="mi">2</span><span class="kt">s</span><span class="w"> </span><span class="kc">infinite</span><span class="w"> </span><span class="kc">ease-in-out</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">devonfire-text</span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-logo</span><span class="p">)</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#EE471D</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-clip</span><span class="p">:</span><span class="w"> </span><span class="kc">text</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="kp">-webkit-</span><span class="n">text-fill-color</span><span class="p">:</span><span class="w"> </span><span class="kc">transparent</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">capitalize</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">animation</span><span class="p">:</span><span class="n">glow</span><span class="w"> </span><span class="mi">2</span><span class="kt">s</span><span class="w"> </span><span class="kc">infinite</span><span class="w"> </span><span class="kc">ease-in-out</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">header</span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-title</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="mi">600</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* #endregion */</span>
+
+<span class="c">/* #region estilização do card post*/</span>
+<span class="p">.</span><span class="nc">card-link</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">.</span><span class="nc">card</span><span class="p">{</span>
+<span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="mi">0</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">238</span><span class="p">,</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-2</span><span class="kt">px</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">all</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h5</span><span class="p">.</span><span class="nc">card-title</span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">black</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span><span class="p">.</span><span class="nc">card-text</span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-body</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="mi">500</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="mi">18</span><span class="kt">px</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">black</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">publication-date</span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-title</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="mh">#EE471D</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="mi">18</span><span class="kt">px</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="mi">900</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mh">#EE471D</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* #endregion*/</span>
+
+<span class="c">/* #region estilização do footer */</span>
+<span class="p">.</span><span class="nc">footer</span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-top</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#EE471D</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding-bottom</span><span class="p">:</span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-title</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">px</span><span class="w"> </span><span class="mh">#EE471D</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">px</span><span class="w"> </span><span class="mh">#EE471D</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">footer</span><span class="w"> </span><span class="nt">a</span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">footer</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#EE471D</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* #endregion */</span>
+
+<span class="c">/* #region estilização da página de postagem  */</span>
+<span class="p">.</span><span class="nc">feature-image</span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">object-fit</span><span class="p">:</span><span class="kc">cover</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">max-height</span><span class="p">:</span><span class="mi">400</span><span class="kt">px</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="mi">100</span><span class="kt">%</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* #endregion */</span>
+
+<span class="c">/* #region estilização dos botões e icones do blog */</span>
+<span class="p">.</span><span class="nc">fa-brands</span><span class="p">{</span>
+<span class="w">    </span><span class="k">margin-right</span><span class="p">:</span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="mi">46</span><span class="kt">px</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-decoration</span><span class="p">:</span><span class="kc">none</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">fa-brands</span><span class="p">:</span><span class="nd">hover</span><span class="p">{</span>
+<span class="w">    </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-2</span><span class="kt">px</span><span class="p">)</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">all</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">animation</span><span class="p">:</span><span class="n">glow</span><span class="w"> </span><span class="mi">2</span><span class="kt">s</span><span class="w"> </span><span class="kc">infinite</span><span class="w"> </span><span class="kc">ease-in-out</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-custom</span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#EE471D</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-color</span><span class="p">:</span><span class="mh">#EE471D</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">white</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">background-color</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">border-color</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="kc">color</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-custom</span><span class="p">:</span><span class="nd">hover</span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="mh">#D63E1A</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-color</span><span class="p">:</span><span class="mh">#D63E1A</span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">white</span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* #endregion */</span>
+</code></pre></div>
+
+<ul>
+<li>Completa a fase de personalização do nosso site, é hora de subi-lo ao GitHub e em seguida ao GitHub Pages.</li>
+</ul>
+<h2>Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages</h2>
+<ul>
+<li>
+<p>Inicialize o seu repositório localmente:</p>
+<p>```bash
+cd caminho/do/seu/projeto
+git init</p>
+<p>```</p>
+</li>
+<li>
+<p>Crie um <code>.gitignore</code> :</p>
+<p>```bash</p>
+<h1>.gitignore</h1>
+<p><strong>pycache</strong>/
+output/
+<em>.pyc
+</em>.pyo
+<em>.pyd
+env/
+venv/
+</em>.DS_Store
+*.egg-info/</p>
+<p>```</p>
+</li>
+<li>
+<p>Suba o projeto ao GitHub:</p>
+</li>
+<li>Crie o repositório no GitHub (sem <code>README</code> por enquanto).</li>
+<li>
+<p>Adicione o repositório remoto:</p>
+<p>```bash
+git remote add origin https://github.com/seu-usuario/nome-do-repo.git</p>
+<p>```</p>
+</li>
+<li>
+<p>Adicione os arquivos:</p>
+<p>```bash
+git add .
+git commit -m "Primeiro commit do projeto"</p>
+<p>```</p>
+</li>
+<li>
+<p>Suba para a branch <code>master</code> ou <code>main</code>:</p>
+<p><code>bash
+git push -u origin master</code></p>
+</li>
+<li>
+<p>Gere o <code>requirements.txt</code>:</p>
+<p><code>bash
+pip install -r requirements.txt</code></p>
+<ul>
+<li>
+<p>Use <code>pipreqs</code> para gerar os requisitos reais do projeto (não o ambiente inteiro):</p>
+<p><code>bash
+pip install pipreqs
+pipreqs . --force</code></p>
+<p>Isso criará um <code>requirements.txt</code> apenas com os pacotes realmente utilizados no projeto.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: <code>pelicanconf.py</code>, <code>publishconf.py</code> e <code>tasks.py</code></p>
+<p><strong>pelicanconf.py</strong></p>
+<p>```python
+from datetime import datetime
+SITEYEAR = datetime.now().year</p>
+<p>AUTHOR = '@Robsings'
+SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios '
+SITEURL = ""</p>
+<p>PATH = "content"</p>
+<p>TIMEZONE = 'America/Sao_Paulo'</p>
+<p>DEFAULT_LANG = 'en'</p>
+<p>THEME = "./tema/"</p>
+<h1>Feed generation is usually not desired when developing</h1>
+<p>FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None</p>
+<h1>Blogroll</h1>
+<p>LINKS = (
+    ("GitHub", "https://github.com/robsings"),
+)</p>
+<h1>Social widget</h1>
+<p>SOCIAL = (
+    ("You can add links in your config file", "#"),
+    ("Another social link", "#"),
+)</p>
+<p>DEFAULT_PAGINATION = 10</p>
+<h1>Uncomment following line if you want document-relative URLs when developing</h1>
+<h1>RELATIVE_URLS = True</h1>
+<p>```</p>
+<p><strong>publishconf.py</strong></p>
+<p>```python</p>
+<h1>This file is only used if you use <code>make publish</code> or</h1>
+<h1>explicitly specify it as your config file.</h1>
+<p>import os
+import sys</p>
+<p>sys.path.append(os.curdir)
+from pelicanconf import *</p>
+<h1>If your site is available via HTTPS, make sure SITEURL begins with https://</h1>
+<p>SITEURL = 'devonfire.blog'
+RELATIVE_URLS = False</p>
+<p>FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"</p>
+<p>DELETE_OUTPUT_DIRECTORY = True</p>
+<h1>Following items are often useful when publishing</h1>
+<h1>DISQUS_SITENAME = ""</h1>
+<h1>GOOGLE_ANALYTICS = ""</h1>
+<p>```</p>
+</li>
+</ul>
+<p><strong>tasks.py</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shlex</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">task</span>
+<span class="kn">from</span> <span class="nn">invoke.main</span> <span class="kn">import</span> <span class="n">program</span>
+<span class="kn">from</span> <span class="nn">pelican</span> <span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">pelican_main</span>
+<span class="kn">from</span> <span class="nn">pelican.server</span> <span class="kn">import</span> <span class="n">ComplexHTTPRequestHandler</span><span class="p">,</span> <span class="n">RootedHTTPServer</span>
+<span class="kn">from</span> <span class="nn">pelican.settings</span> <span class="kn">import</span> <span class="n">DEFAULT_CONFIG</span><span class="p">,</span> <span class="n">get_settings_from_file</span>
+
+<span class="n">OPEN_BROWSER_ON_SERVE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">SETTINGS_FILE_BASE</span> <span class="o">=</span> <span class="s2">&quot;pelicanconf.py&quot;</span>
+<span class="n">SETTINGS</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">SETTINGS</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">DEFAULT_CONFIG</span><span class="p">)</span>
+<span class="n">LOCAL_SETTINGS</span> <span class="o">=</span> <span class="n">get_settings_from_file</span><span class="p">(</span><span class="n">SETTINGS_FILE_BASE</span><span class="p">)</span>
+<span class="n">SETTINGS</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">LOCAL_SETTINGS</span><span class="p">)</span>
+
+<span class="c1"># Validação de chaves obrigatórias no CONFIG</span>
+<span class="k">def</span> <span class="nf">validate_config</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+    <span class="n">required_keys</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;settings_base&quot;</span><span class="p">,</span> <span class="s2">&quot;settings_publish&quot;</span><span class="p">,</span> <span class="s2">&quot;deploy_path&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;github_pages_branch&quot;</span><span class="p">,</span> <span class="s2">&quot;commit_message&quot;</span><span class="p">,</span> <span class="s2">&quot;host&quot;</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span>
+    <span class="p">]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">required_keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Chave obrigatória &#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#39; ausente no CONFIG&quot;</span><span class="p">)</span>
+
+<span class="n">CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;settings_base&quot;</span><span class="p">:</span> <span class="n">SETTINGS_FILE_BASE</span><span class="p">,</span>
+    <span class="s2">&quot;settings_publish&quot;</span><span class="p">:</span> <span class="s2">&quot;publishconf.py&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;deploy_path&quot;</span><span class="p">:</span> <span class="n">SETTINGS</span><span class="p">[</span><span class="s2">&quot;OUTPUT_PATH&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;github_pages_branch&quot;</span><span class="p">:</span> <span class="s2">&quot;gh-pages&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;commit_message&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Publish site on </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">validate_config</span><span class="p">(</span><span class="n">CONFIG</span><span class="p">)</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove generated files&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">]):</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">])</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">])</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build local version of site&quot;&quot;&quot;</span>
+    <span class="n">pelican_run</span><span class="p">(</span><span class="s2">&quot;-s </span><span class="si">{settings_base}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">rebuild</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`build` with the delete switch&quot;&quot;&quot;</span>
+    <span class="n">pelican_run</span><span class="p">(</span><span class="s2">&quot;-d -s </span><span class="si">{settings_base}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">regenerate</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Automatically regenerate site upon file modification&quot;&quot;&quot;</span>
+    <span class="n">pelican_run</span><span class="p">(</span><span class="s2">&quot;-r -s </span><span class="si">{settings_base}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">serve</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Serve site at http://$HOST:$PORT/ (default is localhost:8000)&quot;&quot;&quot;</span>
+
+    <span class="k">class</span> <span class="nc">AddressReuseTCPServer</span><span class="p">(</span><span class="n">RootedHTTPServer</span><span class="p">):</span>
+        <span class="n">allow_reuse_address</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">server</span> <span class="o">=</span> <span class="n">AddressReuseTCPServer</span><span class="p">(</span>
+        <span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">],</span>
+        <span class="p">(</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;host&quot;</span><span class="p">],</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;port&quot;</span><span class="p">]),</span>
+        <span class="n">ComplexHTTPRequestHandler</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">OPEN_BROWSER_ON_SERVE</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">webbrowser</span>
+        <span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://</span><span class="si">{host}</span><span class="s2">:</span><span class="si">{port}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Serving at </span><span class="si">{host}</span><span class="s2">:</span><span class="si">{port}</span><span class="s2"> ...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">reserve</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`build`, then `serve`&quot;&quot;&quot;</span>
+    <span class="n">build</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">serve</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build production version of site&quot;&quot;&quot;</span>
+    <span class="n">pelican_run</span><span class="p">(</span><span class="s2">&quot;-s </span><span class="si">{settings_publish}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">livereload</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Automatically reload browser tab upon file modification.&quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">livereload</span> <span class="kn">import</span> <span class="n">Server</span>
+
+    <span class="k">def</span> <span class="nf">cached_build</span><span class="p">():</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;-s </span><span class="si">{settings_base}</span><span class="s2"> -e CACHE_CONTENT=true LOAD_CONTENT_CACHE=true&quot;</span>
+        <span class="n">pelican_run</span><span class="p">(</span><span class="n">cmd</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+    <span class="n">cached_build</span><span class="p">()</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">()</span>
+    <span class="n">theme_path</span> <span class="o">=</span> <span class="n">SETTINGS</span><span class="p">[</span><span class="s2">&quot;THEME&quot;</span><span class="p">]</span>
+    <span class="n">watched_globs</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;settings_base&quot;</span><span class="p">],</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">theme_path</span><span class="si">}</span><span class="s2">/templates/**/*.html&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">content_file_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.md&quot;</span><span class="p">,</span> <span class="s2">&quot;.rst&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="n">content_file_extensions</span><span class="p">:</span>
+        <span class="n">content_glob</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/**/*</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">SETTINGS</span><span class="p">[</span><span class="s2">&quot;PATH&quot;</span><span class="p">],</span> <span class="n">extension</span><span class="p">)</span>
+        <span class="n">watched_globs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content_glob</span><span class="p">)</span>
+
+    <span class="n">static_file_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.css&quot;</span><span class="p">,</span> <span class="s2">&quot;.js&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">extension</span> <span class="ow">in</span> <span class="n">static_file_extensions</span><span class="p">:</span>
+        <span class="n">static_file_glob</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">theme_path</span><span class="si">}</span><span class="s2">/static/**/*</span><span class="si">{</span><span class="n">extension</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">watched_globs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">static_file_glob</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">glob</span> <span class="ow">in</span> <span class="n">watched_globs</span><span class="p">:</span>
+        <span class="n">server</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="n">glob</span><span class="p">,</span> <span class="n">cached_build</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">OPEN_BROWSER_ON_SERVE</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">webbrowser</span>
+        <span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://</span><span class="si">{host}</span><span class="s2">:</span><span class="si">{port}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+
+    <span class="n">server</span><span class="o">.</span><span class="n">serve</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;host&quot;</span><span class="p">],</span> <span class="n">port</span><span class="o">=</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;port&quot;</span><span class="p">],</span> <span class="n">root</span><span class="o">=</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">])</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Publish to production via rsync&quot;&quot;&quot;</span>
+    <span class="n">pelican_run</span><span class="p">(</span><span class="s2">&quot;-s </span><span class="si">{settings_publish}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">))</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="s1">&#39;rsync --delete --exclude &quot;.DS_Store&quot; -pthrvz -c &#39;</span>
+        <span class="s1">&#39;-e &quot;ssh -p </span><span class="si">{ssh_port}</span><span class="s1">&quot; &#39;</span>
+        <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{ssh_user}</span><span class="s2">@</span><span class="si">{ssh_host}</span><span class="s2">:</span><span class="si">{ssh_path}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">CONFIG</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">add_cname</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adiciona o arquivo CNAME para domínios customizados&quot;&quot;&quot;</span>
+    <span class="n">cname</span> <span class="o">=</span> <span class="s2">&quot;devonfire.blog&quot;</span>
+    <span class="n">cname_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;deploy_path&quot;</span><span class="p">],</span> <span class="s2">&quot;CNAME&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cname_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cname</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CNAME &#39;</span><span class="si">{</span><span class="n">cname</span><span class="si">}</span><span class="s2">&#39; adicionado!&quot;</span><span class="p">)</span>
+
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">gh_pages</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Publish to GitHub Pages&quot;&quot;&quot;</span>
+    <span class="n">preview</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="s1">&#39;ghp-import -b &quot;</span><span class="si">{github_pages_branch}</span><span class="s1">&quot; &#39;</span>
+        <span class="s1">&#39;-m &quot;</span><span class="si">{commit_message}</span><span class="s1">&quot; &#39;</span>
+        <span class="s1">&#39;&quot;</span><span class="si">{deploy_path}</span><span class="s1">&quot; -p&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">CONFIG</span><span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">pelican_run</span><span class="p">(</span><span class="n">cmd</span><span class="p">):</span>
+    <span class="n">cmd</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">program</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">remainder</span>  <span class="c1"># allows to pass-through args to pelican</span>
+    <span class="n">pelican_main</span><span class="p">(</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
+</code></pre></div>
+
+<h3>Deploy no GitHub Pages</h3>
+<p><strong>Gerando os arquivos de produção</strong></p>
+<ul>
+<li>Com tudo pronto, gere a versão final do site:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py
+</code></pre></div>
+
+<p><strong>Faça o deploy manual com o <code>ghp-import</code></strong></p>
+<p>Primeiramente instale a ferramenta com: <code>pip install ghp-import</code></p>
+<ul>
+<li>Agora execute o comando:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ghp-import<span class="w"> </span>output<span class="w"> </span>-b<span class="w"> </span>gh-pages<span class="w"> </span>-p
+</code></pre></div>
+
+<p>Isso:</p>
+<ul>
+<li>Gera a branch <code>gh-pages</code> com o conteúdo da pasta <code>output/</code>.</li>
+<li>Faz o push para a branch.</li>
+<li>Publica automaticamente o conteúdo.</li>
+</ul>
+<h3>No GitHub Pages (Configurações do repositório):</h3>
+<ol>
+<li>Vá em <strong>Settings</strong> &gt; <strong>Pages</strong>.</li>
+<li>Em "Source", selecione:<ul>
+<li><strong>Branch:</strong> <code>gh-pages</code></li>
+<li><strong>Directory:</strong> <code>/ (root)</code></li>
+</ul>
+</li>
+<li>(Se quiser usar domínio próprio): ative a opção <strong>Custom Domain</strong> e insira <code>seu-dominio.com</code>.</li>
+</ol>
+<p><code>*</code> Será necessário configurar o DNS/Nameserver no seu servidor de hospedagem. </p>
+<p>Se o campo "Custom Domain" estiver sendo desmarcado a cada push, crie um arquivo chamado <code>CNAME</code> na raiz da pasta <code>output/</code> com o conteúdo do domínio:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;seu-dominio.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output/CNAME
+</code></pre></div>
+
+<p><strong>Configuração do CNAME</strong></p>
+<ul>
+<li>Acesse o painel de controle do seu domínio. Vá em DNS/Nameservers e lá, crie dois registros:<ul>
+<li>Type: CNAME; Name: www; Content: seu_user.github.io; TTL: Automático;</li>
+<li>Type: A; Name: @; Content: 185.199.108.153; TTL: Automático;</li>
+</ul>
+</li>
+</ul>
+<h2>Gerenciamento de branches (<code>master</code>, <code>develop</code> e <code>gh-pages</code>)</h2>
+<p>Aqui a branch <code>develop</code> será onde faremos ajustes no nosso blog, a <code>master</code> será nosso ambiente de stagging,  enquanto a <code>gh-pages</code> será o nosso ambiente de Prod. </p>
+<p>Sempre que você estiver pronto para publicar, gera o site (<code>pelican content …</code>) e empurra só o <code>output/</code> para <code>gh-pages</code>, garantindo que o que rola no ar seja exatamente o que foi construído — nada mais, nada menos</p>
+<h3>Exemplo resumido do fluxo</h3>
+<p>Após o desenvolvimento ser concluído, siga esses passos:</p>
+<ol>
+<li>
+<p><strong>Commit</strong> na <code>master</code>:</p>
+<p><code>bash
+git add .
+git commit -m "Atualizar post ou implementar ajustes"
+git push origin master</code></p>
+</li>
+<li>
+<p><strong>Build</strong>:</p>
+<p><code>bash
+pelican content -o output -s publishconf.py
+echo "seu-dominio.com" &gt; output/CNAME</code></p>
+</li>
+<li>
+<p><strong>Deploy</strong></p>
+<p><code>bash
+ghp-import output -b gh-pages -p</code></p>
+</li>
+</ol>
+<p>Pronto, seu blog está no ar. O próximo passo, a partir daqui, é garantir que ele seja indexado pelos mecanismos de busca e investir em uma boa divulgação.</p>
+    </div>
+
+    <!--#endregion-->
+
+    <br/>
+        <!-- #region Botão de comentário no GitHub e de like-->
+        <div class="post-interactions">
+            <a href="https://github.com/robsings/blog_devonfire/issues/new?title=Coment%C3%A1rio%20sobre%20o%20artigo%20Blog%20no%20GitHub%20Pages%20com%20Pelican%20e%20Python" 
+               target="_blank"
+               class="github-comment-button">
+              Comente no GitHub
+            </a>
+        </div>
+
+    <!--#region Botões de navegação-->
+    <div class="post-navigation">
+     <div class="nextprev-group">
+
+        <a href="https://devonfire.blog/automacao-apontamento-horas.html" class="btn-nextprev" style="margin-right: 10px;">
+            Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos →
+        </a>
+     </div> 
+        <a href="https://devonfire.blog/" class="btn-voltarlista">
+            Voltar para a lista de posts
+        </a>
+    </div>
+    <!--#endregion-->
+
+    
+</div>
+    </main>
+    <!-- #endregion -->
+    <!-- #region footer -->
+    <footer class="footer mt-auto py-4" style="background-color: #000; color: #fff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start">
+                    <a href="https://devonfire.blog/">
+                    <img src="https://devonfire.blog/theme/images/logo2.png" 
+                    alt="Logo" 
+                    class="logo-img" 
+                    style="max-width: 100px;"
+                    title="Voltar para a página inicial">
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0" 
+                    style="color: #EE471D; font-size:small;">
+                    &copy; 2025 
+                    DevOnFire. Todos os direitos reservados a 
+                    <a href="https://linktr.ee/rob.sings" 
+                        target="_blank"
+                        style="color:#fcfcfc;text-decoration:none;font-weight:900">
+                        robsings
+                    </a>.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <!--#region Github icon-->
+                    <a href="https://github.com/robsings" target="_blank" class="text-white me-3" title="Github - robsings"><i class="fa-brands fa-square-github"></i></a>
+                    <!--#endregion-->
+                    <!--#region Medium icon-->
+                    <a href="https://medium.com/@robsings_qadev" target="_blank" class="text-white me-3" title="Medium - rob.sings"><i class="fa-brands fa-medium"></i></a>
+                    <!--endregion-->
+                    <!--#region X icon-->
+                    <a href="https://x.com/Robsings_" target="_blank" class="text-white me-3" title="X - Robsings_"><i class="fa-brands fa-x-twitter"></i></a>
+                    <!--endregion-->   
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- #endregion -->
+
+    <!-- #region Bootstrap Lib -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js">
+    </script>
+    <!-- #endregion -->
+    
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todas as imagens dentro do conteúdo do artigo
+  document.querySelectorAll('.article-content img').forEach(img => {
+    img.addEventListener('click', () => {
+      // Abre a URL da imagem em uma nova aba
+      window.open(img.src, '_blank', 'noopener,noreferrer');
+      window.focus();
+    });
+  });
+});
+    </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todos os <a> do documento
+  document.querySelectorAll('.article-content a').forEach(link => {
+    // Define target="_blank" para abrir em nova aba
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+});
+    </script>
+
+</body>
+</html>
