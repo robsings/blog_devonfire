@@ -20,16 +20,16 @@ No VsCode, após ter criado o diretório do seu projeto,
 - Crie um [ambiente virtual](https://docs.python.org/pt-br/3.13/library/venv.html) e instale o Pelican:
     
 ```bash
-    python -m venv .
-    source meu-blog/bin/activate  # No Windows: .\Scripts\activate
-    pip install pelican markdown
+python -m venv .
+source meu-blog/bin/activate  # No Windows: .\Scripts\activate
+pip install pelican markdown
     
 ```
     
 - Feita a instalação, crie um  novo projeto Pelican com o comando:
     
 ```bash
-    pelican-quickstart
+pelican-quickstart
     
 ```
     
@@ -52,19 +52,19 @@ Configurado o arquivo `pelicanconf.py`, vamos ao nosso `hello world`
 - No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores `---`
     
 ```markdown
-    ---
-    Title: Página Inicial
-    Save_as: index.html
-    ---
+---
+Title: Página Inicial
+Save_as: index.html
+---
     
-    [Seu conteúdo aqui]
+[Seu conteúdo aqui]
 ```
     
 
 - Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:
     
 ```bash
-    pelican content
+pelican content
     
 ```
     
@@ -76,7 +76,7 @@ Este comando processará os arquivos no diretório `content/` e gerará o site e
 - Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:
     
 ```bash
-    pelican -r -l
+pelican -r -l
     
 ```
     
@@ -522,24 +522,24 @@ p.card-text{
 - Inicialize o seu repositório localmente:
     
 ```bash
-    cd caminho/do/seu/projeto
-    git init
+cd caminho/do/seu/projeto
+git init
     
 ```
     
 - Crie um `.gitignore` :
     
 ```bash
-    # .gitignore
-    __pycache__/
-    output/
-    *.pyc
-    *.pyo
-    *.pyd
-    env/
-    venv/
-    *.DS_Store
-    *.egg-info/
+# .gitignore
+__pycache__/
+output/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.DS_Store
+*.egg-info/
     
 ```
     
@@ -548,39 +548,39 @@ p.card-text{
 2. Adicione o repositório remoto:
     
 ```bash
-    git remote add origin https://github.com/seu-usuario/nome-do-repo.git
+git remote add origin https://github.com/seu-usuario/nome-do-repo.git
     
 ```
     
 - Adicione os arquivos:
     
 ```bash
-    git add .
-    git commit -m "Primeiro commit do projeto"
+git add .
+git commit -m "Primeiro commit do projeto"
     
 ```
     
 - Suba para a branch `master` ou `main`:
     
 ```bash
-    git push -u origin master
+git push -u origin master
 ```
     
 
 - Gere o `requirements.txt`:
     
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
     
-    - Use `pipreqs` para gerar os requisitos reais do projeto (não o ambiente inteiro):
+- Use `pipreqs` para gerar os requisitos reais do projeto (não o ambiente inteiro):
         
 ```bash
-        pip install pipreqs
-        pipreqs . --force
+pip install pipreqs
+pipreqs . --force
 ```
         
-        Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no projeto.
+Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no projeto.
         
 - Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: `pelicanconf.py`, `publishconf.py` e `tasks.py`
     
@@ -588,71 +588,71 @@ p.card-text{
     **pelicanconf.py**
     
 ```python
-    from datetime import datetime
-    SITEYEAR = datetime.now().year
+from datetime import datetime
+SITEYEAR = datetime.now().year
     
-    AUTHOR = '@Robsings'
-    SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios '
-    SITEURL = ""
+AUTHOR = '@Robsings'
+SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios '
+SITEURL = ""
     
-    PATH = "content"
+PATH = "content"
     
-    TIMEZONE = 'America/Sao_Paulo'
+TIMEZONE = 'America/Sao_Paulo'
     
-    DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'en'
     
-    THEME = "./tema/"
+THEME = "./tema/"
     
-    # Feed generation is usually not desired when developing
-    FEED_ALL_ATOM = None
-    CATEGORY_FEED_ATOM = None
-    TRANSLATION_FEED_ATOM = None
-    AUTHOR_FEED_ATOM = None
-    AUTHOR_FEED_RSS = None
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
     
-    # Blogroll
-    LINKS = (
-        ("GitHub", "https://github.com/robsings"),
-    )
+# Blogroll
+LINKS = (
+    ("GitHub", "https://github.com/robsings"),
+)
     
-    # Social widget
-    SOCIAL = (
-        ("You can add links in your config file", "#"),
-        ("Another social link", "#"),
-    )
+# Social widget
+SOCIAL = (
+    ("You can add links in your config file", "#"),
+    ("Another social link", "#"),
+)
     
-    DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 10
     
-    # Uncomment following line if you want document-relative URLs when developing
-    # RELATIVE_URLS = True
+# Uncomment following line if you want document-relative URLs when developing
+# RELATIVE_URLS = True
     
 ```
     
     **publishconf.py**
     
 ```python
-    # This file is only used if you use `make publish` or
-    # explicitly specify it as your config file.
+# This file is only used if you use `make publish` or
+# explicitly specify it as your config file.
     
-    import os
-    import sys
+import os
+import sys
     
-    sys.path.append(os.curdir)
-    from pelicanconf import *
+sys.path.append(os.curdir)
+from pelicanconf import *
     
-    # If your site is available via HTTPS, make sure SITEURL begins with https://
-    SITEURL = 'devonfire.blog'
-    RELATIVE_URLS = False
+# If your site is available via HTTPS, make sure SITEURL begins with https://
+SITEURL = 'devonfire.blog'
+RELATIVE_URLS = False
     
-    FEED_ALL_ATOM = "feeds/all.atom.xml"
-    CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
     
-    DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = True
     
-    # Following items are often useful when publishing
+# Following items are often useful when publishing
     
-    # DISQUS_SITENAME = ""
-    # GOOGLE_ANALYTICS = ""
+# DISQUS_SITENAME = ""
+# GOOGLE_ANALYTICS = ""
     
 ```
     
@@ -857,8 +857,8 @@ Isso:
 
 1. Vá em **Settings** > **Pages**.
 2. Em "Source", selecione:
-    - **Branch:** `gh-pages`
-    - **Directory:** `/ (root)`
+- **Branch:** `gh-pages`
+- **Directory:** `/ (root)`
 3. (Se quiser usar domínio próprio): ative a opção **Custom Domain** e insira `seu-dominio.com`.
 
 `*` Será necessário configurar o DNS/Nameserver no seu servidor de hospedagem. 
@@ -888,16 +888,16 @@ Após o desenvolvimento ser concluído, siga esses passos:
 1. **Commit** na `master`:
     
 ```bash
-    git add .
-    git commit -m "Atualizar post ou implementar ajustes"
-    git push origin master
+git add .
+git commit -m "Atualizar post ou implementar ajustes"
+git push origin master
 ```
     
 2. **Build**:
     
 ```bash
-    pelican content -o output -s publishconf.py
-    echo "seu-dominio.com" > output/CNAME
+pelican content -o output -s publishconf.py
+echo "seu-dominio.com" > output/CNAME
 ```
     
 3. **Deploy**
