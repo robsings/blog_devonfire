@@ -13,7 +13,7 @@ JINJA_FILTERS = {
 }
 SITEYEAR = datetime.now().year
 
-AUTHOR = 'robsings'
+AUTHOR = '_robsings'
 SITENAME = ' Blog DevOnFire - Artigos, códigos e devaneios '
 SITEDESCRIPTION = 'O humilde legado digital de um dev em chamas | Estudos, códigos e conversas sobre os mais variados assuntos — da tecnologia e seus rumos à cultura nerd/geek.'
 SITEURL = ""
@@ -39,8 +39,8 @@ EXTRA_PATH_METADATA = {
 }
 DEFAULT_METADATA = {
     'meta_description': SITEDESCRIPTION,
-    'seo_keywords': 'blog, devonfire, tecnologia, programação, rob.sings, @rob.sings, Robsings, robsings, rob_sings, dev, nerd, geek',
-    'seo_author': 'Roberto Santos, @rob.sings, @Robsings_, rob.sings, robsings, @devonfire, devon, devonfire, @robsings_qadev, @robsings_writer',
+    'seo_keywords': 'blog, devonfire, tecnologia, programação, _robsings, rob.sings, @rob.sings, Robsings, robsings, rob_sings, dev, nerd, geek',
+    'seo_author': 'Roberto Santos, _robsings, @rob.sings, @Robsings_, rob.sings, robsings, @devonfire, devon, devonfire, @robsings_qadev, @robsings_writer',
 }
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
