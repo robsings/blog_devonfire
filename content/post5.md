@@ -11,7 +11,7 @@ Seo_Keywords: Pelican, Python, Gerador de sites estáticos
 
 Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.
 
-# Primeiros passos
+# **Primeiros passos**
 
 ***Todo esse blog foi construído graças ao Pelican que é um gerador de sites estáticos escrito em Python. Você pode conferir a documentação oficial através do link: [https://getpelican.com/](https://getpelican.com/)***
 
@@ -83,7 +83,7 @@ pelican -r -l
 
 Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: `http://localhost:8000`
 
-## Vamos criar agora o nosso próprio tema
+# **Vamos criar agora o nosso próprio tema**
 
 Quando executamos o comando: `pelican content` ou o  `pelican content -s pelicanconf.py`, o **Pelican** gera na pasta **output** as pastas e arquivos referentes aos temas de sua página, porém, será um tema padrão, que no caso não nos interessa. 
 
@@ -129,11 +129,11 @@ THEME = "./tema/"
 
 ![image.png](./images/imagem_post/post_pelican_blog/image%204.png)
 
-### Estilização do Blog
+# **Estilização do Blog**
 
 A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.
 
-### Base.html
+## **⚫ Base.html**
 
 **`tema\templates\base.html`**
 
@@ -248,12 +248,11 @@ A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.
         })();
 </script>
 
-    </script>
 </body>
 </html>
 ```
 
-### Index.html
+## **⚫ Index.html**
 
 `tema\templates\index.html`
 
@@ -303,7 +302,7 @@ A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.
 
 ```
 
-### Article.html
+## **⚫ Article.html**
 
 `tema\templates\article.html`
 
@@ -346,7 +345,7 @@ A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.
 {% endblock %}
 ```
 
-### Style.css
+## **⚫ Style.css**
 
 `tema\static\css\style.css`
 
@@ -517,7 +516,7 @@ p.card-text{
 
 - Completa a fase de personalização do nosso site, é hora de subi-lo ao GitHub e em seguida ao GitHub Pages.
 
-## Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages
+# **Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages**
 
 - Inicialize o seu repositório localmente:
     
@@ -585,7 +584,7 @@ Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no
 - Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: `pelicanconf.py`, `publishconf.py` e `tasks.py`
     
     
-    **pelicanconf.py**
+## **⚫ pelicanconf.py**
     
 ```python
 from datetime import datetime
@@ -628,7 +627,7 @@ DEFAULT_PAGINATION = 10
     
 ```
     
-    **publishconf.py**
+## **⚫ publishconf.py**
     
 ```python
 # This file is only used if you use `make publish` or
@@ -657,7 +656,7 @@ DELETE_OUTPUT_DIRECTORY = True
 ```
     
 
-**tasks.py**
+## **⚫ tasks.py**
 
 ```python
 import os
@@ -827,9 +826,9 @@ def pelican_run(cmd):
 
 ```
 
-### Deploy no GitHub Pages
+# Deploy no GitHub Pages
 
-**Gerando os arquivos de produção**
+## **⚫ Gerando os arquivos de produção**
 
 - Com tudo pronto, gere a versão final do site:
 
@@ -837,7 +836,7 @@ def pelican_run(cmd):
 pelican content -o output -s publishconf.py
 ```
 
-**Faça o deploy manual com o `ghp-import`**
+## **⚫ Faça o deploy manual com o `ghp-import`**
 
 Primeiramente instale a ferramenta com: `pip install ghp-import`
 
@@ -853,7 +852,7 @@ Isso:
 - Faz o push para a branch.
 - Publica automaticamente o conteúdo.
 
-### No GitHub Pages (Configurações do repositório):
+## **⚫ No GitHub Pages (Configurações do repositório):**
 
 1. Vá em **Settings** > **Pages**.
 2. Em "Source", selecione:
@@ -869,23 +868,23 @@ Se o campo "Custom Domain" estiver sendo desmarcado a cada push, crie um arquivo
 echo "seu-dominio.com" > output/CNAME
 ```
 
-**Configuração do CNAME**
+## **⚫ Configuração do CNAME**
 
 - Acesse o painel de controle do seu domínio. Vá em DNS/Nameservers e lá, crie dois registros:
     - Type: CNAME; Name: www; Content: seu_user.github.io; TTL: Automático;
     - Type: A; Name: @; Content: 185.199.108.153; TTL: Automático;
 
-## Gerenciamento de branches (`master`, `develop` e `gh-pages`)
+# **Gerenciamento de branches `master`, `develop` e `gh-pages`**
 
 Aqui a branch `develop` será onde faremos ajustes no nosso blog, a `master` será nosso ambiente de stagging,  enquanto a `gh-pages` será o nosso ambiente de Prod. 
 
 Sempre que você estiver pronto para publicar, gera o site (`pelican content …`) e empurra só o `output/` para `gh-pages`, garantindo que o que rola no ar seja exatamente o que foi construído — nada mais, nada menos
 
-### Exemplo resumido do fluxo
+## **Exemplo resumido do fluxo**
 
 Após o desenvolvimento ser concluído, siga esses passos:
 
-1. **Commit** na `master`:
+### **⚫ Commit na `master`:**
     
 ```bash
 git add .
@@ -893,14 +892,14 @@ git commit -m "Atualizar post ou implementar ajustes"
 git push origin master
 ```
     
-2. **Build**:
+### **⚫ Build**:
     
 ```bash
 pelican content -o output -s publishconf.py
 echo "seu-dominio.com" > output/CNAME
 ```
     
-3. **Deploy**
+### **⚫ Deploy**
     
 ```bash
 ghp-import output -b gh-pages -p
