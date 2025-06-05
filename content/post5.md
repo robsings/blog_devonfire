@@ -19,19 +19,19 @@ No VsCode, após ter criado o diretório do seu projeto,
 
 - Crie um [ambiente virtual](https://docs.python.org/pt-br/3.13/library/venv.html) e instale o Pelican:
     
-    ```bash
+```bash
     python -m venv .
     source meu-blog/bin/activate  # No Windows: .\Scripts\activate
     pip install pelican markdown
     
-    ```
+```
     
 - Feita a instalação, crie um  novo projeto Pelican com o comando:
     
-    ```bash
+```bash
     pelican-quickstart
     
-    ```
+```
     
 
 **Responda, por fim, as perguntas conforme forem aparecendo com Y/N.**
@@ -51,22 +51,22 @@ Configurado o arquivo `pelicanconf.py`, vamos ao nosso `hello world`
     - Inclua a `home.md` na `pages`
 - No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores `---`
     
-    ```markdown
+```markdown
     ---
     Title: Página Inicial
     Save_as: index.html
     ---
     
     [Seu conteúdo aqui]
-    ```
+```
     
 
 - Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:
     
-    ```bash
+```bash
     pelican content
     
-    ```
+```
     
 
 Este comando processará os arquivos no diretório `content/` e gerará o site estático no diretório `output/`.
@@ -75,10 +75,10 @@ Este comando processará os arquivos no diretório `content/` e gerará o site e
 
 - Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:
     
-    ```bash
+```bash
     pelican -r -l
     
-    ```
+```
     
 
 Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: `http://localhost:8000`
@@ -521,15 +521,15 @@ p.card-text{
 
 - Inicialize o seu repositório localmente:
     
-    ```bash
+```bash
     cd caminho/do/seu/projeto
     git init
     
-    ```
+```
     
 - Crie um `.gitignore` :
     
-    ```bash
+```bash
     # .gitignore
     __pycache__/
     output/
@@ -541,44 +541,44 @@ p.card-text{
     *.DS_Store
     *.egg-info/
     
-    ```
+```
     
 - Suba o projeto ao GitHub:
 1. Crie o repositório no GitHub (sem `README` por enquanto).
 2. Adicione o repositório remoto:
     
-    ```bash
+```bash
     git remote add origin https://github.com/seu-usuario/nome-do-repo.git
     
-    ```
+```
     
 - Adicione os arquivos:
     
-    ```bash
+```bash
     git add .
     git commit -m "Primeiro commit do projeto"
     
-    ```
+```
     
 - Suba para a branch `master` ou `main`:
     
-    ```bash
+```bash
     git push -u origin master
-    ```
+```
     
 
 - Gere o `requirements.txt`:
     
-    ```bash
+```bash
     pip install -r requirements.txt
-    ```
+```
     
     - Use `pipreqs` para gerar os requisitos reais do projeto (não o ambiente inteiro):
         
-        ```bash
+```bash
         pip install pipreqs
         pipreqs . --force
-        ```
+```
         
         Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no projeto.
         
@@ -587,7 +587,7 @@ p.card-text{
     
     **pelicanconf.py**
     
-    ```python
+```python
     from datetime import datetime
     SITEYEAR = datetime.now().year
     
@@ -626,11 +626,11 @@ p.card-text{
     # Uncomment following line if you want document-relative URLs when developing
     # RELATIVE_URLS = True
     
-    ```
+```
     
     **publishconf.py**
     
-    ```python
+```python
     # This file is only used if you use `make publish` or
     # explicitly specify it as your config file.
     
@@ -654,7 +654,7 @@ p.card-text{
     # DISQUS_SITENAME = ""
     # GOOGLE_ANALYTICS = ""
     
-    ```
+```
     
 
 **tasks.py**
@@ -887,24 +887,24 @@ Após o desenvolvimento ser concluído, siga esses passos:
 
 1. **Commit** na `master`:
     
-    ```bash
+```bash
     git add .
     git commit -m "Atualizar post ou implementar ajustes"
     git push origin master
-    ```
+```
     
 2. **Build**:
     
-    ```bash
+```bash
     pelican content -o output -s publishconf.py
     echo "seu-dominio.com" > output/CNAME
-    ```
+```
     
 3. **Deploy**
     
-    ```bash
-    ghp-import output -b gh-pages -p
-    ```
+```bash
+ghp-import output -b gh-pages -p
+```
     
 
 Pronto, seu blog está no ar. O próximo passo, a partir daqui, é garantir que ele seja indexado pelos mecanismos de busca e investir em uma boa divulgação.
