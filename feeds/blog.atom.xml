@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - Artigos, códigos e devaneios - Blog</title><link href="https://devonfire.blog/" rel="alternate"></link><link href="https://devonfire.blog/feeds/blog.atom.xml" rel="self"></link><id>https://devonfire.blog/</id><updated>2025-06-05T13:49:04-03:00</updated><entry><title>Blog no GitHub Pages com Pelican e Python</title><link href="https://devonfire.blog/blog-com-pelican-e-githubpages.html" rel="alternate"></link><published>2025-06-05T13:37:00-03:00</published><updated>2025-06-05T13:49:04-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-06-05:/blog-com-pelican-e-githubpages.html</id><summary type="html">&lt;p&gt;Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - Artigos, códigos e devaneios - Blog</title><link href="https://devonfire.blog/" rel="alternate"></link><link href="https://devonfire.blog/feeds/blog.atom.xml" rel="self"></link><id>https://devonfire.blog/</id><updated>2025-06-05T14:21:58-03:00</updated><entry><title>Blog no GitHub Pages com Pelican e Python</title><link href="https://devonfire.blog/blog-com-pelican-e-githubpages.html" rel="alternate"></link><published>2025-06-05T13:37:00-03:00</published><updated>2025-06-05T14:21:58-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-06-05:/blog-com-pelican-e-githubpages.html</id><summary type="html">&lt;p&gt;Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.&lt;/p&gt;
 &lt;h1&gt;Primeiros passos&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Todo esse blog foi construído graças ao Pelican que é um gerador de sites estáticos escrito em Python. Você pode conferir a documentação oficial através do link: &lt;a href="https://getpelican.com/"&gt;https://getpelican.com/&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;No VsCode, após ter criado o diretório do seu projeto,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Crie um &lt;a href="https://docs.python.org/pt-br/3.13/library/venv.html"&gt;ambiente virtual&lt;/a&gt; e instale o Pelican:&lt;/p&gt;
-&lt;p&gt;```bash
-python -m venv .
-source meu-blog/bin/activate  # No Windows: .\Scripts\activate
-pip install pelican markdown&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Feita a instalação, crie um  novo projeto Pelican com o comando:&lt;/p&gt;
-&lt;p&gt;```bash
-pelican-quickstart&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Crie um &lt;a href="https://docs.python.org/pt-br/3.13/library/venv.html"&gt;ambiente virtual&lt;/a&gt; e instale o Pelican:&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;venv&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;meu-blog/bin/activate&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;# No Windows: .\Scripts\activate&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Feita a instalação, crie um  novo projeto Pelican com o comando:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;pelican-quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;strong&gt;Responda, por fim, as perguntas conforme forem aparecendo com Y/N.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Feito isso a estrutura do nosso projeto será formada:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image.png" src="./images/imagem_post/post_pelican_blog/image.png"&gt;&lt;/p&gt;
@@ -30,32 +28,30 @@ pelican-quickstart&lt;/p&gt;
 &lt;li&gt;Inclua a &lt;code&gt;home.md&lt;/code&gt; na &lt;code&gt;pages&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores &lt;code&gt;---&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;```markdown&lt;/h2&gt;
-&lt;p&gt;Title: Página Inicial
-Save_as: index.html&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;[Seu conteúdo aqui]
-```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:&lt;/p&gt;
-&lt;p&gt;```bash
-pelican content&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores &lt;code&gt;---&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    ---
+    Title: Página Inicial
+    Save_as: index.html
+    ---
+
+    [Seu conteúdo aqui]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;content
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Este comando processará os arquivos no diretório &lt;code&gt;content/&lt;/code&gt; e gerará o site estático no diretório &lt;code&gt;output/&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%201.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:&lt;/p&gt;
-&lt;p&gt;```bash
-pelican -r -l&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="w"&gt; &lt;/span&gt;-l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: &lt;code&gt;http://localhost:8000&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Vamos criar agora o nosso próprio tema&lt;/h2&gt;
 &lt;p&gt;Quando executamos o comando: &lt;code&gt;pelican content&lt;/code&gt; ou o  &lt;code&gt;pelican content -s pelicanconf.py&lt;/code&gt;, o &lt;strong&gt;Pelican&lt;/strong&gt; gera na pasta &lt;strong&gt;output&lt;/strong&gt; as pastas e arquivos referentes aos temas de sua página, porém, será um tema padrão, que no caso não nos interessa. &lt;/p&gt;
@@ -471,116 +467,136 @@ pelican -r -l&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Inicialize o seu repositório localmente:&lt;/p&gt;
-&lt;p&gt;```bash
-cd caminho/do/seu/projeto
-git init&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Crie um &lt;code&gt;.gitignore&lt;/code&gt; :&lt;/p&gt;
-&lt;p&gt;```bash&lt;/p&gt;
-&lt;h1&gt;.gitignore&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;pycache&lt;/strong&gt;/
-output/
-&lt;em&gt;.pyc
-&lt;/em&gt;.pyo
-&lt;em&gt;.pyd
-env/
-venv/
-&lt;/em&gt;.DS_Store
-*.egg-info/&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Suba o projeto ao GitHub:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;Crie o repositório no GitHub (sem &lt;code&gt;README&lt;/code&gt; por enquanto).&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Adicione o repositório remoto:&lt;/p&gt;
-&lt;p&gt;```bash
-git remote add origin https://github.com/seu-usuario/nome-do-repo.git&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Adicione os arquivos:&lt;/p&gt;
-&lt;p&gt;```bash
-git add .
-git commit -m "Primeiro commit do projeto"&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Suba para a branch &lt;code&gt;master&lt;/code&gt; ou &lt;code&gt;main&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;bash
-git push -u origin master&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Gere o &lt;code&gt;requirements.txt&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;bash
-pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Use &lt;code&gt;pipreqs&lt;/code&gt; para gerar os requisitos reais do projeto (não o ambiente inteiro):&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;bash
-pip install pipreqs
-pipreqs . --force&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Isso criará um &lt;code&gt;requirements.txt&lt;/code&gt; apenas com os pacotes realmente utilizados no projeto.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Inicialize o seu repositório localmente:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;caminho/do/seu/projeto
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Crie um &lt;code&gt;.gitignore&lt;/code&gt; :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# .gitignore&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;__pycache__/
+&lt;span class="w"&gt;    &lt;/span&gt;output/
+&lt;span class="w"&gt;    &lt;/span&gt;*.pyc
+&lt;span class="w"&gt;    &lt;/span&gt;*.pyo
+&lt;span class="w"&gt;    &lt;/span&gt;*.pyd
+&lt;span class="w"&gt;    &lt;/span&gt;env/
+&lt;span class="w"&gt;    &lt;/span&gt;venv/
+&lt;span class="w"&gt;    &lt;/span&gt;*.DS_Store
+&lt;span class="w"&gt;    &lt;/span&gt;*.egg-info/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Suba o projeto ao GitHub:&lt;/li&gt;
+&lt;li&gt;Crie o repositório no GitHub (sem &lt;code&gt;README&lt;/code&gt; por enquanto).&lt;/li&gt;
+&lt;li&gt;Adicione o repositório remoto:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;https://github.com/seu-usuario/nome-do-repo.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Adicione os arquivos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Primeiro commit do projeto&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Suba para a branch &lt;code&gt;master&lt;/code&gt; ou &lt;code&gt;main&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gere o &lt;code&gt;requirements.txt&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="w"&gt; &lt;/span&gt;requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;- Use `pipreqs` para gerar os requisitos reais do projeto (não o ambiente inteiro):
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;        &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pipreqs
+&lt;span class="w"&gt;        &lt;/span&gt;pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;--force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no projeto.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: &lt;code&gt;pelicanconf.py&lt;/code&gt;, &lt;code&gt;publishconf.py&lt;/code&gt; e &lt;code&gt;tasks.py&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;pelicanconf.py&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;```python
-from datetime import datetime
-SITEYEAR = datetime.now().year&lt;/p&gt;
-&lt;p&gt;AUTHOR = '@Robsings'
-SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios '
-SITEURL = ""&lt;/p&gt;
-&lt;p&gt;PATH = "content"&lt;/p&gt;
-&lt;p&gt;TIMEZONE = 'America/Sao_Paulo'&lt;/p&gt;
-&lt;p&gt;DEFAULT_LANG = 'en'&lt;/p&gt;
-&lt;p&gt;THEME = "./tema/"&lt;/p&gt;
-&lt;h1&gt;Feed generation is usually not desired when developing&lt;/h1&gt;
-&lt;p&gt;FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None&lt;/p&gt;
-&lt;h1&gt;Blogroll&lt;/h1&gt;
-&lt;p&gt;LINKS = (
-    ("GitHub", "https://github.com/robsings"),
-)&lt;/p&gt;
-&lt;h1&gt;Social widget&lt;/h1&gt;
-&lt;p&gt;SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)&lt;/p&gt;
-&lt;p&gt;DEFAULT_PAGINATION = 10&lt;/p&gt;
-&lt;h1&gt;Uncomment following line if you want document-relative URLs when developing&lt;/h1&gt;
-&lt;h1&gt;RELATIVE_URLS = True&lt;/h1&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;publishconf.py&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;```python&lt;/p&gt;
-&lt;h1&gt;This file is only used if you use &lt;code&gt;make publish&lt;/code&gt; or&lt;/h1&gt;
-&lt;h1&gt;explicitly specify it as your config file.&lt;/h1&gt;
-&lt;p&gt;import os
-import sys&lt;/p&gt;
-&lt;p&gt;sys.path.append(os.curdir)
-from pelicanconf import *&lt;/p&gt;
-&lt;h1&gt;If your site is available via HTTPS, make sure SITEURL begins with https://&lt;/h1&gt;
-&lt;p&gt;SITEURL = 'devonfire.blog'
-RELATIVE_URLS = False&lt;/p&gt;
-&lt;p&gt;FEED_ALL_ATOM = "feeds/all.atom.xml"
-CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"&lt;/p&gt;
-&lt;p&gt;DELETE_OUTPUT_DIRECTORY = True&lt;/p&gt;
-&lt;h1&gt;Following items are often useful when publishing&lt;/h1&gt;
-&lt;h1&gt;DISQUS_SITENAME = ""&lt;/h1&gt;
-&lt;h1&gt;GOOGLE_ANALYTICS = ""&lt;/h1&gt;
-&lt;p&gt;```&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;
+    &lt;span class="n"&gt;SITEYEAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;
+
+    &lt;span class="n"&gt;AUTHOR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;@Robsings&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios &amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;content&amp;quot;&lt;/span&gt;
+
+    &lt;span class="n"&gt;TIMEZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;America/Sao_Paulo&amp;#39;&lt;/span&gt;
+
+    &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;en&amp;#39;&lt;/span&gt;
+
+    &lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./tema/&amp;quot;&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Feed generation is usually not desired when developing&lt;/span&gt;
+    &lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;TRANSLATION_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;AUTHOR_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Blogroll&lt;/span&gt;
+    &lt;span class="n"&gt;LINKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GitHub&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://github.com/robsings&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Social widget&lt;/span&gt;
+    &lt;span class="n"&gt;SOCIAL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;You can add links in your config file&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Another social link&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;DEFAULT_PAGINATION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Uncomment following line if you want document-relative URLs when developing&lt;/span&gt;
+    &lt;span class="c1"&gt;# RELATIVE_URLS = True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;**publishconf.py**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="c1"&gt;# This file is only used if you use `make publish` or&lt;/span&gt;
+    &lt;span class="c1"&gt;# explicitly specify it as your config file.&lt;/span&gt;
+
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+
+    &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;curdir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pelicanconf&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# If your site is available via HTTPS, make sure SITEURL begins with https://&lt;/span&gt;
+    &lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;devonfire.blog&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;RELATIVE_URLS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+
+    &lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;feeds/all.atom.xml&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;feeds/&lt;/span&gt;&lt;span class="si"&gt;{slug}&lt;/span&gt;&lt;span class="s2"&gt;.atom.xml&amp;quot;&lt;/span&gt;
+
+    &lt;span class="n"&gt;DELETE_OUTPUT_DIRECTORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Following items are often useful when publishing&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# DISQUS_SITENAME = &amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="c1"&gt;# GOOGLE_ANALYTICS = &amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;strong&gt;tasks.py&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;shlex&lt;/span&gt;
@@ -799,25 +815,26 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"&lt;/p&gt;
 &lt;h3&gt;Exemplo resumido do fluxo&lt;/h3&gt;
 &lt;p&gt;Após o desenvolvimento ser concluído, siga esses passos:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Commit&lt;/strong&gt; na &lt;code&gt;master&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;bash
-git add .
-git commit -m "Atualizar post ou implementar ajustes"
-git push origin master&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Build&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;bash
-pelican content -o output -s publishconf.py
-echo "seu-dominio.com" &amp;gt; output/CNAME&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;bash
-ghp-import output -b gh-pages -p&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit&lt;/strong&gt; na &lt;code&gt;master&lt;/code&gt;:&lt;/li&gt;
 &lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Atualizar post ou implementar ajustes&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Build&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;content&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;publishconf.py
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;seu-dominio.com&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;output/CNAME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ghp-import&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;gh-pages&lt;span class="w"&gt; &lt;/span&gt;-p
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Pronto, seu blog está no ar. O próximo passo, a partir daqui, é garantir que ele seja indexado pelos mecanismos de busca e investir em uma boa divulgação.&lt;/p&gt;</content><category term="Blog"></category></entry><entry><title>Automatizei o Apontamento de Horas e Parei de Me Preocupar com Esquecimentos</title><link href="https://devonfire.blog/automacao-apontamento-horas.html" rel="alternate"></link><published>2025-05-15T17:06:00-03:00</published><updated>2025-05-15T17:33:27-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-05-15:/automacao-apontamento-horas.html</id><summary type="html">&lt;p&gt;Automatizei o apontamento de horas na empresa com Selenium e Python, garantindo que nunca mais esquecerei de registrar minhas horas no fim do dia. Neste post, compartilho como implementei essa solução.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Este é um simples projeto de automação em Selenium Python concebido pela necessidade de deixar de me esquecer de fazer o meu apontamento de horas no fim do dia.&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Requisitos para o projeto:&lt;/h2&gt;
 &lt;ul&gt;

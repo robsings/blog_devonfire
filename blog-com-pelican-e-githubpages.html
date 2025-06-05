@@ -174,21 +174,19 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <p><strong><em>Todo esse blog foi construído graças ao Pelican que é um gerador de sites estáticos escrito em Python. Você pode conferir a documentação oficial através do link: <a href="https://getpelican.com/">https://getpelican.com/</a></em></strong></p>
 <p>No VsCode, após ter criado o diretório do seu projeto,</p>
 <ul>
-<li>
-<p>Crie um <a href="https://docs.python.org/pt-br/3.13/library/venv.html">ambiente virtual</a> e instale o Pelican:</p>
-<p>```bash
-python -m venv .
-source meu-blog/bin/activate  # No Windows: .\Scripts\activate
-pip install pelican markdown</p>
-<p>```</p>
-</li>
-<li>
-<p>Feita a instalação, crie um  novo projeto Pelican com o comando:</p>
-<p>```bash
-pelican-quickstart</p>
-<p>```</p>
-</li>
+<li>Crie um <a href="https://docs.python.org/pt-br/3.13/library/venv.html">ambiente virtual</a> e instale o Pelican:</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.
+<span class="w">    </span><span class="nb">source</span><span class="w"> </span>meu-blog/bin/activate<span class="w">  </span><span class="c1"># No Windows: .\Scripts\activate</span>
+<span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>pelican<span class="w"> </span>markdown
+</code></pre></div>
+
+<ul>
+<li>Feita a instalação, crie um  novo projeto Pelican com o comando:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican-quickstart
+</code></pre></div>
+
 <p><strong>Responda, por fim, as perguntas conforme forem aparecendo com Y/N.</strong></p>
 <p>Feito isso a estrutura do nosso projeto será formada:</p>
 <p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image.png"></p>
@@ -200,32 +198,30 @@ pelican-quickstart</p>
 <li>Inclua a <code>home.md</code> na <code>pages</code></li>
 </ul>
 </li>
-<li>
-<p>No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores <code>---</code></p>
-<h2>```markdown</h2>
-<p>Title: Página Inicial
-Save_as: index.html</p>
-<hr>
-<p>[Seu conteúdo aqui]
-```</p>
-</li>
-<li>
-<p>Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:</p>
-<p>```bash
-pelican content</p>
-<p>```</p>
-</li>
+<li>No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores <code>---</code></li>
 </ul>
+<div class="highlight"><pre><span></span><code>    ---
+    Title: Página Inicial
+    Save_as: index.html
+    ---
+
+    [Seu conteúdo aqui]
+</code></pre></div>
+
+<ul>
+<li>Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican<span class="w"> </span>content
+</code></pre></div>
+
 <p>Este comando processará os arquivos no diretório <code>content/</code> e gerará o site estático no diretório <code>output/</code>.</p>
 <p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%201.png"></p>
 <ul>
-<li>
-<p>Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:</p>
-<p>```bash
-pelican -r -l</p>
-<p>```</p>
-</li>
+<li>Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican<span class="w"> </span>-r<span class="w"> </span>-l
+</code></pre></div>
+
 <p>Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: <code>http://localhost:8000</code></p>
 <h2>Vamos criar agora o nosso próprio tema</h2>
 <p>Quando executamos o comando: <code>pelican content</code> ou o  <code>pelican content -s pelicanconf.py</code>, o <strong>Pelican</strong> gera na pasta <strong>output</strong> as pastas e arquivos referentes aos temas de sua página, porém, será um tema padrão, que no caso não nos interessa. </p>
@@ -641,116 +637,136 @@ pelican -r -l</p>
 </ul>
 <h2>Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages</h2>
 <ul>
-<li>
-<p>Inicialize o seu repositório localmente:</p>
-<p>```bash
-cd caminho/do/seu/projeto
-git init</p>
-<p>```</p>
-</li>
-<li>
-<p>Crie um <code>.gitignore</code> :</p>
-<p>```bash</p>
-<h1>.gitignore</h1>
-<p><strong>pycache</strong>/
-output/
-<em>.pyc
-</em>.pyo
-<em>.pyd
-env/
-venv/
-</em>.DS_Store
-*.egg-info/</p>
-<p>```</p>
-</li>
-<li>
-<p>Suba o projeto ao GitHub:</p>
-</li>
-<li>Crie o repositório no GitHub (sem <code>README</code> por enquanto).</li>
-<li>
-<p>Adicione o repositório remoto:</p>
-<p>```bash
-git remote add origin https://github.com/seu-usuario/nome-do-repo.git</p>
-<p>```</p>
-</li>
-<li>
-<p>Adicione os arquivos:</p>
-<p>```bash
-git add .
-git commit -m "Primeiro commit do projeto"</p>
-<p>```</p>
-</li>
-<li>
-<p>Suba para a branch <code>master</code> ou <code>main</code>:</p>
-<p><code>bash
-git push -u origin master</code></p>
-</li>
-<li>
-<p>Gere o <code>requirements.txt</code>:</p>
-<p><code>bash
-pip install -r requirements.txt</code></p>
-<ul>
-<li>
-<p>Use <code>pipreqs</code> para gerar os requisitos reais do projeto (não o ambiente inteiro):</p>
-<p><code>bash
-pip install pipreqs
-pipreqs . --force</code></p>
-<p>Isso criará um <code>requirements.txt</code> apenas com os pacotes realmente utilizados no projeto.</p>
-</li>
+<li>Inicialize o seu repositório localmente:</li>
 </ul>
-</li>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>caminho/do/seu/projeto
+<span class="w">    </span>git<span class="w"> </span>init
+</code></pre></div>
+
+<ul>
+<li>Crie um <code>.gitignore</code> :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1"># .gitignore</span>
+<span class="w">    </span>__pycache__/
+<span class="w">    </span>output/
+<span class="w">    </span>*.pyc
+<span class="w">    </span>*.pyo
+<span class="w">    </span>*.pyd
+<span class="w">    </span>env/
+<span class="w">    </span>venv/
+<span class="w">    </span>*.DS_Store
+<span class="w">    </span>*.egg-info/
+</code></pre></div>
+
+<ul>
+<li>Suba o projeto ao GitHub:</li>
+<li>Crie o repositório no GitHub (sem <code>README</code> por enquanto).</li>
+<li>Adicione o repositório remoto:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/seu-usuario/nome-do-repo.git
+</code></pre></div>
+
+<ul>
+<li>Adicione os arquivos:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Primeiro commit do projeto&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Suba para a branch <code>master</code> ou <code>main</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
+
+<ul>
+<li>Gere o <code>requirements.txt</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>- Use `pipreqs` para gerar os requisitos reais do projeto (não o ambiente inteiro):
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="w">        </span>pip<span class="w"> </span>install<span class="w"> </span>pipreqs
+<span class="w">        </span>pipreqs<span class="w"> </span>.<span class="w"> </span>--force
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no projeto.
+</code></pre></div>
+
+<ul>
 <li>
 <p>Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: <code>pelicanconf.py</code>, <code>publishconf.py</code> e <code>tasks.py</code></p>
 <p><strong>pelicanconf.py</strong></p>
-<p>```python
-from datetime import datetime
-SITEYEAR = datetime.now().year</p>
-<p>AUTHOR = '@Robsings'
-SITENAME = ' Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios '
-SITEURL = ""</p>
-<p>PATH = "content"</p>
-<p>TIMEZONE = 'America/Sao_Paulo'</p>
-<p>DEFAULT_LANG = 'en'</p>
-<p>THEME = "./tema/"</p>
-<h1>Feed generation is usually not desired when developing</h1>
-<p>FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None</p>
-<h1>Blogroll</h1>
-<p>LINKS = (
-    ("GitHub", "https://github.com/robsings"),
-)</p>
-<h1>Social widget</h1>
-<p>SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)</p>
-<p>DEFAULT_PAGINATION = 10</p>
-<h1>Uncomment following line if you want document-relative URLs when developing</h1>
-<h1>RELATIVE_URLS = True</h1>
-<p>```</p>
-<p><strong>publishconf.py</strong></p>
-<p>```python</p>
-<h1>This file is only used if you use <code>make publish</code> or</h1>
-<h1>explicitly specify it as your config file.</h1>
-<p>import os
-import sys</p>
-<p>sys.path.append(os.curdir)
-from pelicanconf import *</p>
-<h1>If your site is available via HTTPS, make sure SITEURL begins with https://</h1>
-<p>SITEURL = 'devonfire.blog'
-RELATIVE_URLS = False</p>
-<p>FEED_ALL_ATOM = "feeds/all.atom.xml"
-CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"</p>
-<p>DELETE_OUTPUT_DIRECTORY = True</p>
-<h1>Following items are often useful when publishing</h1>
-<h1>DISQUS_SITENAME = ""</h1>
-<h1>GOOGLE_ANALYTICS = ""</h1>
-<p>```</p>
 </li>
 </ul>
+<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+    <span class="n">SITEYEAR</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+
+    <span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">&#39;@Robsings&#39;</span>
+    <span class="n">SITENAME</span> <span class="o">=</span> <span class="s1">&#39; Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios &#39;</span>
+    <span class="n">SITEURL</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;content&quot;</span>
+
+    <span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Sao_Paulo&#39;</span>
+
+    <span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span>
+
+    <span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;./tema/&quot;</span>
+
+    <span class="c1"># Feed generation is usually not desired when developing</span>
+    <span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># Blogroll</span>
+    <span class="n">LINKS</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;GitHub&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/robsings&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Social widget</span>
+    <span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;You can add links in your config file&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Another social link&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="c1"># Uncomment following line if you want document-relative URLs when developing</span>
+    <span class="c1"># RELATIVE_URLS = True</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>**publishconf.py**
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    <span class="c1"># This file is only used if you use `make publish` or</span>
+    <span class="c1"># explicitly specify it as your config file.</span>
+
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
+
+    <span class="c1"># If your site is available via HTTPS, make sure SITEURL begins with https://</span>
+    <span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;devonfire.blog&#39;</span>
+    <span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s2">&quot;feeds/all.atom.xml&quot;</span>
+    <span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s2">&quot;feeds/</span><span class="si">{slug}</span><span class="s2">.atom.xml&quot;</span>
+
+    <span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Following items are often useful when publishing</span>
+
+    <span class="c1"># DISQUS_SITENAME = &quot;&quot;</span>
+    <span class="c1"># GOOGLE_ANALYTICS = &quot;&quot;</span>
+</code></pre></div>
+
 <p><strong>tasks.py</strong></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shlex</span>
@@ -969,25 +985,26 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"</p>
 <h3>Exemplo resumido do fluxo</h3>
 <p>Após o desenvolvimento ser concluído, siga esses passos:</p>
 <ol>
-<li>
-<p><strong>Commit</strong> na <code>master</code>:</p>
-<p><code>bash
-git add .
-git commit -m "Atualizar post ou implementar ajustes"
-git push origin master</code></p>
-</li>
-<li>
-<p><strong>Build</strong>:</p>
-<p><code>bash
-pelican content -o output -s publishconf.py
-echo "seu-dominio.com" &gt; output/CNAME</code></p>
-</li>
-<li>
-<p><strong>Deploy</strong></p>
-<p><code>bash
-ghp-import output -b gh-pages -p</code></p>
-</li>
+<li><strong>Commit</strong> na <code>master</code>:</li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Atualizar post ou implementar ajustes&quot;</span>
+<span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
+
+<ol>
+<li><strong>Build</strong>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;seu-dominio.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output/CNAME
+</code></pre></div>
+
+<ol>
+<li><strong>Deploy</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code>ghp-import<span class="w"> </span>output<span class="w"> </span>-b<span class="w"> </span>gh-pages<span class="w"> </span>-p
+</code></pre></div>
+
 <p>Pronto, seu blog está no ar. O próximo passo, a partir daqui, é garantir que ele seja indexado pelos mecanismos de busca e investir em uma boa divulgação.</p>
     </div>
 
