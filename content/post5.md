@@ -42,7 +42,7 @@ Feito isso a estrutura do nosso projeto será formada:
 
 ![image.png](./images/imagem_post/post_pelican_blog/image.png)
 
-Importante notar que, o arquivo [`pelicanconf.py`](http://pelicanconf.py) é onde teremos as configurações referentes ao desenvolvimento, enquanto no `publishconf.py` teremos as nossas configurações de produção. Sendo assim, a variável: `SITEURL`,  estará vazia no `pelicanconf.py` e deve ter o seu domínio pessoal em `publishconf.py`
+Importante notar que, o arquivo `pelicanconf.py` é onde teremos as configurações referentes ao desenvolvimento, enquanto no `publishconf.py` teremos as nossas configurações de produção. Sendo assim, a variável: `SITEURL`,  estará vazia no `pelicanconf.py` e deve ter o seu domínio pessoal em `publishconf.py`
 
 Configurado o arquivo `pelicanconf.py`, vamos ao nosso `hello world`
 
