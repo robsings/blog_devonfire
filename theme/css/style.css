@@ -20,6 +20,7 @@ font-weight: 900!important;
 p, ul, ol, li{
     font-size: 25px!important;
     line-height: 2!important;
+    text-decoration: none!important;
 }
 
 /* #region responsividade*/
@@ -163,11 +164,10 @@ p.card-text{
 }
 
 .post p a{
-    text-decoration: none!important;
     color: #EE471D!important;
     font-weight: 900!important;
 }
-li a{
+ul li a{
     text-decoration: none!important;
     color: #EE471D!important;
     font-weight: 900!important;
