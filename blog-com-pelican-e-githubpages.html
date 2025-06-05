@@ -176,15 +176,15 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <ul>
 <li>Crie um <a href="https://docs.python.org/pt-br/3.13/library/venv.html">ambiente virtual</a> e instale o Pelican:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.
-<span class="w">    </span><span class="nb">source</span><span class="w"> </span>meu-blog/bin/activate<span class="w">  </span><span class="c1"># No Windows: .\Scripts\activate</span>
-<span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>pelican<span class="w"> </span>markdown
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.
+<span class="nb">source</span><span class="w"> </span>meu-blog/bin/activate<span class="w">  </span><span class="c1"># No Windows: .\Scripts\activate</span>
+pip<span class="w"> </span>install<span class="w"> </span>pelican<span class="w"> </span>markdown
 </code></pre></div>
 
 <ul>
 <li>Feita a instalação, crie um  novo projeto Pelican com o comando:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican-quickstart
+<div class="highlight"><pre><span></span><code>pelican-quickstart
 </code></pre></div>
 
 <p><strong>Responda, por fim, as perguntas conforme forem aparecendo com Y/N.</strong></p>
@@ -200,18 +200,18 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 </li>
 <li>No conteúdo de seu arquivo.md, você terá que incluir, antes de qualquer texto, imagem, ou mídia, uma seção de metadados com delimitadores <code>---</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code>    ---
-    Title: Página Inicial
-    Save_as: index.html
-    ---
+<div class="highlight"><pre><span></span><code>---
+Title: Página Inicial
+<span class="gu">Save_as: index.html</span>
+<span class="gu">---</span>
 
-    [Seu conteúdo aqui]
+[Seu conteúdo aqui]
 </code></pre></div>
 
 <ul>
 <li>Para gerar os arquivos estáticos do seu site, execute o seguinte comando no terminal, na raiz do seu projeto:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican<span class="w"> </span>content
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>content
 </code></pre></div>
 
 <p>Este comando processará os arquivos no diretório <code>content/</code> e gerará o site estático no diretório <code>output/</code>.</p>
@@ -219,7 +219,7 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <ul>
 <li>Por fim, e aqui chegamos ao final da etapa 1 da criação do nosso blog, inicie o servidor de desenvolvimento com o seguinte comando:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican<span class="w"> </span>-r<span class="w"> </span>-l
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>-r<span class="w"> </span>-l
 </code></pre></div>
 
 <p>Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: <code>http://localhost:8000</code></p>
@@ -639,23 +639,23 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <ul>
 <li>Inicialize o seu repositório localmente:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>caminho/do/seu/projeto
-<span class="w">    </span>git<span class="w"> </span>init
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>caminho/do/seu/projeto
+git<span class="w"> </span>init
 </code></pre></div>
 
 <ul>
 <li>Crie um <code>.gitignore</code> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1"># .gitignore</span>
-<span class="w">    </span>__pycache__/
-<span class="w">    </span>output/
-<span class="w">    </span>*.pyc
-<span class="w">    </span>*.pyo
-<span class="w">    </span>*.pyd
-<span class="w">    </span>env/
-<span class="w">    </span>venv/
-<span class="w">    </span>*.DS_Store
-<span class="w">    </span>*.egg-info/
+<div class="highlight"><pre><span></span><code><span class="c1"># .gitignore</span>
+__pycache__/
+output/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.DS_Store
+*.egg-info/
 </code></pre></div>
 
 <ul>
@@ -663,108 +663,106 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <li>Crie o repositório no GitHub (sem <code>README</code> por enquanto).</li>
 <li>Adicione o repositório remoto:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/seu-usuario/nome-do-repo.git
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/seu-usuario/nome-do-repo.git
 </code></pre></div>
 
 <ul>
 <li>Adicione os arquivos:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>.
-<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Primeiro commit do projeto&quot;</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Primeiro commit do projeto&quot;</span>
 </code></pre></div>
 
 <ul>
 <li>Suba para a branch <code>master</code> ou <code>main</code>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div>
 
 <ul>
 <li>Gere o <code>requirements.txt</code>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>- Use `pipreqs` para gerar os requisitos reais do projeto (não o ambiente inteiro):
+<ul>
+<li>Use <code>pipreqs</code> para gerar os requisitos reais do projeto (não o ambiente inteiro):</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pipreqs
+pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="w">        </span>pip<span class="w"> </span>install<span class="w"> </span>pipreqs
-<span class="w">        </span>pipreqs<span class="w"> </span>.<span class="w"> </span>--force
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>    Isso criará um `requirements.txt` apenas com os pacotes realmente utilizados no projeto.
-</code></pre></div>
-
+<p>Isso criará um <code>requirements.txt</code> apenas com os pacotes realmente utilizados no projeto.</p>
 <ul>
 <li>
 <p>Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: <code>pelicanconf.py</code>, <code>publishconf.py</code> e <code>tasks.py</code></p>
 <p><strong>pelicanconf.py</strong></p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-    <span class="n">SITEYEAR</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">SITEYEAR</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
 
-    <span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">&#39;@Robsings&#39;</span>
-    <span class="n">SITENAME</span> <span class="o">=</span> <span class="s1">&#39; Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios &#39;</span>
-    <span class="n">SITEURL</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">&#39;@Robsings&#39;</span>
+<span class="n">SITENAME</span> <span class="o">=</span> <span class="s1">&#39; Blog DevOnFire - O humilde legado digital de um dev em chamas | Artigos, códigos e devaneios &#39;</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-    <span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;content&quot;</span>
+<span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;content&quot;</span>
 
-    <span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Sao_Paulo&#39;</span>
+<span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Sao_Paulo&#39;</span>
 
-    <span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span>
+<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span>
 
-    <span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;./tema/&quot;</span>
+<span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;./tema/&quot;</span>
 
-    <span class="c1"># Feed generation is usually not desired when developing</span>
-    <span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="c1"># Feed generation is usually not desired when developing</span>
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># Blogroll</span>
-    <span class="n">LINKS</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="p">(</span><span class="s2">&quot;GitHub&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/robsings&quot;</span><span class="p">),</span>
-    <span class="p">)</span>
+<span class="c1"># Blogroll</span>
+<span class="n">LINKS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">&quot;GitHub&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/robsings&quot;</span><span class="p">),</span>
+<span class="p">)</span>
 
-    <span class="c1"># Social widget</span>
-    <span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="p">(</span><span class="s2">&quot;You can add links in your config file&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s2">&quot;Another social link&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">),</span>
-    <span class="p">)</span>
+<span class="c1"># Social widget</span>
+<span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">&quot;You can add links in your config file&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Another social link&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span><span class="p">),</span>
+<span class="p">)</span>
 
-    <span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">10</span>
 
-    <span class="c1"># Uncomment following line if you want document-relative URLs when developing</span>
-    <span class="c1"># RELATIVE_URLS = True</span>
+<span class="c1"># Uncomment following line if you want document-relative URLs when developing</span>
+<span class="c1"># RELATIVE_URLS = True</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>**publishconf.py**
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>    <span class="c1"># This file is only used if you use `make publish` or</span>
-    <span class="c1"># explicitly specify it as your config file.</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
+<span class="c1"># explicitly specify it as your config file.</span>
 
-    <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
-    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
-    <span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
 
-    <span class="c1"># If your site is available via HTTPS, make sure SITEURL begins with https://</span>
-    <span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;devonfire.blog&#39;</span>
-    <span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># If your site is available via HTTPS, make sure SITEURL begins with https://</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;devonfire.blog&#39;</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s2">&quot;feeds/all.atom.xml&quot;</span>
-    <span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s2">&quot;feeds/</span><span class="si">{slug}</span><span class="s2">.atom.xml&quot;</span>
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s2">&quot;feeds/all.atom.xml&quot;</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s2">&quot;feeds/</span><span class="si">{slug}</span><span class="s2">.atom.xml&quot;</span>
 
-    <span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="c1"># Following items are often useful when publishing</span>
+<span class="c1"># Following items are often useful when publishing</span>
 
-    <span class="c1"># DISQUS_SITENAME = &quot;&quot;</span>
-    <span class="c1"># GOOGLE_ANALYTICS = &quot;&quot;</span>
+<span class="c1"># DISQUS_SITENAME = &quot;&quot;</span>
+<span class="c1"># GOOGLE_ANALYTICS = &quot;&quot;</span>
 </code></pre></div>
 
 <p><strong>tasks.py</strong></p>
@@ -959,11 +957,9 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <h3>No GitHub Pages (Configurações do repositório):</h3>
 <ol>
 <li>Vá em <strong>Settings</strong> &gt; <strong>Pages</strong>.</li>
-<li>Em "Source", selecione:<ul>
+<li>Em "Source", selecione:</li>
 <li><strong>Branch:</strong> <code>gh-pages</code></li>
 <li><strong>Directory:</strong> <code>/ (root)</code></li>
-</ul>
-</li>
 <li>(Se quiser usar domínio próprio): ative a opção <strong>Custom Domain</strong> e insira <code>seu-dominio.com</code>.</li>
 </ol>
 <p><code>*</code> Será necessário configurar o DNS/Nameserver no seu servidor de hospedagem. </p>
@@ -987,16 +983,16 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 <ol>
 <li><strong>Commit</strong> na <code>master</code>:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>.
-<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Atualizar post ou implementar ajustes&quot;</span>
-<span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Atualizar post ou implementar ajustes&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div>
 
 <ol>
 <li><strong>Build</strong>:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;seu-dominio.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output/CNAME
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;seu-dominio.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output/CNAME
 </code></pre></div>
 
 <ol>
