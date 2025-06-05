@@ -170,7 +170,7 @@ type="button" data-bs-toggle="offcanvas" data-bs-target="#archiveOffcanvas" aria
 
     <div class="article-content mb-5 post">
         <p>Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.</p>
-<h1>Primeiros passos</h1>
+<h1><strong>Primeiros passos</strong></h1>
 <p><strong><em>Todo esse blog foi construído graças ao Pelican que é um gerador de sites estáticos escrito em Python. Você pode conferir a documentação oficial através do link: <a href="https://getpelican.com/">https://getpelican.com/</a></em></strong></p>
 <p>No VsCode, após ter criado o diretório do seu projeto,</p>
 <ul>
@@ -223,7 +223,7 @@ Title: Página Inicial
 </code></pre></div>
 
 <p>Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: <code>http://localhost:8000</code></p>
-<h2>Vamos criar agora o nosso próprio tema</h2>
+<h1><strong>Vamos criar agora o nosso próprio tema</strong></h1>
 <p>Quando executamos o comando: <code>pelican content</code> ou o  <code>pelican content -s pelicanconf.py</code>, o <strong>Pelican</strong> gera na pasta <strong>output</strong> as pastas e arquivos referentes aos temas de sua página, porém, será um tema padrão, que no caso não nos interessa. </p>
 <p>Para trabalharmos com o nosso próprio tema, primeiro, temos que definir a seguinte estrutura de arquivos e pastas: </p>
 <p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%202.png"></p>
@@ -262,9 +262,9 @@ Title: Página Inicial
 </code></pre></div>
 
 <p><img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%204.png"></p>
-<h3>Estilização do Blog</h3>
+<h1><strong>Estilização do Blog</strong></h1>
 <p>A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.</p>
-<h3>Base.html</h3>
+<h2><strong>⚫ Base.html</strong></h2>
 <p><strong><code>tema\templates\base.html</code></strong></p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;pt-br&quot;</span><span class="p">&gt;</span>
@@ -376,12 +376,11 @@ Title: Página Inicial
 <span class="w">        </span><span class="p">})();</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<h3>Index.html</h3>
+<h2><strong>⚫ Index.html</strong></h2>
 <p><code>tema\templates\index.html</code></p>
 <div class="highlight"><pre><span></span><code>{% extends &#39;./base.html&#39; %}
 
@@ -427,7 +426,7 @@ Title: Página Inicial
 {% endblock %}
 </code></pre></div>
 
-<h3>Article.html</h3>
+<h2><strong>⚫ Article.html</strong></h2>
 <p><code>tema\templates\article.html</code></p>
 <div class="highlight"><pre><span></span><code>{% extends &#39;base.html&#39; %}
 
@@ -467,7 +466,7 @@ Title: Página Inicial
 {% endblock %}
 </code></pre></div>
 
-<h3>Style.css</h3>
+<h2><strong>⚫ Style.css</strong></h2>
 <p><code>tema\static\css\style.css</code></p>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Audiowide&amp;display=swap&#39;</span><span class="o">)</span><span class="p">;</span>
 <span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Poiret+One&amp;display=swap&#39;</span><span class="o">)</span><span class="p">;</span>
@@ -635,7 +634,7 @@ Title: Página Inicial
 <ul>
 <li>Completa a fase de personalização do nosso site, é hora de subi-lo ao GitHub e em seguida ao GitHub Pages.</li>
 </ul>
-<h2>Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages</h2>
+<h1><strong>Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages</strong></h1>
 <ul>
 <li>Inicialize o seu repositório localmente:</li>
 </ul>
@@ -694,11 +693,9 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 
 <p>Isso criará um <code>requirements.txt</code> apenas com os pacotes realmente utilizados no projeto.</p>
 <ul>
-<li>
-<p>Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: <code>pelicanconf.py</code>, <code>publishconf.py</code> e <code>tasks.py</code></p>
-<p><strong>pelicanconf.py</strong></p>
-</li>
+<li>Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: <code>pelicanconf.py</code>, <code>publishconf.py</code> e <code>tasks.py</code></li>
 </ul>
+<h2><strong>⚫ pelicanconf.py</strong></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="n">SITEYEAR</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
 
@@ -738,9 +735,7 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 <span class="c1"># RELATIVE_URLS = True</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>**publishconf.py**
-</code></pre></div>
-
+<h2><strong>⚫ publishconf.py</strong></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
 <span class="c1"># explicitly specify it as your config file.</span>
 
@@ -765,7 +760,7 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 <span class="c1"># GOOGLE_ANALYTICS = &quot;&quot;</span>
 </code></pre></div>
 
-<p><strong>tasks.py</strong></p>
+<h2><strong>⚫ tasks.py</strong></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shlex</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
@@ -932,15 +927,15 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
     <span class="n">pelican_main</span><span class="p">(</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
 </code></pre></div>
 
-<h3>Deploy no GitHub Pages</h3>
-<p><strong>Gerando os arquivos de produção</strong></p>
+<h1>Deploy no GitHub Pages</h1>
+<h2><strong>⚫ Gerando os arquivos de produção</strong></h2>
 <ul>
 <li>Com tudo pronto, gere a versão final do site:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py
 </code></pre></div>
 
-<p><strong>Faça o deploy manual com o <code>ghp-import</code></strong></p>
+<h2><strong>⚫ Faça o deploy manual com o <code>ghp-import</code></strong></h2>
 <p>Primeiramente instale a ferramenta com: <code>pip install ghp-import</code></p>
 <ul>
 <li>Agora execute o comando:</li>
@@ -954,7 +949,7 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 <li>Faz o push para a branch.</li>
 <li>Publica automaticamente o conteúdo.</li>
 </ul>
-<h3>No GitHub Pages (Configurações do repositório):</h3>
+<h2><strong>⚫ No GitHub Pages (Configurações do repositório):</strong></h2>
 <ol>
 <li>Vá em <strong>Settings</strong> &gt; <strong>Pages</strong>.</li>
 <li>Em "Source", selecione:</li>
@@ -967,7 +962,7 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;seu-dominio.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output/CNAME
 </code></pre></div>
 
-<p><strong>Configuração do CNAME</strong></p>
+<h2><strong>⚫ Configuração do CNAME</strong></h2>
 <ul>
 <li>Acesse o painel de controle do seu domínio. Vá em DNS/Nameservers e lá, crie dois registros:<ul>
 <li>Type: CNAME; Name: www; Content: seu_user.github.io; TTL: Automático;</li>
@@ -975,29 +970,23 @@ pipreqs<span class="w"> </span>.<span class="w"> </span>--force
 </ul>
 </li>
 </ul>
-<h2>Gerenciamento de branches (<code>master</code>, <code>develop</code> e <code>gh-pages</code>)</h2>
+<h1><strong>Gerenciamento de branches <code>master</code>, <code>develop</code> e <code>gh-pages</code></strong></h1>
 <p>Aqui a branch <code>develop</code> será onde faremos ajustes no nosso blog, a <code>master</code> será nosso ambiente de stagging,  enquanto a <code>gh-pages</code> será o nosso ambiente de Prod. </p>
 <p>Sempre que você estiver pronto para publicar, gera o site (<code>pelican content …</code>) e empurra só o <code>output/</code> para <code>gh-pages</code>, garantindo que o que rola no ar seja exatamente o que foi construído — nada mais, nada menos</p>
-<h3>Exemplo resumido do fluxo</h3>
+<h2><strong>Exemplo resumido do fluxo</strong></h2>
 <p>Após o desenvolvimento ser concluído, siga esses passos:</p>
-<ol>
-<li><strong>Commit</strong> na <code>master</code>:</li>
-</ol>
+<h3><strong>⚫ Commit na <code>master</code>:</strong></h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Atualizar post ou implementar ajustes&quot;</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div>
 
-<ol>
-<li><strong>Build</strong>:</li>
-</ol>
+<h3><strong>⚫ Build</strong>:</h3>
 <div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>content<span class="w"> </span>-o<span class="w"> </span>output<span class="w"> </span>-s<span class="w"> </span>publishconf.py
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;seu-dominio.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output/CNAME
 </code></pre></div>
 
-<ol>
-<li><strong>Deploy</strong></li>
-</ol>
+<h3><strong>⚫ Deploy</strong></h3>
 <div class="highlight"><pre><span></span><code>ghp-import<span class="w"> </span>output<span class="w"> </span>-b<span class="w"> </span>gh-pages<span class="w"> </span>-p
 </code></pre></div>
 

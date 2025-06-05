@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - Artigos, códigos e devaneios</title><link href="https://devonfire.blog/" rel="alternate"></link><link href="https://devonfire.blog/feeds/all.atom.xml" rel="self"></link><id>https://devonfire.blog/</id><updated>2025-06-05T14:43:08-03:00</updated><entry><title>ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</title><link href="https://devonfire.blog/chatgpt-no-dia-a-dia.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-05-09T12:23:21-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-03-03:/chatgpt-no-dia-a-dia.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;O que é o ChatGPT?&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog DevOnFire - Artigos, códigos e devaneios</title><link href="https://devonfire.blog/" rel="alternate"></link><link href="https://devonfire.blog/feeds/all.atom.xml" rel="self"></link><id>https://devonfire.blog/</id><updated>2025-06-05T18:00:41-03:00</updated><entry><title>ChatGPT - O que é, como usá-lo e como ele pode nos ajudar no dia a dia</title><link href="https://devonfire.blog/chatgpt-no-dia-a-dia.html" rel="alternate"></link><published>2025-03-03T13:24:00-03:00</published><updated>2025-05-09T12:23:21-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-03-03:/chatgpt-no-dia-a-dia.html</id><summary type="html">&lt;p&gt;Um resumo prático sobre como o ChatGPT pode ser integrado na vida cotidiana.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;O que é o ChatGPT?&lt;/h1&gt;
 &lt;p&gt;De maneira simples, ele é um chatbot - um programa de computador super inteligente projetado para imitar conversas com usuários humanos, através da internet.  &lt;/p&gt;
 &lt;p&gt;O que distingue o ChatGPT dos chatbots tradicionais é seu modelo de linguagem que utiliza da &lt;a href="https://www.surfedigital.io/blog/ia-generativa"&gt;Inteligência Artificial Generativa&lt;/a&gt; (Generative AI). Este modelo &lt;strong&gt;permite que o ChatGPT entenda e responda de maneira mais humana, utilizando linguagem natural&lt;/strong&gt; e contextualizada, oferecendo uma experiência às pessoas muito mais rica, próxima e interativa.  &lt;/p&gt;
 &lt;p&gt;Além disso, o ChatGPT é capaz de aprender com as interações, adaptando-se e aprimorando suas respostas ao longo do tempo.  &lt;/p&gt;
@@ -450,8 +450,8 @@ Por fim, vamos criar mais um arquivo. Agora um &lt;code&gt;.bat&lt;/code&gt;.&lt
 powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File &amp;quot;./scheduled_to_9pm.ps1&amp;quot; &amp;gt; NUL 2&amp;gt;&amp;amp;1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Inclua esse .bat no seu diretório Startup e teste o funcionamento de tudo.&lt;/p&gt;</content><category term="Blog"></category></entry><entry><title>Blog no GitHub Pages com Pelican e Python</title><link href="https://devonfire.blog/blog-com-pelican-e-githubpages.html" rel="alternate"></link><published>2025-06-05T13:37:00-03:00</published><updated>2025-06-05T14:43:08-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-06-05:/blog-com-pelican-e-githubpages.html</id><summary type="html">&lt;p&gt;Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.&lt;/p&gt;
-&lt;h1&gt;Primeiros passos&lt;/h1&gt;
+&lt;p&gt;Inclua esse .bat no seu diretório Startup e teste o funcionamento de tudo.&lt;/p&gt;</content><category term="Blog"></category></entry><entry><title>Blog no GitHub Pages com Pelican e Python</title><link href="https://devonfire.blog/blog-com-pelican-e-githubpages.html" rel="alternate"></link><published>2025-06-05T13:37:00-03:00</published><updated>2025-06-05T18:00:41-03:00</updated><author><name>_robsings</name></author><id>tag:devonfire.blog,2025-06-05:/blog-com-pelican-e-githubpages.html</id><summary type="html">&lt;p&gt;Neste artigo, compartilho minha experiência na criação de um blog com Pelican, Python e GitHub Pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Este blog, no qual você navega, é hoje meu maior orgulho como desenvolvedor. Ele foi criado — entre outras razões — para compartilhar, com vocês e com a posteridade, o conhecimento que acumulei em programação e tecnologia. Por isso, decidi escrever este post, mostrando como o construí. Espero, sinceramente, que este conteúdo lhes seja útil.&lt;/p&gt;
+&lt;h1&gt;&lt;strong&gt;Primeiros passos&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Todo esse blog foi construído graças ao Pelican que é um gerador de sites estáticos escrito em Python. Você pode conferir a documentação oficial através do link: &lt;a href="https://getpelican.com/"&gt;https://getpelican.com/&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;No VsCode, após ter criado o diretório do seu projeto,&lt;/p&gt;
 &lt;ul&gt;
@@ -504,7 +504,7 @@ Title: Página Inicial
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Este comando gera o conteúdo e inicia um servidor local que permite visualizar o site através do endereço: &lt;code&gt;http://localhost:8000&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Vamos criar agora o nosso próprio tema&lt;/h2&gt;
+&lt;h1&gt;&lt;strong&gt;Vamos criar agora o nosso próprio tema&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Quando executamos o comando: &lt;code&gt;pelican content&lt;/code&gt; ou o  &lt;code&gt;pelican content -s pelicanconf.py&lt;/code&gt;, o &lt;strong&gt;Pelican&lt;/strong&gt; gera na pasta &lt;strong&gt;output&lt;/strong&gt; as pastas e arquivos referentes aos temas de sua página, porém, será um tema padrão, que no caso não nos interessa. &lt;/p&gt;
 &lt;p&gt;Para trabalharmos com o nosso próprio tema, primeiro, temos que definir a seguinte estrutura de arquivos e pastas: &lt;/p&gt;
 &lt;p&gt;&lt;img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%202.png"&gt;&lt;/p&gt;
@@ -543,9 +543,9 @@ Title: Página Inicial
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="image.png" src="./images/imagem_post/post_pelican_blog/image%204.png"&gt;&lt;/p&gt;
-&lt;h3&gt;Estilização do Blog&lt;/h3&gt;
+&lt;h1&gt;&lt;strong&gt;Estilização do Blog&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;A seguir exibo o conteúdo dos arquivos utilizados na construção do meu tema.&lt;/p&gt;
-&lt;h3&gt;Base.html&lt;/h3&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Base.html&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code&gt;tema\templates\base.html&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pt-br&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -657,12 +657,11 @@ Title: Página Inicial
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;})();&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Index.html&lt;/h3&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Index.html&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;tema\templates\index.html&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends &amp;#39;./base.html&amp;#39; %}
 
@@ -708,7 +707,7 @@ Title: Página Inicial
 {% endblock %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Article.html&lt;/h3&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Article.html&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;tema\templates\article.html&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends &amp;#39;base.html&amp;#39; %}
 
@@ -748,7 +747,7 @@ Title: Página Inicial
 {% endblock %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Style.css&lt;/h3&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Style.css&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;tema\static\css\style.css&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://fonts.googleapis.com/css2?family=Audiowide&amp;amp;display=swap&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://fonts.googleapis.com/css2?family=Audiowide&amp;amp;family=Poiret+One&amp;amp;display=swap&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -916,7 +915,7 @@ Title: Página Inicial
 &lt;ul&gt;
 &lt;li&gt;Completa a fase de personalização do nosso site, é hora de subi-lo ao GitHub e em seguida ao GitHub Pages.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages&lt;/h2&gt;
+&lt;h1&gt;&lt;strong&gt;Subindo o projeto ao GitHub e configurando o deploy no GitHub Pages&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Inicialize o seu repositório localmente:&lt;/li&gt;
 &lt;/ul&gt;
@@ -975,11 +974,9 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
 
 &lt;p&gt;Isso criará um &lt;code&gt;requirements.txt&lt;/code&gt; apenas com os pacotes realmente utilizados no projeto.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: &lt;code&gt;pelicanconf.py&lt;/code&gt;, &lt;code&gt;publishconf.py&lt;/code&gt; e &lt;code&gt;tasks.py&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;pelicanconf.py&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Aqui revisei os arquivos de configuração do meu projeto. Uma vez que o layout e tema do site esteja ok, somente isso aqui pode fazer o deploy falhar: &lt;code&gt;pelicanconf.py&lt;/code&gt;, &lt;code&gt;publishconf.py&lt;/code&gt; e &lt;code&gt;tasks.py&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ pelicanconf.py&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;
 &lt;span class="n"&gt;SITEYEAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;
 
@@ -1019,9 +1016,7 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="c1"&gt;# RELATIVE_URLS = True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;**publishconf.py**
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;h2&gt;&lt;strong&gt;⚫ publishconf.py&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# This file is only used if you use `make publish` or&lt;/span&gt;
 &lt;span class="c1"&gt;# explicitly specify it as your config file.&lt;/span&gt;
 
@@ -1046,7 +1041,7 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="c1"&gt;# GOOGLE_ANALYTICS = &amp;quot;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;tasks.py&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ tasks.py&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;shlex&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;shutil&lt;/span&gt;
@@ -1213,15 +1208,15 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
     &lt;span class="n"&gt;pelican_main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;shlex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Deploy no GitHub Pages&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Gerando os arquivos de produção&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;Deploy no GitHub Pages&lt;/h1&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Gerando os arquivos de produção&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Com tudo pronto, gere a versão final do site:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;content&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;publishconf.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Faça o deploy manual com o &lt;code&gt;ghp-import&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Faça o deploy manual com o &lt;code&gt;ghp-import&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Primeiramente instale a ferramenta com: &lt;code&gt;pip install ghp-import&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Agora execute o comando:&lt;/li&gt;
@@ -1235,7 +1230,7 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
 &lt;li&gt;Faz o push para a branch.&lt;/li&gt;
 &lt;li&gt;Publica automaticamente o conteúdo.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;No GitHub Pages (Configurações do repositório):&lt;/h3&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ No GitHub Pages (Configurações do repositório):&lt;/strong&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Vá em &lt;strong&gt;Settings&lt;/strong&gt; &amp;gt; &lt;strong&gt;Pages&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Em "Source", selecione:&lt;/li&gt;
@@ -1248,7 +1243,7 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;seu-dominio.com&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;output/CNAME
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Configuração do CNAME&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;⚫ Configuração do CNAME&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Acesse o painel de controle do seu domínio. Vá em DNS/Nameservers e lá, crie dois registros:&lt;ul&gt;
 &lt;li&gt;Type: CNAME; Name: www; Content: seu_user.github.io; TTL: Automático;&lt;/li&gt;
@@ -1256,29 +1251,23 @@ pipreqs&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Gerenciamento de branches (&lt;code&gt;master&lt;/code&gt;, &lt;code&gt;develop&lt;/code&gt; e &lt;code&gt;gh-pages&lt;/code&gt;)&lt;/h2&gt;
+&lt;h1&gt;&lt;strong&gt;Gerenciamento de branches &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;develop&lt;/code&gt; e &lt;code&gt;gh-pages&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Aqui a branch &lt;code&gt;develop&lt;/code&gt; será onde faremos ajustes no nosso blog, a &lt;code&gt;master&lt;/code&gt; será nosso ambiente de stagging,  enquanto a &lt;code&gt;gh-pages&lt;/code&gt; será o nosso ambiente de Prod. &lt;/p&gt;
 &lt;p&gt;Sempre que você estiver pronto para publicar, gera o site (&lt;code&gt;pelican content …&lt;/code&gt;) e empurra só o &lt;code&gt;output/&lt;/code&gt; para &lt;code&gt;gh-pages&lt;/code&gt;, garantindo que o que rola no ar seja exatamente o que foi construído — nada mais, nada menos&lt;/p&gt;
-&lt;h3&gt;Exemplo resumido do fluxo&lt;/h3&gt;
+&lt;h2&gt;&lt;strong&gt;Exemplo resumido do fluxo&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Após o desenvolvimento ser concluído, siga esses passos:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Commit&lt;/strong&gt; na &lt;code&gt;master&lt;/code&gt;:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3&gt;&lt;strong&gt;⚫ Commit na &lt;code&gt;master&lt;/code&gt;:&lt;/strong&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
 git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Atualizar post ou implementar ajustes&amp;quot;&lt;/span&gt;
 git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Build&lt;/strong&gt;:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3&gt;&lt;strong&gt;⚫ Build&lt;/strong&gt;:&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;content&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;publishconf.py
 &lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;seu-dominio.com&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;output/CNAME
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3&gt;&lt;strong&gt;⚫ Deploy&lt;/strong&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ghp-import&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;gh-pages&lt;span class="w"&gt; &lt;/span&gt;-p
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
