@@ -167,6 +167,11 @@ p.card-text{
     color: #EE471D!important;
     font-weight: 900!important;
 }
+.post p li a{
+    text-decoration: none!important;
+    color: #EE471D!important;
+    font-weight: 900!important;
+}
 code {
     color: #EE471D !important;
 }
